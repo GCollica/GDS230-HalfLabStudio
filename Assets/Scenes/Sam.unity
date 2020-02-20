@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 164648800}
   - component: {fileID: 164648803}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: Turret
   m_TagString: Turret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
