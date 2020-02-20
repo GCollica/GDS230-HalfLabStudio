@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PathFinder : MonoBehaviour
 {
     //Array of waypoints ie. the path to follow
@@ -22,6 +23,8 @@ public class PathFinder : MonoBehaviour
     void Start()
     {
         gC = FindObjectOfType<GameController>();
+
+        
     }
 
     // Update is called once per frame
@@ -36,6 +39,7 @@ public class PathFinder : MonoBehaviour
         {
             //reset the turret to the one youre entering
             turret[0] = collision.gameObject.GetComponent<Turret>();
+            
 
             //check if the turrets current enemy is this gameobject
             //if it is take away health
