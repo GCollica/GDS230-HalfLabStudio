@@ -5,7 +5,7 @@ using UnityEngine;
 public class Turret : MonoBehaviour
 {
 
-    //public GameObject bullet;
+  //  public GameObject bullet;
     
     //the transform of the enemy within range
     public Transform enemy;
@@ -68,7 +68,7 @@ public class Turret : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, turnSpeed * Time.deltaTime);
     }
 
-   /* void Fire()
+    /*void Fire()
     {
         fireGunFloat[0] -= Time.deltaTime;
         if (fireGunFloat[0] < 0f)

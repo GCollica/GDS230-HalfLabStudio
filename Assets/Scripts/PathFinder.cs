@@ -73,7 +73,7 @@ public class PathFinder : MonoBehaviour
         if (health <= 0)
         {
             Destroy(this.gameObject);
-            gC.CashMoney += 50;
+            gC.cashMoney += 50;
         }
 
     }
