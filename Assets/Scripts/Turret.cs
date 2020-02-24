@@ -10,6 +10,7 @@ public class Turret : MonoBehaviour
     //the transform of the enemy within range
     public Transform enemy;
 
+    public float damage = 0.75f;
 
     public Transform firePoint;
     
@@ -28,14 +29,14 @@ public class Turret : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Upgrade();
     }
 
     private void FixedUpdate()
     {
         
     }
-
+    
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.tag == "Enemy")
@@ -67,6 +68,15 @@ public class Turret : MonoBehaviour
         Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, turnSpeed * Time.deltaTime);
     }
+
+    void Upgrade() 
+    {
+        if (Input.GetMouseButtonUp(0)) 
+        {
+           // damage += 0.75f;
+        }
+    }
+
 
     /*void Fire()
     {

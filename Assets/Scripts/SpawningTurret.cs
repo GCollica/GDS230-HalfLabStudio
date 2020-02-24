@@ -4,25 +4,57 @@ using UnityEngine;
 
 public class SpawningTurret : MonoBehaviour
 {
-    //get this to follow mouse point, then click when in certain area and if placed in area charge money
-    private Vector3 mousePos;
-    Rigidbody2D rb;
-    Vector2 direction;
-    float moveSpeed = 1000f;
-    // Start is called before the first frame update
+    //get this to follow mouse point, then click when in certain area and if placed in area charge money   
+    //the turret gameObject
+    public GameObject realTurret;
+    //game controller to control money 
+    GameController gC;
+    
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        gC = FindObjectOfType<GameController>();
     }
+
+    //follow mouse
     void FixedUpdate()
     {
-        mousePos = Camera.main.ScreenToViewportPoint(Input.mousePosition);
-        direction = (mousePos - transform.position).normalized;
-        rb.velocity = new Vector2(direction.x * moveSpeed, direction.y * moveSpeed);
+        Vector3 pos = Input.mousePosition;
+        pos.z = transform.position.z - Camera.main.transform.position.z;
+        transform.position = Camera.main.ScreenToWorldPoint(pos);
     }
-    // Update is called once per frame
-    void Update()
+
+    private void Update()
     {
-        
+        DontSpawn();
     }
+
+    //Spawn turret on set point, remove #CashMoney when spawned
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.tag == "TurretZone") 
+        {
+            if (gC.cashMoney >= 150)
+            {
+                if (Input.GetMouseButtonUp(0))
+                {
+                    Instantiate(realTurret, transform.position, Quaternion.identity);
+                    gC.cashMoney -= 150;
+                    gC.turret1 = null;
+                    Destroy(collision.gameObject);
+                    Destroy(gameObject);
+                }
+            }
+        }
+    }
+
+    //if attempting to spawn turret while not over spawn point, dont.
+    void DontSpawn() 
+    {
+        if (Input.GetMouseButtonUp(0))
+        {
+            gC.turret1 = null;
+            Destroy(gameObject);
+        }
+    }
+
 }

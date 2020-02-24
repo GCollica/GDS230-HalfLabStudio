@@ -45,7 +45,7 @@ public class PathFinder : MonoBehaviour
             //if it is take away health
             if (turret[0].enemy == this.gameObject.transform)
             {
-                health -= 0.75f * Time.deltaTime;
+                health -= turret[0].damage * Time.deltaTime;
             }
             
 
