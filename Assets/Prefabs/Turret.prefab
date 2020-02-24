@@ -58,7 +58,7 @@ Transform:
   m_GameObject: {fileID: 1209650461054667073}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.09, y: -1.78, z: 0}
-  m_LocalScale: {x: 17.895967, y: 5.2251, z: 5.2251}
+  m_LocalScale: {x: 13.557448, y: 3.9583793, z: 3.9583793}
   m_Children:
   - {fileID: 1209650459560541388}
   m_Father: {fileID: 0}
@@ -126,6 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 0}
+  damage: 0.75
   firePoint: {fileID: 1209650459560541388}
   turnSpeed: 10
   fireGunFloat: []
