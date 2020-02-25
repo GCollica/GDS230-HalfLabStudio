@@ -29,7 +29,7 @@ public class Turret : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Upgrade();
+        
     }
 
     private void FixedUpdate()
@@ -69,12 +69,9 @@ public class Turret : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, turnSpeed * Time.deltaTime);
     }
 
-    void Upgrade() 
+    public void Upgrade() 
     {
-        if (Input.GetMouseButtonUp(0)) 
-        {
-           // damage += 0.75f;
-        }
+        Debug.Log("Upgrade");
     }
 
 
