@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour
     public Vector3 mouse;
     public int cashMoney;
     public GameObject turret1;
+    public Transform[] waypoints;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +19,7 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        CheckClick();   
     }
 
     public void SpawningTurrets()
@@ -30,6 +31,33 @@ public class GameController : MonoBehaviour
         }
         
         
+    }
+
+    public void CheckClick()
+    {
+       /* if (Input.GetMouseButtonUp(0))
+        {
+            Debug.Log("mouse was hit");
+            
+            RaycastHit hitInfo = new RaycastHit();
+            bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
+            if (hit)
+            {
+                Debug.Log("Hit" + hitInfo.transform.gameObject.name);
+                if (hitInfo.transform.gameObject.tag == "Turret")
+                {
+                    Debug.Log("Upgrade Window");
+                }
+                else
+                {
+                    Debug.Log("Not Working");
+                }
+            }
+            else
+            {
+                Debug.Log("No Hit");
+            }
+        }*/
     }
 
 
