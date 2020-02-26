@@ -7,6 +7,7 @@ public class SpawningTurret : MonoBehaviour
     //get this to follow mouse point, then click when in certain area and if placed in area charge money   
     //the turret gameObject
     public GameObject realTurret;
+    public GameObject turretBase;
     //game controller to control money 
     GameController gC;
     
@@ -38,6 +39,7 @@ public class SpawningTurret : MonoBehaviour
                 if (Input.GetMouseButtonUp(0))
                 {
                     Instantiate(realTurret, transform.position, Quaternion.identity);
+                    Instantiate(turretBase, transform.position, Quaternion.identity);
                     gC.cashMoney -= 150;
                     gC.turret1 = null;
                     Destroy(collision.gameObject);
