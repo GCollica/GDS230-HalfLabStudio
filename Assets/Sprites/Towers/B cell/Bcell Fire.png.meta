@@ -1,16 +1,31 @@
 fileFormatVersion: 2
-guid: 14e0b200df68004478a330d992c8165d
+guid: efa67af861e8dc74f9aa373ebe3a9f52
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1435297040512150886
-    second: Killer T Base_0
+      213: -8207044958597737722
+    second: Bcell Fire_0
   - first:
-      213: 1791665846728920452
-    second: Killer T Base_1
+      213: 2455798408549206888
+    second: Bcell Fire_1
   - first:
-      213: -8178630922439636584
-    second: Killer T Base_2
+      213: 8207599974677307151
+    second: Bcell Fire_2
+  - first:
+      213: -7586054423886018026
+    second: Bcell Fire_3
+  - first:
+      213: -1388294549163076434
+    second: Bcell Fire_4
+  - first:
+      213: -3354266884939113674
+    second: Bcell Fire_5
+  - first:
+      213: 7179941567464978053
+    second: Bcell Fire_6
+  - first:
+      213: 3519124345662524790
+    second: Bcell Fire_7
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -55,7 +70,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 0, z: 1023, w: 0}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -95,7 +110,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Killer T Base_0
+      name: Bcell Fire_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcf1c49212eb8f246972e72f8b1065eb
+      internalID: -8207044958597737722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bcell Fire_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd459c6f1a6e0d649ae8a1009a50c3a6
+      internalID: 2455798408549206888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bcell Fire_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cedacb072345cb540aad7a57c14b77fc
+      internalID: 8207599974677307151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bcell Fire_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e4dd2f5107016a468d8e0a084b1ba62
+      internalID: -7586054423886018026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bcell Fire_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4368d18896bc8d44396a2ec31a9fa4f8
+      internalID: -1388294549163076434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bcell Fire_5
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c870b62ccd8120c4193654ad29e62821
+      internalID: -3354266884939113674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bcell Fire_6
       rect:
         serializedVersion: 2
         x: 0
@@ -109,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42aa6f5a8c296a34da4bb6f2a5878605
-      internalID: 1435297040512150886
+      spriteID: b702598a5c3be7b4c84fb7716e462539
+      internalID: 7179941567464978053
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Killer T Base_1
+      name: Bcell Fire_7
       rect:
         serializedVersion: 2
         x: 512
@@ -130,29 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcff2bb4558c97348a189cb65560ddc7
-      internalID: 1791665846728920452
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Killer T Base_2
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 0
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6b396e5e873e69e4dae16098824b00b0
-      internalID: -8178630922439636584
+      spriteID: b31b42b4da4c1d94ebef0c965e777007
+      internalID: 3519124345662524790
       vertices: []
       indices: 
       edges: []

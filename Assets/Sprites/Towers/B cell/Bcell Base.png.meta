@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: 14e0b200df68004478a330d992c8165d
+guid: 8405e54ad53299f42ae9cf7012a064c5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1435297040512150886
-    second: Killer T Base_0
+      213: -2776388071307808310
+    second: Bcell Base_0
   - first:
-      213: 1791665846728920452
-    second: Killer T Base_1
+      213: -2270392137701346860
+    second: Bcell Base_1
   - first:
-      213: -8178630922439636584
-    second: Killer T Base_2
+      213: -2889377922307391010
+    second: Bcell Base_2
+  - first:
+      213: 3394626946528814897
+    second: Bcell Base_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -55,7 +58,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 0, z: 1023, w: 0}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -95,7 +98,49 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Killer T Base_0
+      name: Bcell Base_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e07327a561213448b924dc3b69019d6
+      internalID: -2776388071307808310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bcell Base_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d64b96cce3924e4c9e903de5adb82d8
+      internalID: -2270392137701346860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bcell Base_2
       rect:
         serializedVersion: 2
         x: 0
@@ -109,14 +154,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42aa6f5a8c296a34da4bb6f2a5878605
-      internalID: 1435297040512150886
+      spriteID: c8c60d89f863af543bfe74430072feae
+      internalID: -2889377922307391010
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Killer T Base_1
+      name: Bcell Base_3
       rect:
         serializedVersion: 2
         x: 512
@@ -130,29 +175,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcff2bb4558c97348a189cb65560ddc7
-      internalID: 1791665846728920452
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Killer T Base_2
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 0
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6b396e5e873e69e4dae16098824b00b0
-      internalID: -8178630922439636584
+      spriteID: df17be304bac0624eb62b7a65fbf2b51
+      internalID: 3394626946528814897
       vertices: []
       indices: 
       edges: []
