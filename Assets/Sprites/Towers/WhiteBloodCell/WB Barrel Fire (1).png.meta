@@ -1,34 +1,34 @@
 fileFormatVersion: 2
-guid: df4d69a72bae6ca46ae929d16cee711a
+guid: df84daa6d33f1c840a2ddf7cb579a40a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7304165129548891581
-    second: Killer T Cannon Fire_0
+      213: -8568295892540424971
+    second: WB Barrel Fire (1)_0
   - first:
-      213: 5465606992444481477
-    second: Killer T Cannon Fire_1
+      213: 7035569651851518912
+    second: WB Barrel Fire (1)_1
   - first:
-      213: -2655228262641257022
-    second: Killer T Cannon Fire_2
+      213: -1911865047844060343
+    second: WB Barrel Fire (1)_2
   - first:
-      213: -8515219412668796158
-    second: Killer T Cannon Fire_3
+      213: -5127270253216596050
+    second: WB Barrel Fire (1)_3
   - first:
-      213: 6374555522670954294
-    second: Killer T Cannon Fire_4
+      213: -399810415943693150
+    second: WB Barrel Fire (1)_4
   - first:
-      213: 7106283293914534624
-    second: Killer T Cannon Fire_5
+      213: 2359274301892419295
+    second: WB Barrel Fire (1)_5
   - first:
-      213: -4347557381557397455
-    second: Killer T Cannon Fire_6
+      213: 6776295764084904378
+    second: WB Barrel Fire (1)_6
   - first:
-      213: -5717453786224934603
-    second: Killer T Cannon Fire_7
+      213: 3892429326208780278
+    second: WB Barrel Fire (1)_7
   - first:
-      213: -4615058863262317827
-    second: Killer T Cannon Fire_8
+      213: -1540811644931851503
+    second: WB Barrel Fire (1)_8
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -125,7 +125,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Killer T Cannon Fire_0
+      name: WB Barrel Fire (1)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -139,14 +139,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 045705c506000464688e49187c0e183f
-      internalID: -7304165129548891581
+      spriteID: 221f6ca5587fb044fadb571efba04219
+      internalID: -8568295892540424971
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Killer T Cannon Fire_1
+      name: WB Barrel Fire (1)_1
       rect:
         serializedVersion: 2
         x: 512
@@ -160,14 +160,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f1b82205bf6558418058c113cd62c16
-      internalID: 5465606992444481477
+      spriteID: 36f5e747e9587f644b5409df8f12f7d8
+      internalID: 7035569651851518912
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Killer T Cannon Fire_2
+      name: WB Barrel Fire (1)_2
       rect:
         serializedVersion: 2
         x: 1024
@@ -181,14 +181,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4efd9226cab80e744a5b58ee999f5d73
-      internalID: -2655228262641257022
+      spriteID: a25182b5347690747b3ead9c1b3bf66e
+      internalID: -1911865047844060343
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Killer T Cannon Fire_3
+      name: WB Barrel Fire (1)_3
       rect:
         serializedVersion: 2
         x: 0
@@ -202,14 +202,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 675ba4aed95345e43814e7e521ae8e72
-      internalID: -8515219412668796158
+      spriteID: 4a709f6cb03a98f4ebec10f1c9207d1b
+      internalID: -5127270253216596050
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Killer T Cannon Fire_4
+      name: WB Barrel Fire (1)_4
       rect:
         serializedVersion: 2
         x: 512
@@ -223,14 +223,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce555c0cfd9382f43b214b907af19d4f
-      internalID: 6374555522670954294
+      spriteID: d0fe8c1999f6a0d4383cdd8cd8210bd0
+      internalID: -399810415943693150
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Killer T Cannon Fire_5
+      name: WB Barrel Fire (1)_5
       rect:
         serializedVersion: 2
         x: 1024
@@ -244,14 +244,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb4f7a31e3784d449a573b5d02a9b2e6
-      internalID: 7106283293914534624
+      spriteID: 6d7059217dc17ff4da9f5f6bdb3dc10e
+      internalID: 2359274301892419295
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Killer T Cannon Fire_6
+      name: WB Barrel Fire (1)_6
       rect:
         serializedVersion: 2
         x: 0
@@ -265,14 +265,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbb201826ffccb540b890d14556aa76d
-      internalID: -4347557381557397455
+      spriteID: 2a7a9dc96297c354c8c28888a3b3a14d
+      internalID: 6776295764084904378
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Killer T Cannon Fire_7
+      name: WB Barrel Fire (1)_7
       rect:
         serializedVersion: 2
         x: 512
@@ -286,14 +286,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a4da7a270d14ed4a8d570a2fe5c2636
-      internalID: -5717453786224934603
+      spriteID: ed890c3fd34ef1141b053ccb8f1cb0bb
+      internalID: 3892429326208780278
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Killer T Cannon Fire_8
+      name: WB Barrel Fire (1)_8
       rect:
         serializedVersion: 2
         x: 1024
@@ -307,8 +307,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19d053d4cd60fc448ba031a3119e3625
-      internalID: -4615058863262317827
+      spriteID: 5e46e83250ad91d4e8772e32f2c82636
+      internalID: -1540811644931851503
       vertices: []
       indices: 
       edges: []

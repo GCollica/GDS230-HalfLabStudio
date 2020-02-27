@@ -1,34 +1,31 @@
 fileFormatVersion: 2
-guid: df4d69a72bae6ca46ae929d16cee711a
+guid: e1a70a65e919f7f41a6b107ee5981198
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7304165129548891581
-    second: Killer T Cannon Fire_0
+      213: 2365554316452359015
+    second: Carona_0
   - first:
-      213: 5465606992444481477
-    second: Killer T Cannon Fire_1
+      213: -4349932568842657165
+    second: Carona_1
   - first:
-      213: -2655228262641257022
-    second: Killer T Cannon Fire_2
+      213: 1584959238394605229
+    second: Carona_2
   - first:
-      213: -8515219412668796158
-    second: Killer T Cannon Fire_3
+      213: -8116069850190161878
+    second: Carona_3
   - first:
-      213: 6374555522670954294
-    second: Killer T Cannon Fire_4
+      213: 550302498924562774
+    second: Carona_4
   - first:
-      213: 7106283293914534624
-    second: Killer T Cannon Fire_5
+      213: -4217920534153513670
+    second: Carona_5
   - first:
-      213: -4347557381557397455
-    second: Killer T Cannon Fire_6
+      213: 767604086625550539
+    second: Carona_6
   - first:
-      213: -5717453786224934603
-    second: Killer T Cannon Fire_7
-  - first:
-      213: -4615058863262317827
-    second: Killer T Cannon Fire_8
+      213: 8556008841113656206
+    second: Carona_7
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -125,7 +122,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Killer T Cannon Fire_0
+      name: Carona_0
       rect:
         serializedVersion: 2
         x: 0
@@ -139,14 +136,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 045705c506000464688e49187c0e183f
-      internalID: -7304165129548891581
+      spriteID: 5be3f656cc9425040a7bbecd210a0cd8
+      internalID: 2365554316452359015
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Killer T Cannon Fire_1
+      name: Carona_1
       rect:
         serializedVersion: 2
         x: 512
@@ -160,14 +157,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f1b82205bf6558418058c113cd62c16
-      internalID: 5465606992444481477
+      spriteID: 181592fad5db6d74886062cd8265f964
+      internalID: -4349932568842657165
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Killer T Cannon Fire_2
+      name: Carona_2
       rect:
         serializedVersion: 2
         x: 1024
@@ -181,14 +178,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4efd9226cab80e744a5b58ee999f5d73
-      internalID: -2655228262641257022
+      spriteID: 1e01b546dd4899d4aa3292b860d58fe7
+      internalID: 1584959238394605229
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Killer T Cannon Fire_3
+      name: Carona_3
       rect:
         serializedVersion: 2
         x: 0
@@ -202,14 +199,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 675ba4aed95345e43814e7e521ae8e72
-      internalID: -8515219412668796158
+      spriteID: 441d8fab11007bf459505403e111e947
+      internalID: -8116069850190161878
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Killer T Cannon Fire_4
+      name: Carona_4
       rect:
         serializedVersion: 2
         x: 512
@@ -223,14 +220,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce555c0cfd9382f43b214b907af19d4f
-      internalID: 6374555522670954294
+      spriteID: 9c532601b255bbd478e8f63e2a70caf0
+      internalID: 550302498924562774
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Killer T Cannon Fire_5
+      name: Carona_5
       rect:
         serializedVersion: 2
         x: 1024
@@ -244,14 +241,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb4f7a31e3784d449a573b5d02a9b2e6
-      internalID: 7106283293914534624
+      spriteID: 3fcf5bb2fd01e534fa1387c305b378bf
+      internalID: -4217920534153513670
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Killer T Cannon Fire_6
+      name: Carona_6
       rect:
         serializedVersion: 2
         x: 0
@@ -265,14 +262,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbb201826ffccb540b890d14556aa76d
-      internalID: -4347557381557397455
+      spriteID: beeb024a157ea524faed218b34573396
+      internalID: 767604086625550539
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Killer T Cannon Fire_7
+      name: Carona_7
       rect:
         serializedVersion: 2
         x: 512
@@ -286,29 +283,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a4da7a270d14ed4a8d570a2fe5c2636
-      internalID: -5717453786224934603
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Killer T Cannon Fire_8
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 0
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 19d053d4cd60fc448ba031a3119e3625
-      internalID: -4615058863262317827
+      spriteID: bdf43ca7af6a4ec4ba03056f3a97c2c3
+      internalID: 8556008841113656206
       vertices: []
       indices: 
       edges: []

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: df4d69a72bae6ca46ae929d16cee711a
+guid: 80d39dc2c5673a149b2c6dc6f39d50b5
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -26,9 +26,6 @@ TextureImporter:
   - first:
       213: -5717453786224934603
     second: Killer T Cannon Fire_7
-  - first:
-      213: -4615058863262317827
-    second: Killer T Cannon Fire_8
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -73,7 +70,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 3, y: 2, z: 3, w: 3}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -90,7 +87,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -102,19 +99,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -139,7 +124,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 045705c506000464688e49187c0e183f
+      spriteID: 1549aa11ec0e29d49b6f33ae4339d8eb
       internalID: -7304165129548891581
       vertices: []
       indices: 
@@ -160,7 +145,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f1b82205bf6558418058c113cd62c16
+      spriteID: 7016c453873d2d940a4a261345035853
       internalID: 5465606992444481477
       vertices: []
       indices: 
@@ -181,7 +166,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4efd9226cab80e744a5b58ee999f5d73
+      spriteID: ab8e641a7e76d0947a6cb91deea96b11
       internalID: -2655228262641257022
       vertices: []
       indices: 
@@ -202,7 +187,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 675ba4aed95345e43814e7e521ae8e72
+      spriteID: 0df218ce2dcc8aa438d274764220d584
       internalID: -8515219412668796158
       vertices: []
       indices: 
@@ -223,7 +208,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce555c0cfd9382f43b214b907af19d4f
+      spriteID: 0ee931414b238754ca82a4eac66dd8cf
       internalID: 6374555522670954294
       vertices: []
       indices: 
@@ -244,7 +229,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb4f7a31e3784d449a573b5d02a9b2e6
+      spriteID: 13559ca5f337f6743ac3bd65f74acffa
       internalID: 7106283293914534624
       vertices: []
       indices: 
@@ -265,7 +250,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbb201826ffccb540b890d14556aa76d
+      spriteID: cfd5a26ef7cb7f844b4416adc59ec8c5
       internalID: -4347557381557397455
       vertices: []
       indices: 
@@ -286,29 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a4da7a270d14ed4a8d570a2fe5c2636
+      spriteID: 7451e0e289a2d874d804c551343f3501
       internalID: -5717453786224934603
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Killer T Cannon Fire_8
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 0
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 19d053d4cd60fc448ba031a3119e3625
-      internalID: -4615058863262317827
       vertices: []
       indices: 
       edges: []
