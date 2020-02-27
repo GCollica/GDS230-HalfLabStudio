@@ -1,34 +1,31 @@
 fileFormatVersion: 2
-guid: df4d69a72bae6ca46ae929d16cee711a
+guid: efa67af861e8dc74f9aa373ebe3a9f52
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7304165129548891581
-    second: Killer T Cannon Fire_0
+      213: -8207044958597737722
+    second: Bcell Fire_0
   - first:
-      213: 5465606992444481477
-    second: Killer T Cannon Fire_1
+      213: 2455798408549206888
+    second: Bcell Fire_1
   - first:
-      213: -2655228262641257022
-    second: Killer T Cannon Fire_2
+      213: 8207599974677307151
+    second: Bcell Fire_2
   - first:
-      213: -8515219412668796158
-    second: Killer T Cannon Fire_3
+      213: -7586054423886018026
+    second: Bcell Fire_3
   - first:
-      213: 6374555522670954294
-    second: Killer T Cannon Fire_4
+      213: -1388294549163076434
+    second: Bcell Fire_4
   - first:
-      213: 7106283293914534624
-    second: Killer T Cannon Fire_5
+      213: -3354266884939113674
+    second: Bcell Fire_5
   - first:
-      213: -4347557381557397455
-    second: Killer T Cannon Fire_6
+      213: 7179941567464978053
+    second: Bcell Fire_6
   - first:
-      213: -5717453786224934603
-    second: Killer T Cannon Fire_7
-  - first:
-      213: -4615058863262317827
-    second: Killer T Cannon Fire_8
+      213: 3519124345662524790
+    second: Bcell Fire_7
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -90,7 +87,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -102,19 +99,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -125,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Killer T Cannon Fire_0
+      name: Bcell Fire_0
       rect:
         serializedVersion: 2
         x: 0
@@ -139,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 045705c506000464688e49187c0e183f
-      internalID: -7304165129548891581
+      spriteID: dcf1c49212eb8f246972e72f8b1065eb
+      internalID: -8207044958597737722
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Killer T Cannon Fire_1
+      name: Bcell Fire_1
       rect:
         serializedVersion: 2
         x: 512
@@ -160,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f1b82205bf6558418058c113cd62c16
-      internalID: 5465606992444481477
+      spriteID: dd459c6f1a6e0d649ae8a1009a50c3a6
+      internalID: 2455798408549206888
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Killer T Cannon Fire_2
+      name: Bcell Fire_2
       rect:
         serializedVersion: 2
         x: 1024
@@ -181,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4efd9226cab80e744a5b58ee999f5d73
-      internalID: -2655228262641257022
+      spriteID: cedacb072345cb540aad7a57c14b77fc
+      internalID: 8207599974677307151
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Killer T Cannon Fire_3
+      name: Bcell Fire_3
       rect:
         serializedVersion: 2
         x: 0
@@ -202,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 675ba4aed95345e43814e7e521ae8e72
-      internalID: -8515219412668796158
+      spriteID: 6e4dd2f5107016a468d8e0a084b1ba62
+      internalID: -7586054423886018026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Killer T Cannon Fire_4
+      name: Bcell Fire_4
       rect:
         serializedVersion: 2
         x: 512
@@ -223,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce555c0cfd9382f43b214b907af19d4f
-      internalID: 6374555522670954294
+      spriteID: 4368d18896bc8d44396a2ec31a9fa4f8
+      internalID: -1388294549163076434
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Killer T Cannon Fire_5
+      name: Bcell Fire_5
       rect:
         serializedVersion: 2
         x: 1024
@@ -244,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb4f7a31e3784d449a573b5d02a9b2e6
-      internalID: 7106283293914534624
+      spriteID: c870b62ccd8120c4193654ad29e62821
+      internalID: -3354266884939113674
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Killer T Cannon Fire_6
+      name: Bcell Fire_6
       rect:
         serializedVersion: 2
         x: 0
@@ -265,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbb201826ffccb540b890d14556aa76d
-      internalID: -4347557381557397455
+      spriteID: b702598a5c3be7b4c84fb7716e462539
+      internalID: 7179941567464978053
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Killer T Cannon Fire_7
+      name: Bcell Fire_7
       rect:
         serializedVersion: 2
         x: 512
@@ -286,29 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a4da7a270d14ed4a8d570a2fe5c2636
-      internalID: -5717453786224934603
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Killer T Cannon Fire_8
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 0
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 19d053d4cd60fc448ba031a3119e3625
-      internalID: -4615058863262317827
+      spriteID: b31b42b4da4c1d94ebef0c965e777007
+      internalID: 3519124345662524790
       vertices: []
       indices: 
       edges: []
