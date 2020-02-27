@@ -33,11 +33,13 @@ public class SpawningTurret : MonoBehaviour
     {
         if (collision.tag == "TurretZone") 
         {
+            Debug.Log("In turret zone");
             if (gC.cashMoney >= 150)
             {
+                Debug.Log("enough cash");
                 if (Input.GetMouseButtonUp(0))
                 {
-                    Instantiate(realTurret, transform.position, Quaternion.identity);
+                    Instantiate(realTurret, collision.transform.position, Quaternion.identity);
                     gC.cashMoney -= 150;
                     gC.turret1 = null;
                     Destroy(collision.gameObject);
