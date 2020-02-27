@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+    public int health = 10;
     public GameObject enemyPlacer;
     public Vector3 mouse;
     public int cashMoney;

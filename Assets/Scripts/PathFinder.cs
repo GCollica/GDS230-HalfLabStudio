@@ -47,10 +47,11 @@ public class PathFinder : MonoBehaviour
             {
                 health -= turret[0].damage * Time.deltaTime;
             }
-            
-
-
-            
+        }
+        if (collision.tag == "EnemyExit")
+        {
+            gC.health -= 1;
+            Destroy(gameObject);
         }
     }
 
