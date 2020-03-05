@@ -6,7 +6,7 @@ public class BuyingTurret : MonoBehaviour
 {
     public GameObject[] purchaseTurretsButton;
     public GameController gC;
-    public Vector3 mouse;
+    
     
     public GameObject[] turret;
 
@@ -19,7 +19,7 @@ public class BuyingTurret : MonoBehaviour
 
     void Start()
     {
-        mouse = new Vector3(transform.position.x, transform.position.y, -1);
+        
         gC = FindObjectOfType<GameController>();
         purchaseTurretsButton[0].transform.position = new Vector3(-7.5f, 4.3f, -1);
         purchaseTurretsButton[1].transform.position = new Vector3(-5f, 4.31f, -1);

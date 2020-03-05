@@ -36,10 +36,7 @@ public class PathFinder : MonoBehaviour
         Move();
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        
-    }
+    
 
     private void OnTriggerStay2D(Collider2D collision)
     {

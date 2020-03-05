@@ -19,9 +19,9 @@ public class Turret2 : MonoBehaviour
 
     public CircleCollider2D cCol;
 
-    int upgradeDamage = 150;
-    int upgradeRange = 150;
-    int sellTurret = 30;
+    public int upgradeDamage = 150;
+    public int upgradeRange = 150;
+    public int sellTurret = 30;
 
     // Start is called before the first frame update
     void Start()
