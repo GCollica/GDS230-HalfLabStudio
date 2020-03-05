@@ -10,11 +10,7 @@ public class SpawningEnemies : MonoBehaviour
     public int waveCount = 0;
     public int enemyCount = 5;
     // Start is called before the first frame update
-    void Start()
-    {
-       
-    }
-
+    
     public void Waves()
     {
         waveCount += 1;

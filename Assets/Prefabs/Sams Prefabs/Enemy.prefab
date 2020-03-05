@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2241497635532746218}
   - component: {fileID: 2241497635532746217}
   - component: {fileID: 2241497635532746216}
-  - component: {fileID: 2241497635532746215}
+  - component: {fileID: -8284745885019368580}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -107,12 +107,8 @@ MonoBehaviour:
   health: 5
   moveSpeed: 0.3
   waypointIndex: 0
-  turret:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  turret: {fileID: 0}
+  turret2: {fileID: 0}
   gC: {fileID: 0}
 --- !u!58 &2241497635532746216
 CircleCollider2D:
@@ -130,7 +126,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.011521536
---- !u!50 &2241497635532746215
+--- !u!50 &-8284745885019368580
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0

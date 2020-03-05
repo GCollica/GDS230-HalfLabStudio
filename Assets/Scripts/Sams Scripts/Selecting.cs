@@ -5,10 +5,7 @@ using UnityEngine;
 public class Selecting : MonoBehaviour
 {
     public int length = 100;
-    void Update()
-    {
-       // CheckClick();
-    }
+    
 
 
     void CheckClick()

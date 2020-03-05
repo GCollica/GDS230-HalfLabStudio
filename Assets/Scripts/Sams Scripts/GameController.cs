@@ -21,11 +21,7 @@ public class GameController : MonoBehaviour
         cashMoney = 4000000;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 
    /* public void SpawningTurretsGC()
     {
