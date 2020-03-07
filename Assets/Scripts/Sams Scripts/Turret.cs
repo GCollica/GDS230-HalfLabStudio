@@ -35,39 +35,15 @@ public class Turret : MonoBehaviour
     {
         
         gC = FindObjectOfType<GameController>();
-        //find main scene canvas
-        upgradeButtons[5] = GameObject.Find("Canvas1");
-        //unparent upgrade buttons from turret (so they dont follow rotation)
-        upgradeButtons[0].transform.SetParent(null);
-        upgradeButtons[1].transform.SetParent(null);
-        upgradeButtons[2].transform.SetParent(null);
-        upgradeButtons[3].transform.SetParent(null);
-        //reparent upgrade buttons to main scene canvas
-        upgradeButtons[0].transform.SetParent(upgradeButtons[5].transform);
-        upgradeButtons[1].transform.SetParent(upgradeButtons[5].transform);
-        upgradeButtons[2].transform.SetParent(upgradeButtons[5].transform);
-        upgradeButtons[3].transform.SetParent(upgradeButtons[5].transform);
-        //set upgrade buttons world location
-        upgradeButtons[0].transform.position = new Vector3(3, 2.5f, -1);
-        upgradeButtons[1].transform.position = new Vector3(6.5f, 2.5f, -1);
-        upgradeButtons[2].transform.position = new Vector3(3, -1.4f, -1);
-        upgradeButtons[3].transform.position = new Vector3(6.5f, -1.4f, -1);
+      
         
 
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        upgradeText[0].text = "Upgrade Damage     - " + damageIncreaseCost.ToString() + " Gold";
-        upgradeText[1].text = "Upgrade Range     - " + rangeIncreaseCost.ToString() + " Gold";
-        upgradeText[2].text = "Destroy Turret + " + sellTurret.ToString() + " Gold";
-    }
+   
 
-    private void FixedUpdate()
-    {
-        
-    }
+    
     
     //only deal damage to enemy objects if they are your target
     private void OnTriggerStay2D(Collider2D collision)
@@ -129,25 +105,22 @@ public class Turret : MonoBehaviour
     }
 
     public void IncreaseDamage() 
-    {
-        if (gC.cashMoney >= damageIncreaseCost)
-        {
+    { 
             damage += 0.25f;
             gC.cashMoney -= damageIncreaseCost;
             damageIncreaseCost += 100;
             sellTurret += 5;
-        }
+        
     }
 
     public void IncreaseRange() 
     {
-        if (gC.cashMoney >= rangeIncreaseCost)
-        {
+        
             cC2D.radius += 0.05f;
             gC.cashMoney -= rangeIncreaseCost;
             rangeIncreaseCost += 200;
             sellTurret += 10;
-        }
+        
     }
 
     public void DestroyTower() 

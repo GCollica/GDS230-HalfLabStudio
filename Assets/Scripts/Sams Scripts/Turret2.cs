@@ -27,31 +27,10 @@ public class Turret2 : MonoBehaviour
     void Start()
     {
         gC = FindObjectOfType<GameController>();
-        //find main scene canvas
-        upgradeWindows[6] = GameObject.Find("Canvas1");
-        //unparent upgrade buttons from turret (so they wont follow rotation)
-        upgradeWindows[1].transform.SetParent(null);
-        upgradeWindows[2].transform.SetParent(null);
-        upgradeWindows[3].transform.SetParent(null);
-        upgradeWindows[4].transform.SetParent(null);
-        //reparent upgrade buttons to main scene canvas
-        upgradeWindows[1].transform.SetParent(upgradeWindows[6].transform);
-        upgradeWindows[2].transform.SetParent(upgradeWindows[6].transform);
-        upgradeWindows[3].transform.SetParent(upgradeWindows[6].transform);
-        upgradeWindows[4].transform.SetParent(upgradeWindows[6].transform);
-        //set upgrade buttons world location
-        upgradeWindows[1].transform.position = new Vector3(3, 2.5f, -1);
-        upgradeWindows[2].transform.position = new Vector3(6.5f, 2.5f, -1);
-        upgradeWindows[4].transform.position = new Vector3(3, -1.4f, -1);
-        upgradeWindows[3].transform.position = new Vector3(6.5f, -1.4f, -1);
+
     }
 
-    private void Update()
-    {
-        upgradeText[0].text = "Upgrade Damage - " + upgradeDamage.ToString() + " Gold";
-        upgradeText[1].text = "Upgrade Range - " + upgradeRange.ToString() + " Gold";
-        upgradeText[3].text = "Destroy Turret + " + sellTurret.ToString() + " Gold";
-    }
+  
 
     public void OpenUpgradeWindow()
     {
