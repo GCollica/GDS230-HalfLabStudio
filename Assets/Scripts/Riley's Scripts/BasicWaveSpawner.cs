@@ -8,6 +8,8 @@ public class BasicWaveSpawner : MonoBehaviour
     public Transform leftEnemyPrefab;
     public Transform rightEnemyPrefab;
 
+    public Vector3 rightEnemyOffset;
+
     public Transform spawnPoint;
 
     public float waveCountdown = 5f;
@@ -27,7 +29,7 @@ public class BasicWaveSpawner : MonoBehaviour
 
         gameStartTimer -= Time.deltaTime;
 
-        gameStartTimer -= Mathf.Clamp(gameStartTimer, 0f, Mathf.Infinity);
+        gameStartTimer = Mathf.Clamp(gameStartTimer, 0f, Mathf.Infinity);
 
         waveCountdownText.text = string.Format("{0:00.00}", gameStartTimer);
     }
@@ -39,14 +41,14 @@ public class BasicWaveSpawner : MonoBehaviour
         for (int i = 0; i < waveIndex; i++)
         {
             SpawnEnemy();
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.3f);
         }
     }
 
     void SpawnEnemy()
     {
         Instantiate(leftEnemyPrefab, spawnPoint.position, spawnPoint.rotation);
-        //Instantiate(rightEnemyPrefab, spawnPoint.position, spawnPoint.rotation);
+        Instantiate(rightEnemyPrefab, spawnPoint.position + rightEnemyOffset, spawnPoint.rotation);
     }
 
 }

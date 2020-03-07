@@ -741,6 +741,7 @@ MonoBehaviour:
     type: 3}
   rightEnemyPrefab: {fileID: 5477876673659567538, guid: 78329d0e038a73745984d596f0ab48bf,
     type: 3}
+  rightEnemyOffset: {x: 0, y: 0.25, z: 0}
   spawnPoint: {fileID: 1195825182}
   waveCountdown: 5
   waveCountdownText: {fileID: 1770855614}
