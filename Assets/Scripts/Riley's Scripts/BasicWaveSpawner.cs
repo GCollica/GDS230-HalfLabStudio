@@ -8,6 +8,8 @@ public class BasicWaveSpawner : MonoBehaviour
     public Transform leftEnemyPrefab;
     public Transform rightEnemyPrefab;
 
+    public static int EnemiesAlive = 0;
+
     public Vector3 rightEnemyOffset;
 
     public Transform spawnPoint;
@@ -48,7 +50,10 @@ public class BasicWaveSpawner : MonoBehaviour
     void SpawnEnemy()
     {
         Instantiate(leftEnemyPrefab, spawnPoint.position, spawnPoint.rotation);
+        EnemiesAlive++;
+
         Instantiate(rightEnemyPrefab, spawnPoint.position + rightEnemyOffset, spawnPoint.rotation);
+        EnemiesAlive++;
     }
 
 }
