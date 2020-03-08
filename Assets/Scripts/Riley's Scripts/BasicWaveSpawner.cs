@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class BasicWaveSpawner : MonoBehaviour
 {
+    public static int EnemiesAlive = 0;
+
     public Transform leftEnemyPrefab;
     public Transform rightEnemyPrefab;
 
@@ -48,7 +50,10 @@ public class BasicWaveSpawner : MonoBehaviour
     void SpawnEnemy()
     {
         Instantiate(leftEnemyPrefab, spawnPoint.position, spawnPoint.rotation);
+        EnemiesAlive++;
+
         Instantiate(rightEnemyPrefab, spawnPoint.position + rightEnemyOffset, spawnPoint.rotation);
+        EnemiesAlive++;
     }
 
 }
