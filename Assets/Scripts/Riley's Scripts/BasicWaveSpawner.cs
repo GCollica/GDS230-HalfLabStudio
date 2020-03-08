@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class BasicWaveSpawner : MonoBehaviour
 {
+    public static int EnemiesAlive = 0;
+
     public Transform leftEnemyPrefab;
     public Transform rightEnemyPrefab;
-
-    public static int EnemiesAlive = 0;
 
     public Vector3 rightEnemyOffset;
 
