@@ -11,7 +11,7 @@ public class Turret2 : MonoBehaviour
     
     public Transform enemy;
 
-    public float damage = 0.3f;
+    public float damage = 0.5f;
 
     public GameController gC;
 
@@ -47,7 +47,7 @@ public class Turret2 : MonoBehaviour
 
     public void UpgradeDamage()
     {
-        damage += 0.2f;
+        damage += 0.5f;
         gC.cashMoney -= upgradeDamage;
         upgradeDamage += 100;
         sellTurret += 10;

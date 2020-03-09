@@ -21,6 +21,8 @@ public class BasicWaveSpawner : MonoBehaviour
 
     private int waveIndex = 0;
 
+    public GameController gC;
+
     void Update()
     {
         if (gameStartTimer <= 0f)

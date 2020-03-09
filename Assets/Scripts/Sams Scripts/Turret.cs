@@ -19,7 +19,7 @@ public class Turret : MonoBehaviour
     //the transform of the enemy within range
     public Transform enemy;
 
-    public float damage = 0.75f;
+    public float damage = 1.25f;
     public int damageIncreaseCost = 100;
 
     public int sellTurret = 50;

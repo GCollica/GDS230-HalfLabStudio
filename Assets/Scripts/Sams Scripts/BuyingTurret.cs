@@ -5,4 +5,6 @@ using UnityEngine;
 public class BuyingTurret : MonoBehaviour
 {
     public GameObject[] purchaseTurretsButton;
+
+    public bool turretSpawned;
 }

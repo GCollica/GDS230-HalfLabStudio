@@ -19,6 +19,8 @@ public class ButtonScript : MonoBehaviour
     public GameObject[] turrets;
 
     public bool upgradingTurretsBool;
+
+    
     
     
    
@@ -85,11 +87,16 @@ public class ButtonScript : MonoBehaviour
         if (collider.gameObject.tag == "TurretZone" && gC.purchaseTurretWindow == false) 
         {
             buyingTurretScript = collider.gameObject.GetComponent<BuyingTurret>();
-            purchaseTurretButtons[0] = buyingTurretScript.purchaseTurretsButton[0];
-            purchaseTurretButtons[0].SetActive(true);
-            purchaseTurretButtons[1].SetActive(true);
+            if (buyingTurretScript.turretSpawned == false)
+            {
+                purchaseTurretButtons[0] = buyingTurretScript.purchaseTurretsButton[0];
+                purchaseTurretButtons[0].SetActive(true);
+                purchaseTurretButtons[1].SetActive(true);
 
-            gC.purchaseTurretWindow = true;
+                gC.purchaseTurretWindow = true;
+                //buyingTurretScript.turretSpawned = true;
+            }
+
         }
 
     }
@@ -98,23 +105,27 @@ public class ButtonScript : MonoBehaviour
     {
         if (gC.cashMoney >= 150)
         {
-            Instantiate(turrets[0], buyingTurretScript.transform.position, Quaternion.identity);
+            Instantiate(turrets[0], new Vector3(buyingTurretScript.transform.position.x, buyingTurretScript.transform.position.y, buyingTurretScript.transform.position.z -0.05f), Quaternion.identity);
             gC.cashMoney -= 150;
+            purchaseTurretButtons[0].SetActive(false);
             purchaseTurretButtons[1].SetActive(false);
             gC.purchaseTurretWindow = false;
-            Destroy(buyingTurretScript.gameObject);
+            buyingTurretScript.turretSpawned = true;
+            // Destroy(buyingTurretScript.gameObject);
         }
     }
 
     public void SpawnTurret2() 
     {
-        if (gC.cashMoney >= 250) 
+        if (gC.cashMoney >= 300) 
         {
-            Instantiate(turrets[1], buyingTurretScript.transform.position, Quaternion.identity);
-            gC.cashMoney -= 250;
+            Instantiate(turrets[1], new Vector3(buyingTurretScript.transform.position.x, buyingTurretScript.transform.position.y, buyingTurretScript.transform.position.z - 0.05f), Quaternion.identity);
+            gC.cashMoney -= 300;
+            purchaseTurretButtons[0].SetActive(false);
             purchaseTurretButtons[1].SetActive(false);
             gC.purchaseTurretWindow = false;
-            Destroy(buyingTurretScript.gameObject);
+            buyingTurretScript.turretSpawned = true;
+            // Destroy(buyingTurretScript.gameObject);
         }
     }
 
@@ -164,11 +175,12 @@ public class ButtonScript : MonoBehaviour
 
     public void DestroyTurret1() 
     {
-        //purchaseturretbuttons 2-4 will be the scripts reference to the turret objects
-        Instantiate(purchaseTurretButtons[2], turretScript.transform.position, Quaternion.identity);
+        
+        //Instantiate(purchaseTurretButtons[2], turretScript.transform.position, Quaternion.identity);
         gC.cashMoney += turretScript.sellTurret;
         CloseUpgradeWindow();
         Destroy(turretScript.gameObject);
+        buyingTurretScript.turretSpawned = false;
     }
 
     public void IncreaseTurret2Damage() 
@@ -189,11 +201,12 @@ public class ButtonScript : MonoBehaviour
 
     public void DestroyTurret2() 
     {
-        //purchaseturretbuttons 2-4 will be the scripts reference to the turret objects
-        Instantiate(purchaseTurretButtons[2], turret2Script.transform.position, Quaternion.identity);
+        
+       // Instantiate(purchaseTurretButtons[2], turret2Script.transform.position, Quaternion.identity);
         gC.cashMoney += turret2Script.sellTurret;
         CloseUpgradeWindow();
         Destroy(turret2Script.gameObject);
+        buyingTurretScript.turretSpawned = false;
     }
 
 
