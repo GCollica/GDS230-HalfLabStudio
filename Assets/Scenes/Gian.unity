@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 124388543}
   - component: {fileID: 124388544}
   m_Layer: 0
-  m_Name: SyringeTower-Sheet_0 (2)
+  m_Name: SyringeTower(1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -473,7 +473,7 @@ GameObject:
   - component: {fileID: 472442949}
   - component: {fileID: 472442948}
   m_Layer: 0
-  m_Name: SpinnerTower-Sheet_0
+  m_Name: SpinnerTower(0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1215,7 +1215,7 @@ GameObject:
   - component: {fileID: 1302860056}
   - component: {fileID: 1302860057}
   m_Layer: 0
-  m_Name: SyringeTower-Sheet_0 (1)
+  m_Name: SyringeTower(0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1483,7 +1483,7 @@ GameObject:
   - component: {fileID: 2050209611}
   - component: {fileID: 2050209610}
   m_Layer: 0
-  m_Name: SpinnerTower-Sheet_0 (1)
+  m_Name: SpinnerTower(1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
