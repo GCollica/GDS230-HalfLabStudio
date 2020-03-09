@@ -499,12 +499,12 @@ PrefabInstance:
     - target: {fileID: 2848093200321873856, guid: c40bc0e0684edb7488ab3cee67b2cb2d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 473
+      value: -34147
       objectReference: {fileID: 0}
     - target: {fileID: 2848093200321873856, guid: c40bc0e0684edb7488ab3cee67b2cb2d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 330
+      value: -1693
       objectReference: {fileID: 0}
     - target: {fileID: 2848093200321873856, guid: c40bc0e0684edb7488ab3cee67b2cb2d,
         type: 3}
@@ -1358,15 +1358,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8411966550319958961, guid: 6025f60bc8d6eba479a2e4be461631f5,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8019526232928690259, guid: 6025f60bc8d6eba479a2e4be461631f5,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411966550319958961, guid: 6025f60bc8d6eba479a2e4be461631f5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6025f60bc8d6eba479a2e4be461631f5, type: 3}
@@ -2355,6 +2355,56 @@ PrefabInstance:
       propertyPath: m_Name
       value: FollowMouse
       objectReference: {fileID: 0}
+    - target: {fileID: 9080273740845076252, guid: 8a8053650b6edc44bbc828659b7717b7,
+        type: 3}
+      propertyPath: gC
+      value: 
+      objectReference: {fileID: 134282133}
+    - target: {fileID: 9080273740845076252, guid: 8a8053650b6edc44bbc828659b7717b7,
+        type: 3}
+      propertyPath: UpgradingTurretsObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 1360347879}
+    - target: {fileID: 9080273740845076252, guid: 8a8053650b6edc44bbc828659b7717b7,
+        type: 3}
+      propertyPath: UpgradingTurretsObjects.Array.data[3]
+      value: 
+      objectReference: {fileID: 435420937}
+    - target: {fileID: 9080273740845076252, guid: 8a8053650b6edc44bbc828659b7717b7,
+        type: 3}
+      propertyPath: upgradesText.Array.data[0]
+      value: 
+      objectReference: {fileID: 10869857}
+    - target: {fileID: 9080273740845076252, guid: 8a8053650b6edc44bbc828659b7717b7,
+        type: 3}
+      propertyPath: upgradesText.Array.data[1]
+      value: 
+      objectReference: {fileID: 814578145}
+    - target: {fileID: 9080273740845076252, guid: 8a8053650b6edc44bbc828659b7717b7,
+        type: 3}
+      propertyPath: upgradesText.Array.data[2]
+      value: 
+      objectReference: {fileID: 68350212}
+    - target: {fileID: 9080273740845076252, guid: 8a8053650b6edc44bbc828659b7717b7,
+        type: 3}
+      propertyPath: upgradesText.Array.data[3]
+      value: 
+      objectReference: {fileID: 486784227}
+    - target: {fileID: 9080273740845076252, guid: 8a8053650b6edc44bbc828659b7717b7,
+        type: 3}
+      propertyPath: upgradesText.Array.data[4]
+      value: 
+      objectReference: {fileID: 1220739108}
+    - target: {fileID: 9080273740845076252, guid: 8a8053650b6edc44bbc828659b7717b7,
+        type: 3}
+      propertyPath: upgradesText.Array.data[5]
+      value: 
+      objectReference: {fileID: 299564303}
+    - target: {fileID: 9080273740845076252, guid: 8a8053650b6edc44bbc828659b7717b7,
+        type: 3}
+      propertyPath: purchaseTurretButtons.Array.data[1]
+      value: 
+      objectReference: {fileID: 1990160024}
     - target: {fileID: 9080273740845076255, guid: 8a8053650b6edc44bbc828659b7717b7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2410,56 +2460,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9080273740845076252, guid: 8a8053650b6edc44bbc828659b7717b7,
-        type: 3}
-      propertyPath: gC
-      value: 
-      objectReference: {fileID: 134282133}
-    - target: {fileID: 9080273740845076252, guid: 8a8053650b6edc44bbc828659b7717b7,
-        type: 3}
-      propertyPath: UpgradingTurretsObjects.Array.data[1]
-      value: 
-      objectReference: {fileID: 1360347879}
-    - target: {fileID: 9080273740845076252, guid: 8a8053650b6edc44bbc828659b7717b7,
-        type: 3}
-      propertyPath: UpgradingTurretsObjects.Array.data[3]
-      value: 
-      objectReference: {fileID: 435420937}
-    - target: {fileID: 9080273740845076252, guid: 8a8053650b6edc44bbc828659b7717b7,
-        type: 3}
-      propertyPath: upgradesText.Array.data[0]
-      value: 
-      objectReference: {fileID: 10869857}
-    - target: {fileID: 9080273740845076252, guid: 8a8053650b6edc44bbc828659b7717b7,
-        type: 3}
-      propertyPath: upgradesText.Array.data[1]
-      value: 
-      objectReference: {fileID: 814578145}
-    - target: {fileID: 9080273740845076252, guid: 8a8053650b6edc44bbc828659b7717b7,
-        type: 3}
-      propertyPath: upgradesText.Array.data[2]
-      value: 
-      objectReference: {fileID: 68350212}
-    - target: {fileID: 9080273740845076252, guid: 8a8053650b6edc44bbc828659b7717b7,
-        type: 3}
-      propertyPath: upgradesText.Array.data[3]
-      value: 
-      objectReference: {fileID: 486784227}
-    - target: {fileID: 9080273740845076252, guid: 8a8053650b6edc44bbc828659b7717b7,
-        type: 3}
-      propertyPath: upgradesText.Array.data[4]
-      value: 
-      objectReference: {fileID: 1220739108}
-    - target: {fileID: 9080273740845076252, guid: 8a8053650b6edc44bbc828659b7717b7,
-        type: 3}
-      propertyPath: upgradesText.Array.data[5]
-      value: 
-      objectReference: {fileID: 299564303}
-    - target: {fileID: 9080273740845076252, guid: 8a8053650b6edc44bbc828659b7717b7,
-        type: 3}
-      propertyPath: purchaseTurretButtons.Array.data[1]
-      value: 
-      objectReference: {fileID: 1990160024}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a8053650b6edc44bbc828659b7717b7, type: 3}
 --- !u!4 &1908682035 stripped
