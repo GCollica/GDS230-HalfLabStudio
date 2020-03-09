@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PillProjectileAnim
+  m_Name: PillProjectile64Anim
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -54,6 +54,9 @@ AnimationClip:
     - time: 0.9166667
       value: {fileID: 2511829726183550827, guid: 4d5ad06c20e1f40448cc6e7123d55d3f,
         type: 3}
+    - time: 1
+      value: {fileID: -1884559222634696804, guid: 4d5ad06c20e1f40448cc6e7123d55d3f,
+        type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -85,12 +88,13 @@ AnimationClip:
     - {fileID: -2521419356777297881, guid: 4d5ad06c20e1f40448cc6e7123d55d3f, type: 3}
     - {fileID: 1537387223545035394, guid: 4d5ad06c20e1f40448cc6e7123d55d3f, type: 3}
     - {fileID: 2511829726183550827, guid: 4d5ad06c20e1f40448cc6e7123d55d3f, type: 3}
+    - {fileID: -1884559222634696804, guid: 4d5ad06c20e1f40448cc6e7123d55d3f, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1
+    m_StopTime: 1.0833334
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
