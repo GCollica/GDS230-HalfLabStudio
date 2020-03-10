@@ -14,14 +14,16 @@ public class BasicWaveSpawner : MonoBehaviour
 
     public Transform spawnPoint;
 
-    public float waveCountdown = 5f;
-    private float gameStartTimer = 2f;
+    public float waveCountdown = 1f;
+    private float gameStartTimer = 1f;
 
     public Text waveCountdownText;
 
-    private int waveIndex = 0;
+    public int waveIndex = 0;
 
     public GameController gC;
+
+    public float timeBetweenSpawns;
 
     void Update()
     {
@@ -40,12 +42,15 @@ public class BasicWaveSpawner : MonoBehaviour
 
     IEnumerator WaveSpawn()
     {
-        waveIndex++;
-
-        for (int i = 0; i < waveIndex; i++)
+        if (waveIndex < 10)
         {
-            SpawnEnemy();
-            yield return new WaitForSeconds(0.3f);
+            waveIndex++;
+
+            for (int i = 0; i < waveIndex; i++)
+            {
+                SpawnEnemy();
+                yield return new WaitForSeconds(timeBetweenSpawns);
+            }
         }
     }
 
@@ -57,5 +62,4 @@ public class BasicWaveSpawner : MonoBehaviour
         Instantiate(rightEnemyPrefab, spawnPoint.position + rightEnemyOffset, spawnPoint.rotation);
         EnemiesAlive++;
     }
-
 }

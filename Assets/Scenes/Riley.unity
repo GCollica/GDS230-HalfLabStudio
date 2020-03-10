@@ -195,7 +195,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &206741059
 Transform:
   m_ObjectHideFlags: 0
@@ -204,8 +204,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 206741058}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.25}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -0.31688, z: -0.25}
+  m_LocalScale: {x: 0.36623, y: 0.36623, z: 0.36623}
   m_Children:
   - {fileID: 946474330}
   - {fileID: 1154860740}
@@ -741,10 +741,13 @@ MonoBehaviour:
     type: 3}
   rightEnemyPrefab: {fileID: 5477876673659567538, guid: 78329d0e038a73745984d596f0ab48bf,
     type: 3}
-  rightEnemyOffset: {x: 0, y: 0.25, z: 0}
+  rightEnemyOffset: {x: 0, y: 0.7, z: 0}
   spawnPoint: {fileID: 1195825182}
-  waveCountdown: 5
+  waveCountdown: 2
   waveCountdownText: {fileID: 1770855614}
+  waveIndex: 0
+  gC: {fileID: 0}
+  timeBetweenSpawns: 1.25
 --- !u!1 &946474329
 GameObject:
   m_ObjectHideFlags: 0
@@ -871,7 +874,7 @@ Transform:
   m_GameObject: {fileID: 1136824369}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1419775, y: 0.15879063, z: 0.14945}
+  m_LocalScale: {x: 0.9076338, y: 1.0151167, z: 0.955404}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
