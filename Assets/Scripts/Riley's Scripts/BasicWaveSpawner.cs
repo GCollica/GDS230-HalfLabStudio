@@ -5,24 +5,21 @@ using UnityEngine;
 
 public class BasicWaveSpawner : MonoBehaviour
 {
-    public static int EnemiesAlive = 0;
-
-    public Transform leftEnemyPrefab;
-    public Transform rightEnemyPrefab;
-
-    public Vector3 rightEnemyOffset;
-
-    public Transform spawnPoint;
-
-    public float waveCountdown = 1f;
-    private float gameStartTimer = 1f;
-
     public Text waveCountdownText;
-
-    public int waveIndex = 0;
 
     public GameController gC;
 
+    [Header("Enemy Attributes")]
+    public Transform leftEnemyPrefab;
+    public Transform rightEnemyPrefab;
+    public Vector3 rightEnemyOffset;
+    public Transform spawnPoint;
+
+    [Header("Wave Attributes")]
+    public float waveCountdown = 10f;
+    private float gameStartTimer = 10f;
+    public int waveIndex = 0;
+    public int waveNumber;
     public float timeBetweenSpawns;
 
     void Update()
@@ -42,7 +39,7 @@ public class BasicWaveSpawner : MonoBehaviour
 
     IEnumerator WaveSpawn()
     {
-        if (waveIndex < 10)
+        if (waveIndex < waveNumber)
         {
             waveIndex++;
 
@@ -57,9 +54,6 @@ public class BasicWaveSpawner : MonoBehaviour
     void SpawnEnemy()
     {
         Instantiate(leftEnemyPrefab, spawnPoint.position, spawnPoint.rotation);
-        EnemiesAlive++;
-
         Instantiate(rightEnemyPrefab, spawnPoint.position + rightEnemyOffset, spawnPoint.rotation);
-        EnemiesAlive++;
     }
 }
