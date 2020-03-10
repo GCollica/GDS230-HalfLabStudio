@@ -15,7 +15,11 @@ public class Turret : MonoBehaviour
     public GameController gC;
 
     public GameObject towerSpawnPoint;
-    
+
+    public GameObject projectile;
+    public GameObject firePoint;
+    public float fireTimer = 3f;
+
     //the transform of the enemy within range
     public Transform enemy;
 
@@ -40,7 +44,12 @@ public class Turret : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    void Update()
+    {
+        Fire();
+    }
+
+
    
 
     
@@ -58,7 +67,7 @@ public class Turret : MonoBehaviour
             
            
             Turn();
-            
+            Fire();
         }
         
     }
@@ -81,19 +90,19 @@ public class Turret : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, turnSpeed * Time.deltaTime);
     }
 
-    public void OpenUpgradeWindow()
+    void Fire()
     {
-        if (gC.upgradeWindow == false)
+        fireTimer -= 0.5f * Time.deltaTime;
+        if (fireTimer <= 0f)
         {
-            upgradeButtons[0].SetActive(true);
-            upgradeButtons[1].SetActive(true);
-            upgradeButtons[2].SetActive(true);
-            upgradeButtons[3].SetActive(true);
-            upgradeButtons[4].SetActive(true);
-            gC.upgradeWindow = true;
+            fireTimer = 3f;
+            Instantiate(projectile, firePoint.transform.position, transform.rotation);
         }
+        else { Debug.Log("NotFiring"); }
+        
         
     }
+    
     public void CloseUpgradeWindow() 
     {
         upgradeButtons[0].SetActive(false);
