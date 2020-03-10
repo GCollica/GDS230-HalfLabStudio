@@ -59,7 +59,7 @@ public class ButtonScript : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D collider)
     {
-        if (collider.gameObject.name == "Turret1Check" && upgradingTurretsBool == false)
+        if (collider.gameObject.name == "Turret1Check" && upgradingTurretsBool == false && gC.purchaseTurretWindow == false)
         {
             turretScript = collider.gameObject.GetComponentInParent<Turret>();
           
@@ -72,7 +72,7 @@ public class ButtonScript : MonoBehaviour
 
         }
 
-        if (collider.gameObject.name == "Turret2Check" && upgradingTurretsBool == false)
+        if (collider.gameObject.name == "Turret2Check" && upgradingTurretsBool == false && gC.purchaseTurretWindow == false)
         {
             turret2Script = collider.gameObject.GetComponentInParent<Turret2>();
 
@@ -84,7 +84,7 @@ public class ButtonScript : MonoBehaviour
             upgradingTurretsBool = true;
         }
 
-        if (collider.gameObject.tag == "TurretZone" && gC.purchaseTurretWindow == false) 
+        if (collider.gameObject.tag == "TurretZone" && gC.purchaseTurretWindow == false && !upgradingTurretsBool) 
         {
             buyingTurretScript = collider.gameObject.GetComponent<BuyingTurret>();
             if (buyingTurretScript.turretSpawned == false)
@@ -180,6 +180,7 @@ public class ButtonScript : MonoBehaviour
         gC.cashMoney += turretScript.sellTurret;
         CloseUpgradeWindow();
         Destroy(turretScript.gameObject);
+        upgradingTurretsBool = false;
         buyingTurretScript.turretSpawned = false;
     }
 
@@ -205,6 +206,7 @@ public class ButtonScript : MonoBehaviour
        // Instantiate(purchaseTurretButtons[2], turret2Script.transform.position, Quaternion.identity);
         gC.cashMoney += turret2Script.sellTurret;
         CloseUpgradeWindow();
+        upgradingTurretsBool = false;
         Destroy(turret2Script.gameObject);
         buyingTurretScript.turretSpawned = false;
     }
