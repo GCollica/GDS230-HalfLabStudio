@@ -46,7 +46,7 @@ public class Turret : MonoBehaviour
 
     void Update()
     {
-        Fire();
+        fireTimer -= 0.5f * Time.deltaTime;
     }
 
 
@@ -92,7 +92,7 @@ public class Turret : MonoBehaviour
 
     void Fire()
     {
-        fireTimer -= 0.5f * Time.deltaTime;
+       
         if (fireTimer <= 0f)
         {
             fireTimer = 3f;
