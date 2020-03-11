@@ -12,11 +12,14 @@ public class RightEnemies : MonoBehaviour
     public Turret turret;
     public Turret2 turret2;
     public GameController gC;
+    
 
     void Start()
     {
         target = RightWaypoints.rightWaypoints[0];
-       // gC = GameObject.Find("GameController").GetComponent<GameController>();
+        gC = GameObject.Find("GameController").GetComponent<GameController>();
+        
+        gameObject.transform.SetParent(GameObject.Find("EnemyParent").transform);
     }
 
     void Update()
@@ -49,27 +52,16 @@ public class RightEnemies : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.tag == "GameController")
-        {
-            gC = collision.gameObject.GetComponent<GameController>();
-        }
+        
         if (collision.tag == "Turret")
         {
             //reset the turret to the one youre entering
             turret = collision.gameObject.GetComponent<Turret>();
 
 
-            //check if the turrets current enemy is this gameobject
-            //if it is take away health
-            //if (turret.enemy == this.gameObject.transform)
-            //{
-            //    health -= turret.damage * Time.deltaTime;
-            //}
+            
         }
-        if (collision.tag == "EnemySpawn")
-        {
-            gameObject.transform.SetParent(collision.transform);
-        }
+        
         if (collision.tag == "EnemyExit")
         {
             gC.health -= 1;
@@ -81,17 +73,19 @@ public class RightEnemies : MonoBehaviour
             turret2 = collision.gameObject.GetComponent<Turret2>();
         }
 
-        if (collision.gameObject.name == "SecondCollider")
-        {
-
-            health -= turret2.damage * Time.deltaTime;
-        }
+        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.name == "T1Projectile(Clone)")
         {
             health -= turret.damage;
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.name == "T2Projectile(Clone)")
+        {
+            health -= turret2.damage;
             Destroy(collision.gameObject);
         }
     }

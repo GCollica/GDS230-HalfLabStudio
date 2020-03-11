@@ -9,9 +9,13 @@ public class Turret2 : MonoBehaviour
     public GameObject[] upgradeWindows;
     public Text[] upgradeText;
     
-    public Transform enemy;
+    public GameObject enemy;
 
-    public float damage = 0.5f;
+    public float damage = 0.1f;
+
+    public GameObject projectile;
+    public GameObject[] firepoints;
+    public float fireTimer = 1.5f;
 
     public GameController gC;
 
@@ -30,7 +34,10 @@ public class Turret2 : MonoBehaviour
 
     }
 
-  
+    private void Update()
+    {
+        fireTimer -= 0.8f * Time.deltaTime;
+    }
 
     public void OpenUpgradeWindow()
     {
@@ -77,6 +84,24 @@ public class Turret2 : MonoBehaviour
         Destroy(gameObject);
     }
 
+    void Fire() 
+    {
+        if (fireTimer <= 0f)
+        {
+            Instantiate(projectile, firepoints[0].transform.position, firepoints[0].transform.rotation);
+            Instantiate(projectile, firepoints[0].transform.position, firepoints[0].transform.rotation);
+            Instantiate(projectile, firepoints[1].transform.position, firepoints[1].transform.rotation);
+            Instantiate(projectile, firepoints[1].transform.position, firepoints[1].transform.rotation);
+            Instantiate(projectile, firepoints[2].transform.position, firepoints[2].transform.rotation);
+            Instantiate(projectile, firepoints[2].transform.position, firepoints[2].transform.rotation);
+            Instantiate(projectile, firepoints[3].transform.position, firepoints[3].transform.rotation);
+            Instantiate(projectile, firepoints[3].transform.position, firepoints[3].transform.rotation);
+            Instantiate(projectile, firepoints[4].transform.position, firepoints[4].transform.rotation);
+            Instantiate(projectile, firepoints[4].transform.position, firepoints[4].transform.rotation);
+            fireTimer = 3f;
+        }
+
+    }
 
     public void CloseUpgradeWindow()
     {
@@ -92,7 +117,7 @@ public class Turret2 : MonoBehaviour
 
     void Turn()
     {
-        Vector2 direction = enemy.position - transform.position;
+        Vector2 direction = enemy.transform.position - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 10 * Time.deltaTime);
@@ -104,9 +129,11 @@ public class Turret2 : MonoBehaviour
         {
             if (!enemy)
             {
-                enemy = collision.gameObject.transform;
+                
+                enemy = collision.gameObject;
             }
             Turn();
+            Fire();
         }
     }
 
@@ -115,7 +142,7 @@ public class Turret2 : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         //if enemy leaves your range stop targeting them
-        if (collision.tag == "Enemy")
+        if (collision.gameObject == enemy)
         {
             enemy = null;
         }

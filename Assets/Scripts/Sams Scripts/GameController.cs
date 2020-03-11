@@ -28,7 +28,8 @@ public class GameController : MonoBehaviour
     void Start()
     {
         mouse = new Vector3(transform.position.x, transform.position.y, 10);
-        cashMoney = 400;
+        cashMoney = 4000000;
+        health = 10000;
     }
 
     private void Update()

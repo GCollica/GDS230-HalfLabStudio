@@ -59,7 +59,7 @@ public class ButtonScript : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D collider)
     {
-        if (collider.gameObject.name == "Turret1Check" && upgradingTurretsBool == false && gC.purchaseTurretWindow == false)
+        if (Input.GetMouseButtonUp(0) && collider.gameObject.name == "Turret1Check" && upgradingTurretsBool == false && gC.purchaseTurretWindow == false)
         {
             turretScript = collider.gameObject.GetComponentInParent<Turret>();
           
@@ -72,7 +72,7 @@ public class ButtonScript : MonoBehaviour
 
         }
 
-        if (collider.gameObject.name == "Turret2Check" && upgradingTurretsBool == false && gC.purchaseTurretWindow == false)
+        if (Input.GetMouseButtonUp(0) && collider.gameObject.name == "Turret2Check" && upgradingTurretsBool == false && gC.purchaseTurretWindow == false)
         {
             turret2Script = collider.gameObject.GetComponentInParent<Turret2>();
 
@@ -84,7 +84,7 @@ public class ButtonScript : MonoBehaviour
             upgradingTurretsBool = true;
         }
 
-        if (collider.gameObject.tag == "TurretZone" && gC.purchaseTurretWindow == false && !upgradingTurretsBool) 
+        if (Input.GetMouseButtonUp(0) && collider.gameObject.tag == "TurretZone" && gC.purchaseTurretWindow == false && !upgradingTurretsBool) 
         {
             buyingTurretScript = collider.gameObject.GetComponent<BuyingTurret>();
             if (buyingTurretScript.turretSpawned == false)

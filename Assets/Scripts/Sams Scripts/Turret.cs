@@ -14,6 +14,8 @@ public class Turret : MonoBehaviour
 
     public GameController gC;
 
+    //bool to check if the enemy target is set currently if not resets the target
+    public bool enemySet;
     public GameObject towerSpawnPoint;
 
     public GameObject projectile;
@@ -21,7 +23,7 @@ public class Turret : MonoBehaviour
     public float fireTimer = 3f;
 
     //the transform of the enemy within range
-    public Transform enemy;
+    public GameObject enemy;
 
     public float damage = 2.5f;
     public int damageIncreaseCost = 100;
@@ -47,7 +49,8 @@ public class Turret : MonoBehaviour
     void Update()
     {
         fireTimer -= 0.8f * Time.deltaTime;
-  
+        
+
     }
 
 
@@ -61,15 +64,16 @@ public class Turret : MonoBehaviour
         if (collision.tag == "Enemy")
         {
             //if enemy is not yet set, set it to the one that is currently inside your collider
-            if (!enemy)
+            if (enemy == null)
             {
-                fireTimer = 3f;
-                enemy = collision.gameObject.transform;
+                enemy = collision.gameObject;
+                
             }
-            
-           
+
+
             Turn();
             Fire();
+
         }
         
     }
@@ -77,7 +81,7 @@ public class Turret : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         //if enemy leaves your range stop targeting them
-        if (collision.tag == "Enemy")
+        if (collision.gameObject == enemy)
         {
             enemy = null;
         }
@@ -86,7 +90,7 @@ public class Turret : MonoBehaviour
     //follow the enemy target
     void Turn()
     {
-        Vector2 direction = enemy.position - transform.position;
+        Vector2 direction = enemy.transform.position - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, turnSpeed * Time.deltaTime);

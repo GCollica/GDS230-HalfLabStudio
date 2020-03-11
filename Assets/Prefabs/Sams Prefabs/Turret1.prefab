@@ -109,6 +109,7 @@ MonoBehaviour:
   cC2D: {fileID: 1209650461054667133}
   rangeIncreaseCost: 200
   gC: {fileID: 0}
+  enemySet: 0
   towerSpawnPoint: {fileID: 9107190717353933932, guid: 6025f60bc8d6eba479a2e4be461631f5,
     type: 3}
   projectile: {fileID: 2070428980856779352, guid: 522401860252f0c448152da1d5cc0d1e,
