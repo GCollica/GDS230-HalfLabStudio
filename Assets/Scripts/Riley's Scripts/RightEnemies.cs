@@ -61,10 +61,10 @@ public class RightEnemies : MonoBehaviour
 
             //check if the turrets current enemy is this gameobject
             //if it is take away health
-            if (turret.enemy == this.gameObject.transform)
-            {
-                health -= turret.damage * Time.deltaTime;
-            }
+            //if (turret.enemy == this.gameObject.transform)
+            //{
+            //    health -= turret.damage * Time.deltaTime;
+            //}
         }
         if (collision.tag == "EnemySpawn")
         {
@@ -85,6 +85,14 @@ public class RightEnemies : MonoBehaviour
         {
 
             health -= turret2.damage * Time.deltaTime;
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.name == "T1Projectile(Clone)")
+        {
+            health -= turret.damage;
+            Destroy(collision.gameObject);
         }
     }
 

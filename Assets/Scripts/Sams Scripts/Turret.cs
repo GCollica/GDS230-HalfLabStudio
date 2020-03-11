@@ -46,15 +46,15 @@ public class Turret : MonoBehaviour
 
     void Update()
     {
-        fireTimer -= 0.5f * Time.deltaTime;
-        Fire();
+        fireTimer -= 0.8f * Time.deltaTime;
+  
     }
 
 
-   
 
     
-    
+
+
     //only deal damage to enemy objects if they are your target
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -63,6 +63,7 @@ public class Turret : MonoBehaviour
             //if enemy is not yet set, set it to the one that is currently inside your collider
             if (!enemy)
             {
+                fireTimer = 3f;
                 enemy = collision.gameObject.transform;
             }
             
