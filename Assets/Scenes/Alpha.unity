@@ -1413,15 +1413,15 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 1.75
       objectReference: {fileID: 0}
-    - target: {fileID: 8411966550319958961, guid: 6025f60bc8d6eba479a2e4be461631f5,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8019526232928690259, guid: 6025f60bc8d6eba479a2e4be461631f5,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411966550319958961, guid: 6025f60bc8d6eba479a2e4be461631f5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6025f60bc8d6eba479a2e4be461631f5, type: 3}
@@ -2031,10 +2031,10 @@ MonoBehaviour:
     type: 3}
   rightEnemyOffset: {x: 0, y: 0.7, z: 0}
   spawnPoint: {fileID: 647296740}
-  waveCountdown: 2
+  waveCountdown: 10
   waveIndex: 0
   waveNumber: 15
-  timeBetweenSpawns: 1.25
+  timeBetweenSpawns: 10
 --- !u!4 &1456734867
 Transform:
   m_ObjectHideFlags: 0
@@ -2795,6 +2795,36 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1940833078
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1940833079}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1940833079
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940833078}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.48, y: 4.06, z: -21.358398}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1990160024 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8154292735311316582, guid: 018f0907ac6c57e4eb4e147a312b7176,

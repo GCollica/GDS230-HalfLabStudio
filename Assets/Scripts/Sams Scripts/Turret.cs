@@ -23,7 +23,7 @@ public class Turret : MonoBehaviour
     //the transform of the enemy within range
     public Transform enemy;
 
-    public float damage = 1.25f;
+    public float damage = 2.5f;
     public int damageIncreaseCost = 100;
 
     public int sellTurret = 50;
@@ -47,6 +47,7 @@ public class Turret : MonoBehaviour
     void Update()
     {
         fireTimer -= 0.5f * Time.deltaTime;
+        Fire();
     }
 
 
@@ -92,13 +93,15 @@ public class Turret : MonoBehaviour
 
     void Fire()
     {
-       
+        
+
         if (fireTimer <= 0f)
         {
-            fireTimer = 3f;
             Instantiate(projectile, firePoint.transform.position, transform.rotation);
+            fireTimer = 3f;
         }
-        else { Debug.Log("NotFiring"); }
+        
+      
         
         
     }
