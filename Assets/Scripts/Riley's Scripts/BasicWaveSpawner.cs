@@ -9,8 +9,8 @@ public class BasicWaveSpawner : MonoBehaviour
 
     public GameController gC;
 
-    List<GameObject> Enemies;
-
+    public GameObject enemyParent;
+ 
     [Header("Enemy Attributes")]
     public Transform leftEnemyPrefab;
     public Transform rightEnemyPrefab;
@@ -55,8 +55,6 @@ public class BasicWaveSpawner : MonoBehaviour
 
     void SpawnEnemy()
     {
-       
-
         Instantiate(leftEnemyPrefab, spawnPoint.position, spawnPoint.rotation);
         Instantiate(rightEnemyPrefab, spawnPoint.position + rightEnemyOffset, spawnPoint.rotation);
     }
