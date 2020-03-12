@@ -29,7 +29,9 @@ public class Turret : MonoBehaviour
     public int damageIncreaseCost = 100;
 
     public int sellTurret = 50;
-    
+
+    public Animator anim;
+
     //the speed that the turret turns towards the enemy in range
     public float turnSpeed = 10f;
 
@@ -48,7 +50,7 @@ public class Turret : MonoBehaviour
 
     void Update()
     {
-        fireTimer -= 0.8f * Time.deltaTime;
+        
         
 
     }
@@ -98,12 +100,20 @@ public class Turret : MonoBehaviour
 
     void Fire()
     {
-        
+        fireTimer -= 0.8f * Time.deltaTime;
 
-        if (fireTimer <= 0f)
+        if (fireTimer <= 2f)
+        {
+            anim.SetBool("Fire", true);
+        }
+        if (fireTimer <= 0.25f)
         {
             Instantiate(projectile, firePoint.transform.position, transform.rotation);
             fireTimer = 3f;
+        }
+        if (fireTimer >= 2f)
+        {
+            anim.SetBool("Fire", false);
         }
         
       
