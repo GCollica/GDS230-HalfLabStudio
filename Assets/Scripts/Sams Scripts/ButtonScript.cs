@@ -8,6 +8,7 @@ public class ButtonScript : MonoBehaviour
 
     public Turret turretScript;
     public Turret2 turret2Script;
+    
     public BuyingTurret buyingTurretScript;
     public GameController gC;
 
@@ -18,6 +19,7 @@ public class ButtonScript : MonoBehaviour
 
     public GameObject[] turrets;
 
+    public GameObject turret3;
     public bool upgradingTurretsBool;
 
     public bool openWindow;
@@ -81,6 +83,7 @@ public class ButtonScript : MonoBehaviour
 
         }
 
+        //using turret2check so the range collider doesnt trigger
         if (collider.gameObject.name == "Turret2Check" && upgradingTurretsBool == false)
         {
             turret2Script = collider.gameObject.GetComponentInParent<Turret2>();
@@ -91,6 +94,17 @@ public class ButtonScript : MonoBehaviour
 
             UpgradingTurretsObjects[2].SetActive(true);
             UpgradingTurretsObjects[3].SetActive(true);
+
+            upgradingTurretsBool = true;
+        }
+        if (collider.gameObject.name == "Turret3Check" && upgradingTurretsBool == false)
+        {
+            turret3 = collider.gameObject.transform.parent.gameObject;
+
+            openWindow = true;
+
+            UpgradingTurretsObjects[4].SetActive(true);
+            UpgradingTurretsObjects[5].SetActive(true);
 
             upgradingTurretsBool = true;
         }
@@ -232,7 +246,7 @@ public class ButtonScript : MonoBehaviour
         CloseUpgradeWindow();
         upgradingTurretsBool = false;
         buyingTurretScript.turretSpawned = false;
-
+        Destroy(turret3);
     }
 
 }
