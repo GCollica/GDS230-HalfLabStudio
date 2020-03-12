@@ -107,7 +107,6 @@ public class ButtonScript : MonoBehaviour
                 openWindow = true;
 
                 gC.purchaseTurretWindow = true;
-                //buyingTurretScript.turretSpawned = true;
             }
 
         }
@@ -124,7 +123,6 @@ public class ButtonScript : MonoBehaviour
             purchaseTurretButtons[1].SetActive(false);
             gC.purchaseTurretWindow = false;
             buyingTurretScript.turretSpawned = true;
-            // Destroy(buyingTurretScript.gameObject);
         }
     }
 
@@ -138,7 +136,6 @@ public class ButtonScript : MonoBehaviour
             purchaseTurretButtons[1].SetActive(false);
             gC.purchaseTurretWindow = false;
             buyingTurretScript.turretSpawned = true;
-            // Destroy(buyingTurretScript.gameObject);
         }
     }
 
@@ -195,13 +192,11 @@ public class ButtonScript : MonoBehaviour
 
     public void DestroyTurret1() 
     {
-        
-        //Instantiate(purchaseTurretButtons[2], turretScript.transform.position, Quaternion.identity);
         gC.cashMoney += turretScript.sellTurret;
         CloseUpgradeWindow();
-        Destroy(turretScript.gameObject);
         upgradingTurretsBool = false;
         buyingTurretScript.turretSpawned = false;
+        Destroy(turretScript.gameObject);
     }
 
     public void IncreaseTurret2Damage() 
@@ -224,14 +219,20 @@ public class ButtonScript : MonoBehaviour
 
     public void DestroyTurret2() 
     {
-        
-       // Instantiate(purchaseTurretButtons[2], turret2Script.transform.position, Quaternion.identity);
         gC.cashMoney += turret2Script.sellTurret;
         CloseUpgradeWindow();
         upgradingTurretsBool = false;
-        Destroy(turret2Script.gameObject);
         buyingTurretScript.turretSpawned = false;
+        Destroy(turret2Script.gameObject);
     }
 
+    public void DestroyTurret3()
+    {
+        gC.cashMoney += 250;
+        CloseUpgradeWindow();
+        upgradingTurretsBool = false;
+        buyingTurretScript.turretSpawned = false;
+
+    }
 
 }
