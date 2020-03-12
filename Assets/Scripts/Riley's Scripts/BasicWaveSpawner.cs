@@ -55,7 +55,7 @@ public class BasicWaveSpawner : MonoBehaviour
 
     void SpawnEnemy()
     {
-        Enemies.Add((GameObject)Instantiate(leftEnemyPrefab, spawnPoint.position, spawnPoint.rotation);
+       
 
         Instantiate(leftEnemyPrefab, spawnPoint.position, spawnPoint.rotation);
         Instantiate(rightEnemyPrefab, spawnPoint.position + rightEnemyOffset, spawnPoint.rotation);
