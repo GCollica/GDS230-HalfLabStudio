@@ -63,7 +63,7 @@ public class Turret2 : MonoBehaviour
 
     public void UpgradeRange()
     {
-        cCol.radius += 0.05f;
+        cCol.radius += 0.5f;
         gC.cashMoney -= upgradeRange;
         upgradeRange += 150;
         col.size += new Vector2(0.5f, 0.5f);

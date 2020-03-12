@@ -143,7 +143,7 @@ public class Turret : MonoBehaviour
     public void IncreaseRange() 
     {
         
-            cC2D.radius += 0.05f;
+            cC2D.radius += 0.5f;
             gC.cashMoney -= rangeIncreaseCost;
             rangeIncreaseCost += 200;
             sellTurret += 10;

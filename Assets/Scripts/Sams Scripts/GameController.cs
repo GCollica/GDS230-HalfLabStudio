@@ -17,9 +17,14 @@ public class GameController : MonoBehaviour
     public bool upgradeWindow = false;
     public bool purchaseTurretWindow = false;
     public GameObject enemyParent;
+    public GameObject enemyParentPrefab;
+    public GameObject ePP;
+    public GameObject WinButtons;
+    public GameObject pause;
 
     public GameObject loseObjects;
 
+    
 
 
     //these two scripts are stored for the end game scenario
@@ -30,8 +35,8 @@ public class GameController : MonoBehaviour
     void Start()
     {
         mouse = new Vector3(transform.position.x, transform.position.y, 10);
-        cashMoney = 4000000;
-        health = 10000;
+        cashMoney = 400;
+        health = 10;
     }
 
     private void Update()
@@ -50,7 +55,24 @@ public class GameController : MonoBehaviour
             spawner.gameObject.SetActive(false);
             bS.gameObject.SetActive(false);
             loseObjects.SetActive(true);
+            
         }
+    }
+
+    public void PauseGame() 
+    {
+        enemyParent.SetActive(false);
+        spawner.gameObject.SetActive(false);
+        bS.gameObject.SetActive(false);
+        pause.SetActive(true);
+    }
+
+    public void UnPauseGame() 
+    {
+        enemyParent.SetActive(true);
+        spawner.gameObject.SetActive(true);
+        bS.gameObject.SetActive(true);
+        pause.SetActive(false);
     }
 
     public void AdWatched()
@@ -62,7 +84,11 @@ public class GameController : MonoBehaviour
         loseObjects.SetActive(false);
     }
 
-   
+    public void Win() 
+    {
+        WinButtons.SetActive(true);
+        bS.gameObject.SetActive(false);
+    }
 
    
 

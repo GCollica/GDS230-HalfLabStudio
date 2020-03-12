@@ -8,7 +8,8 @@ public class ButtonScript : MonoBehaviour
 
     public Turret turretScript;
     public Turret2 turret2Script;
-    
+    public Turret3 turret3Script;
+
     public BuyingTurret buyingTurretScript;
     public GameController gC;
 
@@ -19,7 +20,6 @@ public class ButtonScript : MonoBehaviour
 
     public GameObject[] turrets;
 
-    public GameObject turret3;
     public bool upgradingTurretsBool;
 
     public bool openWindow;
@@ -99,7 +99,8 @@ public class ButtonScript : MonoBehaviour
         }
         if (collider.gameObject.name == "Turret3Check" && upgradingTurretsBool == false)
         {
-            turret3 = collider.gameObject.transform.parent.gameObject;
+            turret3Script = collider.gameObject.GetComponentInParent<Turret3>();
+            UpgradingTurretsObjects[4] = turret3Script.upgradeWindows;
 
             openWindow = true;
 
@@ -129,8 +130,10 @@ public class ButtonScript : MonoBehaviour
 
     public void SpawnTurret1() 
     {
+        openWindow = false;
         if (gC.cashMoney >= 150)
         {
+
             Instantiate(turrets[0], new Vector3(buyingTurretScript.transform.position.x, buyingTurretScript.transform.position.y, buyingTurretScript.transform.position.z -0.05f), Quaternion.identity);
             gC.cashMoney -= 150;
             purchaseTurretButtons[0].SetActive(false);
@@ -142,6 +145,7 @@ public class ButtonScript : MonoBehaviour
 
     public void SpawnTurret2() 
     {
+        openWindow = false;
         if (gC.cashMoney >= 300) 
         {
             Instantiate(turrets[1], new Vector3(buyingTurretScript.transform.position.x, buyingTurretScript.transform.position.y, buyingTurretScript.transform.position.z - 0.05f), Quaternion.identity);
@@ -155,12 +159,16 @@ public class ButtonScript : MonoBehaviour
 
     public void SpawnTurret3()
     {
-    Instantiate(turrets[2], new Vector3(buyingTurretScript.transform.position.x, buyingTurretScript.transform.position.y, buyingTurretScript.transform.position.z - 0.05f), Quaternion.identity);
-        gC.cashMoney -= 500;
-        purchaseTurretButtons[0].SetActive(false);
-        purchaseTurretButtons[1].SetActive(false);
-        gC.purchaseTurretWindow = false;
-        buyingTurretScript.turretSpawned = true;
+        openWindow = false;
+        if (gC.cashMoney >= 500) 
+        {
+            Instantiate(turrets[2], new Vector3(buyingTurretScript.transform.position.x, buyingTurretScript.transform.position.y, buyingTurretScript.transform.position.z - 0.05f), Quaternion.identity);
+            gC.cashMoney -= 500;
+            purchaseTurretButtons[0].SetActive(false);
+            purchaseTurretButtons[1].SetActive(false);
+            gC.purchaseTurretWindow = false;
+            buyingTurretScript.turretSpawned = true;
+        }
     }
 
     public void CloseTurretWindow() 
@@ -183,24 +191,32 @@ public class ButtonScript : MonoBehaviour
             UpgradingTurretsObjects[2].SetActive(false);
         }
         UpgradingTurretsObjects[3].SetActive(false);
+        if (UpgradingTurretsObjects[4]) 
+        {
+            UpgradingTurretsObjects[4].SetActive(false);
+        }
+        UpgradingTurretsObjects[5].SetActive(false);
         upgradingTurretsBool = false;
     }
 
     public void IncreaseTurret1Damage()
     {
+        openWindow = false;
         if (gC.cashMoney >= turretScript.damageIncreaseCost)
         {
+            
             turretScript.IncreaseDamage();
-            openWindow = false;
+            
         }
     }
 
     public void IncreaseTurret1Range() 
     {
+        openWindow = false;
         if (gC.cashMoney >= turretScript.rangeIncreaseCost) 
         {
             turretScript.IncreaseRange();
-            openWindow = false;
+            
         }
     }
 
@@ -215,19 +231,23 @@ public class ButtonScript : MonoBehaviour
 
     public void IncreaseTurret2Damage() 
     {
+
+        openWindow = false;
         if (gC.cashMoney >= turret2Script.upgradeDamage) 
         {
             turret2Script.UpgradeDamage();
-            openWindow = false;
+            
         }
     }
 
     public void IncreaseTurret2Range() 
     {
+
+        openWindow = false;
         if (gC.cashMoney >= turret2Script.upgradeRange) 
         {
             turret2Script.UpgradeRange();
-            openWindow = false;
+            
         }
     }
 
@@ -246,7 +266,7 @@ public class ButtonScript : MonoBehaviour
         CloseUpgradeWindow();
         upgradingTurretsBool = false;
         buyingTurretScript.turretSpawned = false;
-        Destroy(turret3);
+        Destroy(turret3Script.gameObject);
     }
 
 }
