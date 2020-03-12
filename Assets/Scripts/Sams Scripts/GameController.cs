@@ -18,6 +18,8 @@ public class GameController : MonoBehaviour
     public bool purchaseTurretWindow = false;
     public GameObject enemyParent;
 
+    public GameObject loseObjects;
+
 
 
     //these two scripts are stored for the end game scenario
@@ -44,10 +46,20 @@ public class GameController : MonoBehaviour
     {
         if (health <= 0) 
         {
-            Destroy(enemyParent);
+            enemyParent.SetActive(false);
             spawner.gameObject.SetActive(false);
             bS.gameObject.SetActive(false);
+            loseObjects.SetActive(true);
         }
+    }
+
+    public void AdWatched()
+    {
+        health += 5;
+        enemyParent.SetActive(true);
+        spawner.gameObject.SetActive(true);
+        bS.gameObject.SetActive(true);
+        loseObjects.SetActive(false);
     }
 
    
