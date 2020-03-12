@@ -10,6 +10,7 @@ TagManager:
   - EnemyExit
   - Turret2
   - EnemySpawn
+  - Turret3
   layers:
   - Default
   - TransparentFX
