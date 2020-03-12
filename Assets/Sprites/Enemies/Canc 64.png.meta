@@ -1,34 +1,52 @@
 fileFormatVersion: 2
-guid: 2adabc344af82c34e8f509f4b3eef19e
+guid: 8cc7e452b75e1ec439c5e16d86b095ba
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1863721932810180277
-    second: Germ 64_0
+      213: 8796221707139137976
+    second: Canc 64_0
   - first:
-      213: 6176016005341620591
-    second: Germ 64_1
+      213: 5714758248126600436
+    second: Canc 64_1
   - first:
-      213: -3612277953319208041
-    second: Germ 64_2
+      213: -7084309090656548039
+    second: Canc 64_2
   - first:
-      213: -5699383829633785644
-    second: Germ 64_3
+      213: 4234907650771409839
+    second: Canc 64_3
   - first:
-      213: -1083826322656656060
-    second: Germ 64_4
+      213: 1272930946245046371
+    second: Canc 64_4
   - first:
-      213: 471209827360736387
-    second: Germ 64_5
+      213: 2670311585564350586
+    second: Canc 64_5
   - first:
-      213: 2728170821971125139
-    second: Germ 64_6
+      213: -1272155243483819105
+    second: Canc 64_6
   - first:
-      213: -7553965850353192613
-    second: Germ 64_7
+      213: -1935732665947852890
+    second: Canc 64_7
   - first:
-      213: 2258441305496999060
-    second: Germ 64_8
+      213: -4616218767866116055
+    second: Canc 64_8
+  - first:
+      213: -4527904862225852471
+    second: Canc 64_9
+  - first:
+      213: -4450107385392088749
+    second: Canc 64_10
+  - first:
+      213: -2895633604403102797
+    second: Canc 64_11
+  - first:
+      213: -8712184917299807842
+    second: Canc 64_12
+  - first:
+      213: 1534511461677945329
+    second: Canc 64_13
+  - first:
+      213: 7493425474270050334
+    second: Canc 64_14
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -125,7 +143,91 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Germ 64_0
+      name: Canc 64_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6144
+        width: 2048
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b14d6d8b0bd0cc241b407c7e4b19588b
+      internalID: 8796221707139137976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canc 64_1
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 6144
+        width: 2048
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ba12d7eb3af1a345b3986a219b4da41
+      internalID: 5714758248126600436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canc 64_2
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 6144
+        width: 2048
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55b519eb964050840aa21148edbe5661
+      internalID: -7084309090656548039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canc 64_3
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 6144
+        width: 2048
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8e33c8460b9baa4aac549dc855689c9
+      internalID: 4234907650771409839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canc 64_4
       rect:
         serializedVersion: 2
         x: 0
@@ -133,20 +235,20 @@ TextureImporter:
         width: 2048
         height: 2048
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42558d638a4601c4a8d4f71e62af891a
-      internalID: 1863721932810180277
+      spriteID: 621c8f34c44f5b04c98607c84cfe87e5
+      internalID: 1272930946245046371
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Germ 64_1
+      name: Canc 64_5
       rect:
         serializedVersion: 2
         x: 2048
@@ -154,20 +256,20 @@ TextureImporter:
         width: 2048
         height: 2048
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abe7795465c364c4b973f7e472829380
-      internalID: 6176016005341620591
+      spriteID: a3a97ae56c66bf2458f350f0aed4350c
+      internalID: 2670311585564350586
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Germ 64_2
+      name: Canc 64_6
       rect:
         serializedVersion: 2
         x: 4096
@@ -175,20 +277,41 @@ TextureImporter:
         width: 2048
         height: 2048
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2975adf04ddd474dad3bc756f1eb000
-      internalID: -3612277953319208041
+      spriteID: f4dda4b5c427a2f4c9ea68ecfd963ae8
+      internalID: -1272155243483819105
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Germ 64_3
+      name: Canc 64_7
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 4096
+        width: 2048
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85bf54c20bffa3c4ea78f165bea5716b
+      internalID: -1935732665947852890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canc 64_8
       rect:
         serializedVersion: 2
         x: 0
@@ -196,20 +319,20 @@ TextureImporter:
         width: 2048
         height: 2048
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7523a770fa2fcc64fb9231b1db1514ee
-      internalID: -5699383829633785644
+      spriteID: 70c65fde6a58dc04786039db35c36aff
+      internalID: -4616218767866116055
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Germ 64_4
+      name: Canc 64_9
       rect:
         serializedVersion: 2
         x: 2048
@@ -217,20 +340,20 @@ TextureImporter:
         width: 2048
         height: 2048
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96fb80c184647bf45996c351687c9e17
-      internalID: -1083826322656656060
+      spriteID: 50a050e9819268f45bc3aff753ec35d5
+      internalID: -4527904862225852471
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Germ 64_5
+      name: Canc 64_10
       rect:
         serializedVersion: 2
         x: 4096
@@ -238,20 +361,41 @@ TextureImporter:
         width: 2048
         height: 2048
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c88ad7df29336f44bbc9e5f347dc1226
-      internalID: 471209827360736387
+      spriteID: 39423e1e83dff7447b13aa3d055d3924
+      internalID: -4450107385392088749
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Germ 64_6
+      name: Canc 64_11
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 2048
+        width: 2048
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69a1e542e13e3524e90cbb39ee940fcd
+      internalID: -2895633604403102797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canc 64_12
       rect:
         serializedVersion: 2
         x: 0
@@ -259,20 +403,20 @@ TextureImporter:
         width: 2048
         height: 2048
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28cb2b7f2a477b44fa8d862969164e52
-      internalID: 2728170821971125139
+      spriteID: 3ff51679cf184d2429bf58612eaa8317
+      internalID: -8712184917299807842
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Germ 64_7
+      name: Canc 64_13
       rect:
         serializedVersion: 2
         x: 2048
@@ -280,14 +424,35 @@ TextureImporter:
         width: 2048
         height: 2048
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed84ba563b6157d499309c9939ecd20f
-      internalID: -7553965850353192613
+      spriteID: 651a2e489558d76448cba918a7ea0923
+      internalID: 1534511461677945329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canc 64_14
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 0
+        width: 2048
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b96ebb8b57dfab49a6aabdfa63ed7ce
+      internalID: 7493425474270050334
       vertices: []
       indices: 
       edges: []
