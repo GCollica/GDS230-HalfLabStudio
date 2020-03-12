@@ -120,6 +120,7 @@ MonoBehaviour:
   damage: 2.5
   damageIncreaseCost: 100
   sellTurret: 50
+  anim: {fileID: 8280971752876070664}
   turnSpeed: 10
 --- !u!58 &1209650461054667133
 CircleCollider2D:
