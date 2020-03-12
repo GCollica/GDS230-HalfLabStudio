@@ -739,6 +739,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waveCountdownText: {fileID: 1770855614}
   gC: {fileID: 0}
+  enemyParent: {fileID: 0}
   leftEnemyPrefab: {fileID: 7095584537015850625, guid: 42ae0a64432cb984086b2d35d369e9df,
     type: 3}
   rightEnemyPrefab: {fileID: 5477876673659567538, guid: 78329d0e038a73745984d596f0ab48bf,
