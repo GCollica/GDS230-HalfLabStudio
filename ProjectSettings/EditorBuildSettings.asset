@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Alpha.unity
     guid: 040ff4f8a606aaf41a292b57a16d197c
+  - enabled: 1
+    path: Assets/Scenes/Options_Menu.unity
+    guid: ee23375c7674e654daf0e15c46b4a525
+  - enabled: 1
+    path: Assets/Scenes/Disease_Compendium.unity
+    guid: 50e852fb079f94a4c8d0b36f00ec8dff
   m_configObjects: {}
