@@ -737,16 +737,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c9be568f3ad8f64480d53342846e92b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waveCountdownText: {fileID: 1770855614}
+  gC: {fileID: 0}
   leftEnemyPrefab: {fileID: 7095584537015850625, guid: 42ae0a64432cb984086b2d35d369e9df,
     type: 3}
   rightEnemyPrefab: {fileID: 5477876673659567538, guid: 78329d0e038a73745984d596f0ab48bf,
     type: 3}
   rightEnemyOffset: {x: 0, y: 0.7, z: 0}
   spawnPoint: {fileID: 1195825182}
-  waveCountdown: 2
-  waveCountdownText: {fileID: 1770855614}
+  waveCountdown: 10
+  gameStartTimer: 10
   waveIndex: 0
-  gC: {fileID: 0}
+  waveNumber: 15
   timeBetweenSpawns: 1.25
 --- !u!1 &946474329
 GameObject:

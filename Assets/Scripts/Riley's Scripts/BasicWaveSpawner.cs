@@ -9,6 +9,8 @@ public class BasicWaveSpawner : MonoBehaviour
 
     public GameController gC;
 
+    List<GameObject> Enemies;
+
     [Header("Enemy Attributes")]
     public Transform leftEnemyPrefab;
     public Transform rightEnemyPrefab;
@@ -16,8 +18,8 @@ public class BasicWaveSpawner : MonoBehaviour
     public Transform spawnPoint;
 
     [Header("Wave Attributes")]
-    public float waveCountdown = 10f;
-    private float gameStartTimer = 10f;
+    public float waveCountdown;
+    public float gameStartTimer;
     public int waveIndex = 0;
     public int waveNumber;
     public float timeBetweenSpawns;
@@ -53,6 +55,8 @@ public class BasicWaveSpawner : MonoBehaviour
 
     void SpawnEnemy()
     {
+        Enemies.Add((GameObject)Instantiate(leftEnemyPrefab, spawnPoint.position, spawnPoint.rotation);
+
         Instantiate(leftEnemyPrefab, spawnPoint.position, spawnPoint.rotation);
         Instantiate(rightEnemyPrefab, spawnPoint.position + rightEnemyOffset, spawnPoint.rotation);
     }
