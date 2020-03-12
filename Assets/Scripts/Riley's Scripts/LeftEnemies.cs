@@ -94,6 +94,15 @@ public class LeftEnemies : MonoBehaviour
             health -= turret2.damage;
             Destroy(collision.gameObject);
         }
+        if (collision.gameObject.tag == "Turret3")
+        {
+            speed = 0.25f;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        speed = 0.5f;
     }
 
 }

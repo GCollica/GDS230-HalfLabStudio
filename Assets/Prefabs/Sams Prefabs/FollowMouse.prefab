@@ -68,8 +68,9 @@ MonoBehaviour:
   turrets:
   - {fileID: 1209650461054667073, guid: 3be4fce3920ee7a43be02b091258cc09, type: 3}
   - {fileID: 6412196409959397755, guid: 20571265d0cd32948bac5d362420d07c, type: 3}
-  - {fileID: 0}
+  - {fileID: 3217965776623693167, guid: 3ad3ef5440de422468c05931f18ad08f, type: 3}
   upgradingTurretsBool: 0
+  openWindow: 0
 --- !u!61 &9080273740845076240
 BoxCollider2D:
   m_ObjectHideFlags: 0
