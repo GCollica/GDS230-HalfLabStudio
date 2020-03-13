@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1602050583662219867}
   - component: {fileID: 145202884528775539}
   - component: {fileID: 6265927004820878734}
-  - component: {fileID: 676986585008109295}
+  - component: {fileID: 6820002142523078155}
   m_Layer: 0
   m_Name: T2Projectile
   m_TagString: Untagged
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 4090978583008761406}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.43, y: 0.21, z: -14.3788595}
-  m_LocalScale: {x: 2.1299, y: 2.1299, z: 2.1299}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -72,7 +72,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: -6224480601085753973, guid: 4d5ad06c20e1f40448cc6e7123d55d3f,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -96,6 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 6265927004820878734}
+  deathCountDown: 0.1
 --- !u!50 &6265927004820878734
 Rigidbody2D:
   serializedVersion: 4
@@ -117,8 +119,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &676986585008109295
-CircleCollider2D:
+--- !u!70 &6820002142523078155
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -131,5 +133,5 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.09
+  m_Size: {x: 0.4, y: 0.6}
+  m_Direction: 0
