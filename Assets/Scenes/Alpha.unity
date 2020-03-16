@@ -2258,7 +2258,7 @@ MonoBehaviour:
   rightEnemyOffset: {x: 0, y: 0.8, z: 0}
   spawnPoint: {fileID: 647296740}
   waveCountdown: 20
-  gameStartTimer: 10
+  gameStartTimer: 1
   waveIndex: 0
   waveNumber: 15
   timeBetweenSpawns: 3

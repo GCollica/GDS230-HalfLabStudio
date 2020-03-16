@@ -27,6 +27,8 @@ public class Turret2 : MonoBehaviour
     public int upgradeRange = 150;
     public int sellTurret = 30;
 
+    public bool fireCountDown;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +38,10 @@ public class Turret2 : MonoBehaviour
 
     private void Update()
     {
-        fireTimer -= 0.8f * Time.deltaTime;
+        if (fireCountDown == true)
+        {
+            fireTimer -= 0.8f * Time.deltaTime;
+        }
     }
 
     public void OpenUpgradeWindow()
@@ -132,6 +137,7 @@ public class Turret2 : MonoBehaviour
                 
                 enemy = collision.gameObject;
             }
+            fireCountDown = true;
             Turn();
             Fire();
         }
@@ -146,6 +152,7 @@ public class Turret2 : MonoBehaviour
         {
             enemy = null;
         }
+        fireCountDown = false;
     }
 
 }

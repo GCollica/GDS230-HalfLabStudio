@@ -32,6 +32,8 @@ public class Turret : MonoBehaviour
 
     public Animator anim;
 
+    public bool fireCountDown;
+
     //the speed that the turret turns towards the enemy in range
     public float turnSpeed = 10f;
 
@@ -51,13 +53,13 @@ public class Turret : MonoBehaviour
     void Update()
     {
 
-        fireTimer -= 0.8f * Time.deltaTime;
+        if (fireCountDown == true) 
+        {
+            fireTimer -= 0.8f * Time.deltaTime;
+        }
 
     }
 
-
-
-    
 
 
     //only deal damage to enemy objects if they are your target
@@ -71,11 +73,11 @@ public class Turret : MonoBehaviour
                 enemy = collision.gameObject;
                 
             }
-            
+            fireCountDown = true;
 
             Turn();
             Fire();
-
+            //fireTimer -= 0.8f * Time.deltaTime;
         }
         
     }
@@ -87,6 +89,7 @@ public class Turret : MonoBehaviour
         {
             enemy = null;
         }
+        fireCountDown = false;
     }
 
     //follow the enemy target
@@ -101,7 +104,6 @@ public class Turret : MonoBehaviour
     void Fire()
     {
         
-
         if (fireTimer <= 2f)
         {
             anim.SetBool("Fire", true);
@@ -115,10 +117,6 @@ public class Turret : MonoBehaviour
         {
             anim.SetBool("Fire", false);
         }
-        
-      
-        
-        
     }
     
     public void CloseUpgradeWindow() 
@@ -137,17 +135,14 @@ public class Turret : MonoBehaviour
             gC.cashMoney -= damageIncreaseCost;
             damageIncreaseCost += 100;
             sellTurret += 5;
-        
     }
 
     public void IncreaseRange() 
     {
-        
             cC2D.radius += 0.5f;
             gC.cashMoney -= rangeIncreaseCost;
             rangeIncreaseCost += 200;
             sellTurret += 10;
-        
     }
 
     public void DestroyTower() 
