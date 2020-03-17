@@ -1,10 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LeftEnemies : MonoBehaviour
 {
     public float health = 5f;
+    public bool showHealth;
+    public Slider slides;
+    public GameObject healthBar;
 
     public float speed = 5f;
 
@@ -24,11 +28,10 @@ public class LeftEnemies : MonoBehaviour
 
     }
 
+    
+
     void Update()
     {
-        Vector2 dir = target.position - transform.position;
-        transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
-
         if (Vector2.Distance(transform.position, target.position) <= 0.4f)
         {
             GetNextWaypoint();
@@ -39,6 +42,27 @@ public class LeftEnemies : MonoBehaviour
             gC.cashMoney += 25;
             Destroy(gameObject);
         }
+
+        UpdateHealth();
+    }
+
+
+    void FixedUpdate()
+    {
+        Vector2 dir = target.position - transform.position;
+        transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
+
+    }
+
+    public void UpdateHealth()
+    {
+        if (showHealth == true)
+        {
+            healthBar.SetActive(true);
+        }
+
+
+        slides.value = health;
     }
 
     void GetNextWaypoint()
@@ -86,12 +110,14 @@ public class LeftEnemies : MonoBehaviour
         if (collision.gameObject.name == "T1Projectile(Clone)") 
         {
             health -= turret.damage;
+            showHealth = true;
             Destroy(collision.gameObject);
         }
 
         if (collision.gameObject.name == "T2Projectile(Clone)")
         {
             health -= turret2.damage;
+            showHealth = true;
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "Turret3")
