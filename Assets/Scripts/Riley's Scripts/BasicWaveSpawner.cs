@@ -33,7 +33,7 @@ public class BasicWaveSpawner : MonoBehaviour
             gameStartTimer = waveCountdown;
         }
 
-        if (gC.canMove == true) 
+        if (gC.canMove == true && waveIndex < waveNumber) 
         {
             gameStartTimer -= Time.deltaTime;
         }

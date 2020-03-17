@@ -55,7 +55,7 @@ public class GameController : MonoBehaviour
     {
         if (health <= 0) 
         {
-            enemyParent.SetActive(false);
+            canMove = false;
             spawner.gameObject.SetActive(false);
             bS.gameObject.SetActive(false);
             loseObjects.SetActive(true);
@@ -65,8 +65,7 @@ public class GameController : MonoBehaviour
 
     public void PauseGame() 
     {
-        //enemyParent.SetActive(false);
-        //spawner.gameObject.SetActive(false);
+     
         bS.gameObject.SetActive(false);
         pause.SetActive(true);
         canMove = false;
@@ -74,8 +73,7 @@ public class GameController : MonoBehaviour
 
     public void UnPauseGame() 
     {
-        //enemyParent.SetActive(true);
-        //spawner.gameObject.SetActive(true);
+        
         bS.gameObject.SetActive(true);
         pause.SetActive(false);
         canMove = true;
@@ -84,8 +82,8 @@ public class GameController : MonoBehaviour
     public void AdWatched()
     {
         health += 5;
-        enemyParent.SetActive(true);
-        spawner.gameObject.SetActive(true);
+        canMove = true;
+        spawner.waveIndex -= 1;
         bS.gameObject.SetActive(true);
         loseObjects.SetActive(false);
     }
