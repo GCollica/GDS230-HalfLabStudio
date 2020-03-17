@@ -25,7 +25,7 @@ public class LeftEnemies : MonoBehaviour
         target = LeftWaypoints.leftWaypoints[0];
         gC = GameObject.Find("GameController").GetComponent<GameController>();
         gameObject.transform.SetParent(GameObject.Find("EnemyParent").transform);
-
+        healthBar.SetActive(false);
     }
 
     

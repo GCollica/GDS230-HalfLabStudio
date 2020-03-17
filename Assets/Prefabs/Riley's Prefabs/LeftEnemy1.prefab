@@ -375,6 +375,7 @@ MonoBehaviour:
   health: 5
   showHealth: 0
   slides: {fileID: 4865178343510193128}
+  healthBar: {fileID: 8710428500773045744}
   speed: 0.5
   turret: {fileID: 0}
   turret2: {fileID: 0}

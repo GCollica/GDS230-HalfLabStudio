@@ -1,9 +1,14 @@
-﻿using UnityEngine;
-
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
 public class RightEnemies : MonoBehaviour
 {
     public float health = 5f;
-    
+    public bool showHealth;
+    public Slider slides;
+    public GameObject healthBar;
+
     public float speed = 5f;
 
     private Transform target;
