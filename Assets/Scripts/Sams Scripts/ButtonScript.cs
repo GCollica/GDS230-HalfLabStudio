@@ -131,11 +131,11 @@ public class ButtonScript : MonoBehaviour
     public void SpawnTurret1() 
     {
         openWindow = false;
-        if (gC.cashMoney >= 150)
+        if (gC.researchPoints >= 150)
         {
 
             Instantiate(turrets[0], new Vector3(buyingTurretScript.transform.position.x, buyingTurretScript.transform.position.y, buyingTurretScript.transform.position.z -0.05f), Quaternion.identity);
-            gC.cashMoney -= 150;
+            gC.researchPoints -= 150;
             purchaseTurretButtons[0].SetActive(false);
             purchaseTurretButtons[1].SetActive(false);
             gC.purchaseTurretWindow = false;
@@ -146,10 +146,10 @@ public class ButtonScript : MonoBehaviour
     public void SpawnTurret2() 
     {
         openWindow = false;
-        if (gC.cashMoney >= 300) 
+        if (gC.researchPoints >= 300) 
         {
             Instantiate(turrets[1], new Vector3(buyingTurretScript.transform.position.x, buyingTurretScript.transform.position.y, buyingTurretScript.transform.position.z - 0.05f), Quaternion.identity);
-            gC.cashMoney -= 300;
+            gC.researchPoints -= 300;
             purchaseTurretButtons[0].SetActive(false);
             purchaseTurretButtons[1].SetActive(false);
             gC.purchaseTurretWindow = false;
@@ -160,10 +160,10 @@ public class ButtonScript : MonoBehaviour
     public void SpawnTurret3()
     {
         openWindow = false;
-        if (gC.cashMoney >= 500) 
+        if (gC.researchPoints >= 500) 
         {
             Instantiate(turrets[2], new Vector3(buyingTurretScript.transform.position.x, buyingTurretScript.transform.position.y, buyingTurretScript.transform.position.z - 0.05f), Quaternion.identity);
-            gC.cashMoney -= 500;
+            gC.researchPoints -= 500;
             purchaseTurretButtons[0].SetActive(false);
             purchaseTurretButtons[1].SetActive(false);
             gC.purchaseTurretWindow = false;
@@ -202,7 +202,7 @@ public class ButtonScript : MonoBehaviour
     public void IncreaseTurret1Damage()
     {
         openWindow = false;
-        if (gC.cashMoney >= turretScript.damageIncreaseCost)
+        if (gC.researchPoints >= turretScript.damageIncreaseCost)
         {
             
             turretScript.IncreaseDamage();
@@ -213,7 +213,7 @@ public class ButtonScript : MonoBehaviour
     public void IncreaseTurret1Range() 
     {
         openWindow = false;
-        if (gC.cashMoney >= turretScript.rangeIncreaseCost) 
+        if (gC.researchPoints >= turretScript.rangeIncreaseCost) 
         {
             turretScript.IncreaseRange();
             
@@ -222,7 +222,7 @@ public class ButtonScript : MonoBehaviour
 
     public void DestroyTurret1() 
     {
-        gC.cashMoney += turretScript.sellTurret;
+        gC.researchPoints += turretScript.sellTurret;
         CloseUpgradeWindow();
         upgradingTurretsBool = false;
         buyingTurretScript.turretSpawned = false;
@@ -233,7 +233,7 @@ public class ButtonScript : MonoBehaviour
     {
 
         openWindow = false;
-        if (gC.cashMoney >= turret2Script.upgradeDamage) 
+        if (gC.researchPoints >= turret2Script.upgradeDamage) 
         {
             turret2Script.UpgradeDamage();
             
@@ -244,7 +244,7 @@ public class ButtonScript : MonoBehaviour
     {
 
         openWindow = false;
-        if (gC.cashMoney >= turret2Script.upgradeRange) 
+        if (gC.researchPoints >= turret2Script.upgradeRange) 
         {
             turret2Script.UpgradeRange();
             
@@ -253,7 +253,7 @@ public class ButtonScript : MonoBehaviour
 
     public void DestroyTurret2() 
     {
-        gC.cashMoney += turret2Script.sellTurret;
+        gC.researchPoints += turret2Script.sellTurret;
         CloseUpgradeWindow();
         upgradingTurretsBool = false;
         buyingTurretScript.turretSpawned = false;
@@ -262,7 +262,7 @@ public class ButtonScript : MonoBehaviour
 
     public void DestroyTurret3()
     {
-        gC.cashMoney += 250;
+        gC.researchPoints += 250;
         CloseUpgradeWindow();
         upgradingTurretsBool = false;
         buyingTurretScript.turretSpawned = false;

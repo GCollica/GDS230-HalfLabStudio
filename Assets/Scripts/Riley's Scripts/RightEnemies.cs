@@ -14,7 +14,7 @@ public class RightEnemies : MonoBehaviour
     private Transform target;
     private int rightWaypointIndex = 0;
 
-    bool canMove = true;
+    public BasicWaveSpawner spawner;
 
     public Turret turret;
     public Turret2 turret2;
@@ -26,7 +26,7 @@ public class RightEnemies : MonoBehaviour
         
         target = RightWaypoints.rightWaypoints[0];
         gC = GameObject.Find("GameController").GetComponent<GameController>();
-        
+        spawner = GameObject.Find("Spawner").GetComponent<BasicWaveSpawner>();
         gameObject.transform.SetParent(GameObject.Find("EnemyParent").transform);
         healthBar.SetActive(false);
     }
@@ -51,7 +51,7 @@ public class RightEnemies : MonoBehaviour
 
         if (health <= 0) 
         {
-            gC.cashMoney += 25;
+            gC.researchPoints += 25;
             Destroy(gameObject);
         }
 

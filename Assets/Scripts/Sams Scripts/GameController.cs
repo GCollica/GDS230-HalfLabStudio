@@ -11,20 +11,20 @@ public class GameController : MonoBehaviour
     public GameObject enemyPlacer;
     public Vector3 mouse;
     public Text researchText;
-    public int cashMoney;
+    public int researchPoints;
     public GameObject turret1;
     public Transform[] waypoints;
     public bool upgradeWindow = false;
     public bool purchaseTurretWindow = false;
 
     public GameObject enemyParent;
-    public GameObject enemyParentPrefab;
-    public GameObject ePP;
+
     public GameObject WinButtons;
     public GameObject pause;
     
     //canMove sets the speed for the enemies to 0, and pauses their spawning in the BasicWaveSpawner
     public bool canMove = true;
+    public bool endingAddMoney = true;
 
     public GameObject loseObjects;
 
@@ -39,7 +39,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         mouse = new Vector3(transform.position.x, transform.position.y, 10);
-        cashMoney = 400;
+        researchPoints = 400;
         health = 10;
     }
 
@@ -48,7 +48,7 @@ public class GameController : MonoBehaviour
         LoseState();
 
         healthText.text = "Health: " + health;
-        researchText.text = "Research Points: " + cashMoney;
+        researchText.text = "Research Points: " + researchPoints;
     }
 
     void LoseState() 
@@ -95,6 +95,25 @@ public class GameController : MonoBehaviour
         WinButtons.SetActive(true);
         bS.gameObject.SetActive(false);
         spawner.gameObject.SetActive(false);
+        EndingHealthIncrease();
+    }
+
+    void EndingHealthIncrease()
+    {
+        if (endingAddMoney == true) 
+        {
+            if (health == 1) { researchPoints += 500; }
+            if (health == 2) { researchPoints += 1000; }
+            if (health == 3) { researchPoints += 1500; }
+            if (health == 4) { researchPoints += 2000; }
+            if (health == 5) { researchPoints += 2500; }
+            if (health == 6) { researchPoints += 3000; }
+            if (health == 7) { researchPoints += 3500; }
+            if (health == 8) { researchPoints += 4000; }
+            if (health == 9) { researchPoints += 4500; }
+            if (health == 10) { researchPoints += 5000; }
+            endingAddMoney = false;
+        }
     }
 
    

@@ -58,6 +58,8 @@ public class Turret : MonoBehaviour
             fireTimer -= 0.8f * Time.deltaTime;
         }
 
+
+
     }
 
 
@@ -91,6 +93,8 @@ public class Turret : MonoBehaviour
         }
         fireCountDown = false;
     }
+
+
 
     //follow the enemy target
     void Turn()
@@ -132,7 +136,7 @@ public class Turret : MonoBehaviour
     public void IncreaseDamage() 
     { 
             damage += 0.25f;
-            gC.cashMoney -= damageIncreaseCost;
+            gC.researchPoints -= damageIncreaseCost;
             damageIncreaseCost += 100;
             sellTurret += 5;
     }
@@ -140,7 +144,7 @@ public class Turret : MonoBehaviour
     public void IncreaseRange() 
     {
             cC2D.radius += 0.5f;
-            gC.cashMoney -= rangeIncreaseCost;
+            gC.researchPoints -= rangeIncreaseCost;
             rangeIncreaseCost += 200;
             sellTurret += 10;
     }
@@ -148,7 +152,7 @@ public class Turret : MonoBehaviour
     public void DestroyTower() 
     {
         Instantiate(towerSpawnPoint, new Vector3(transform.position.x, transform.position.y, 40), Quaternion.identity);
-        gC.cashMoney += sellTurret;
+        gC.researchPoints += sellTurret;
         Destroy(upgradeButtons[0]);
         Destroy(upgradeButtons[1]);
         Destroy(upgradeButtons[2]);

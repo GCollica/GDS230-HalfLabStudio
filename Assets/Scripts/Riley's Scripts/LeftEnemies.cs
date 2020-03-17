@@ -20,12 +20,14 @@ public class LeftEnemies : MonoBehaviour
     public Turret turret;
     public Turret2 turret2;
     public GameController gC;
+    public BasicWaveSpawner spawner;
 
 
     void Start()
     {
         target = LeftWaypoints.leftWaypoints[0];
         gC = GameObject.Find("GameController").GetComponent<GameController>();
+        spawner = GameObject.Find("Spawner").GetComponent<BasicWaveSpawner>();
         gameObject.transform.SetParent(GameObject.Find("EnemyParent").transform);
         healthBar.SetActive(false);
     }
@@ -41,7 +43,7 @@ public class LeftEnemies : MonoBehaviour
 
         if (health <= 0f) 
         {
-            gC.cashMoney += 25;
+            gC.researchPoints += 25;
             Destroy(gameObject);
         }
 

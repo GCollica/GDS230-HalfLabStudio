@@ -60,7 +60,7 @@ public class Turret2 : MonoBehaviour
     public void UpgradeDamage()
     {
         damage += 0.5f;
-        gC.cashMoney -= upgradeDamage;
+        gC.researchPoints -= upgradeDamage;
         upgradeDamage += 100;
         sellTurret += 10;
     }
@@ -69,7 +69,7 @@ public class Turret2 : MonoBehaviour
     public void UpgradeRange()
     {
         cCol.radius += 0.5f;
-        gC.cashMoney -= upgradeRange;
+        gC.researchPoints -= upgradeRange;
         upgradeRange += 150;
         col.size += new Vector2(0.5f, 0.5f);
         sellTurret += 15;
@@ -84,7 +84,7 @@ public class Turret2 : MonoBehaviour
         Destroy(upgradeWindows[3]);
         Destroy(upgradeWindows[4]);
         gC.upgradeWindow = false;
-        gC.cashMoney += sellTurret;
+        gC.researchPoints += sellTurret;
         Instantiate(upgradeWindows[5], transform.position, Quaternion.identity);
         Destroy(gameObject);
     }

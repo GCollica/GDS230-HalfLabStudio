@@ -296,18 +296,16 @@ MonoBehaviour:
   enemyPlacer: {fileID: 0}
   mouse: {x: 0, y: 0, z: 0}
   researchText: {fileID: 115959244}
-  cashMoney: 0
+  researchPoints: 0
   turret1: {fileID: 0}
   waypoints: []
   upgradeWindow: 0
   purchaseTurretWindow: 0
   enemyParent: {fileID: 52181149}
-  enemyParentPrefab: {fileID: 6701838643150369290, guid: 680f1a83b8b61fc45aab205c98cc4558,
-    type: 3}
-  ePP: {fileID: 0}
   WinButtons: {fileID: 1024218224}
   pause: {fileID: 696519027}
   canMove: 1
+  endingAddMoney: 1
   loseObjects: {fileID: 1842155124}
   spawner: {fileID: 1456734866}
   bS: {fileID: 1313694179}
@@ -688,7 +686,7 @@ PrefabInstance:
     - target: {fileID: 2848093200321873856, guid: c40bc0e0684edb7488ab3cee67b2cb2d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2848093200321873856, guid: c40bc0e0684edb7488ab3cee67b2cb2d,
         type: 3}
@@ -1220,7 +1218,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 647296739}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5.25, z: -0.25}
+  m_LocalPosition: {x: 0, y: 5.25, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1343,10 +1341,10 @@ RectTransform:
   - {fileID: 52181150}
   - {fileID: 1638266897}
   - {fileID: 115959242}
+  - {fileID: 1763375020}
   - {fileID: 1908682035}
   - {fileID: 1360347878}
   - {fileID: 435420936}
-  - {fileID: 1763375020}
   - {fileID: 533163801}
   - {fileID: 1842155125}
   - {fileID: 695241875}
@@ -1868,7 +1866,7 @@ PrefabInstance:
     - target: {fileID: 8963596138505120477, guid: f951713ad5ddc9840a636a7d12350f48,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8963596138505120477, guid: f951713ad5ddc9840a636a7d12350f48,
         type: 3}
@@ -2648,7 +2646,7 @@ RectTransform:
   m_LocalScale: {x: 0.008945684, y: 0.008945684, z: 0.008945684}
   m_Children: []
   m_Father: {fileID: 736093714}
-  m_RootOrder: 6
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2927,7 +2925,7 @@ PrefabInstance:
     - target: {fileID: 9080273740845076255, guid: 8a8053650b6edc44bbc828659b7717b7,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 9080273740845076255, guid: 8a8053650b6edc44bbc828659b7717b7,
         type: 3}
@@ -3286,7 +3284,7 @@ PrefabInstance:
     - target: {fileID: 2115182836470235560, guid: 1b350cfe684aeb94888e556a9a8925d5,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2115182836470235561, guid: 1b350cfe684aeb94888e556a9a8925d5,
         type: 3}
@@ -3301,7 +3299,7 @@ PrefabInstance:
     - target: {fileID: 2115182836470235561, guid: 1b350cfe684aeb94888e556a9a8925d5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.2246
+      value: -10.37
       objectReference: {fileID: 0}
     - target: {fileID: 2115182836470235561, guid: 1b350cfe684aeb94888e556a9a8925d5,
         type: 3}
