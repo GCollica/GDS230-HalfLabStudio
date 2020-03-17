@@ -12,6 +12,7 @@ public class Turret2 : MonoBehaviour
     public GameObject enemy;
 
     public float damage = 0.1f;
+    public int damageUpgradedTimes;
 
     public GameObject projectile;
     public GameObject[] firepoints;
@@ -20,6 +21,8 @@ public class Turret2 : MonoBehaviour
     public GameController gC;
 
     public CapsuleCollider2D col;
+
+    public int rangeUpgradedTimes;
 
     public CircleCollider2D cCol;
 
@@ -59,6 +62,7 @@ public class Turret2 : MonoBehaviour
 
     public void UpgradeDamage()
     {
+        damageUpgradedTimes += 1;
         damage += 0.5f;
         gC.researchPoints -= upgradeDamage;
         upgradeDamage += 100;
@@ -68,6 +72,7 @@ public class Turret2 : MonoBehaviour
 
     public void UpgradeRange()
     {
+        rangeUpgradedTimes += 1;
         cCol.radius += 0.5f;
         gC.researchPoints -= upgradeRange;
         upgradeRange += 150;

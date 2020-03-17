@@ -57,6 +57,8 @@ public class GameController : MonoBehaviour
         {
             canMove = false;
             spawner.gameObject.SetActive(false);
+            if (bS.openWindow == true) { bS.CloseTurretWindow(); }
+            if (bS.openWindow == true) { bS.CloseUpgradeWindow(); }
             bS.gameObject.SetActive(false);
             loseObjects.SetActive(true);
             
@@ -67,6 +69,8 @@ public class GameController : MonoBehaviour
     {
      
         bS.gameObject.SetActive(false);
+        if (bS.openWindow == true) { bS.CloseTurretWindow(); }
+        if (bS.openWindow == true) { bS.CloseUpgradeWindow(); }
         pause.SetActive(true);
         canMove = false;
     }
@@ -93,6 +97,8 @@ public class GameController : MonoBehaviour
     {
 
         WinButtons.SetActive(true);
+        if (bS.openWindow == true) { bS.CloseTurretWindow(); }
+        if (bS.openWindow == true) { bS.CloseUpgradeWindow(); }
         bS.gameObject.SetActive(false);
         spawner.gameObject.SetActive(false);
         EndingHealthIncrease();

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class LeftEnemies : MonoBehaviour
 {
-    public float health = 5f;
+    public float health = 4.7f;
     public bool showHealth;
     public Slider slides;
     public GameObject healthBar;
@@ -30,6 +30,7 @@ public class LeftEnemies : MonoBehaviour
         spawner = GameObject.Find("Spawner").GetComponent<BasicWaveSpawner>();
         gameObject.transform.SetParent(GameObject.Find("EnemyParent").transform);
         healthBar.SetActive(false);
+        IncreaseHealthPerWave();
     }
 
     
@@ -70,6 +71,26 @@ public class LeftEnemies : MonoBehaviour
 
         slides.value = health;
     }
+
+    void IncreaseHealthPerWave()
+    {
+        if (spawner.waveIndex == 1) { health += 0.05f; }
+        if (spawner.waveIndex == 2) { health += 0.1f; }
+        if (spawner.waveIndex == 3) { health += 0.15f; }
+        if (spawner.waveIndex == 4) { health += 0.2f; }
+        if (spawner.waveIndex == 5) { health += 0.25f; }
+        if (spawner.waveIndex == 6) { health += 0.3f; }
+        if (spawner.waveIndex == 7) { health += 0.35f; }
+        if (spawner.waveIndex == 8) { health += 0.4f; }
+        if (spawner.waveIndex == 9) { health += 0.45f; }
+        if (spawner.waveIndex == 10) { health += 0.5f; }
+        if (spawner.waveIndex == 11) { health += 0.65f; }
+        if (spawner.waveIndex == 12) { health += 0.8f; }
+        if (spawner.waveIndex == 13) { health += 0.95f; }
+        if (spawner.waveIndex == 14) { health += 1.1f; }
+        if (spawner.waveIndex == 15) { health += 1.25f; }
+    }
+
 
     void GetNextWaypoint()
     {

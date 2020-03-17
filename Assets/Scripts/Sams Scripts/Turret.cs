@@ -11,6 +11,7 @@ public class Turret : MonoBehaviour
 
     public CircleCollider2D cC2D;
     public int rangeIncreaseCost = 200;
+    public int rangeUpgradedAmount = 0;
 
     public GameController gC;
 
@@ -27,6 +28,7 @@ public class Turret : MonoBehaviour
 
     public float damage = 2.5f;
     public int damageIncreaseCost = 100;
+    public int damageUpgradedAmount = 0;
 
     public int sellTurret = 50;
 
@@ -134,7 +136,8 @@ public class Turret : MonoBehaviour
     }
 
     public void IncreaseDamage() 
-    { 
+    {
+            damageUpgradedAmount += 1;
             damage += 0.25f;
             gC.researchPoints -= damageIncreaseCost;
             damageIncreaseCost += 100;
@@ -143,11 +146,13 @@ public class Turret : MonoBehaviour
 
     public void IncreaseRange() 
     {
+            rangeUpgradedAmount += 1;
             cC2D.radius += 0.5f;
             gC.researchPoints -= rangeIncreaseCost;
             rangeIncreaseCost += 200;
             sellTurret += 10;
     }
+    
 
     public void DestroyTower() 
     {

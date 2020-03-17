@@ -202,7 +202,7 @@ public class ButtonScript : MonoBehaviour
     public void IncreaseTurret1Damage()
     {
         openWindow = false;
-        if (gC.researchPoints >= turretScript.damageIncreaseCost)
+        if (gC.researchPoints >= turretScript.damageIncreaseCost && turretScript.damageUpgradedAmount <= 4)
         {
             
             turretScript.IncreaseDamage();
@@ -213,7 +213,7 @@ public class ButtonScript : MonoBehaviour
     public void IncreaseTurret1Range() 
     {
         openWindow = false;
-        if (gC.researchPoints >= turretScript.rangeIncreaseCost) 
+        if (gC.researchPoints >= turretScript.rangeIncreaseCost && turretScript.rangeUpgradedAmount <= 3) 
         {
             turretScript.IncreaseRange();
             
@@ -233,7 +233,7 @@ public class ButtonScript : MonoBehaviour
     {
 
         openWindow = false;
-        if (gC.researchPoints >= turret2Script.upgradeDamage) 
+        if (gC.researchPoints >= turret2Script.upgradeDamage && turret2Script.damageUpgradedTimes <= 2) 
         {
             turret2Script.UpgradeDamage();
             
@@ -244,7 +244,7 @@ public class ButtonScript : MonoBehaviour
     {
 
         openWindow = false;
-        if (gC.researchPoints >= turret2Script.upgradeRange) 
+        if (gC.researchPoints >= turret2Script.upgradeRange && turret2Script.rangeUpgradedTimes <= 3) 
         {
             turret2Script.UpgradeRange();
             
