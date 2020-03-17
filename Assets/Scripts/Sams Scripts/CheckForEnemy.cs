@@ -13,7 +13,7 @@ public class CheckForEnemy : MonoBehaviour
     private void Update()
     {
         enemy = GameObject.FindGameObjectWithTag("Enemy");
-        if (enemy == null && gC.health >= 0 && spawner.waveIndex == 15)
+        if (enemy == null && gC.health >= 0 && spawner.waveIndex >= 15)
         {
             gC.Win();
         }

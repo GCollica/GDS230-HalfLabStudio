@@ -14,6 +14,8 @@ public class RightEnemies : MonoBehaviour
     private Transform target;
     private int rightWaypointIndex = 0;
 
+    bool canMove = true;
+
     public Turret turret;
     public Turret2 turret2;
     public GameController gC;
@@ -21,16 +23,26 @@ public class RightEnemies : MonoBehaviour
 
     void Start()
     {
+        
         target = RightWaypoints.rightWaypoints[0];
         gC = GameObject.Find("GameController").GetComponent<GameController>();
         
         gameObject.transform.SetParent(GameObject.Find("EnemyParent").transform);
+        healthBar.SetActive(false);
     }
 
+
+    void FixedUpdate()
+    {
+        if (gC.canMove == true)
+        {
+            Vector2 dir = target.position - transform.position;
+            transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
+        }
+    }
     void Update()
     {
-        Vector2 dir = target.position - transform.position;
-        transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
+        
 
         if (Vector2.Distance(transform.position, target.position) <= 0.4f)
         {
@@ -42,6 +54,19 @@ public class RightEnemies : MonoBehaviour
             gC.cashMoney += 25;
             Destroy(gameObject);
         }
+
+        UpdateHealth();
+    }
+
+    public void UpdateHealth()
+    {
+        if (showHealth == true)
+        {
+            healthBar.SetActive(true);
+        }
+
+
+        slides.value = health;
     }
 
     void GetNextWaypoint()
@@ -85,12 +110,14 @@ public class RightEnemies : MonoBehaviour
         if (collision.gameObject.name == "T1Projectile(Clone)")
         {
             health -= turret.damage;
+            showHealth = true;
             Destroy(collision.gameObject);
         }
 
         if (collision.gameObject.name == "T2Projectile(Clone)")
         {
             health -= turret2.damage;
+            showHealth = true;
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "Turret3")

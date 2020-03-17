@@ -15,6 +15,8 @@ public class LeftEnemies : MonoBehaviour
     private Transform target;
     private int leftWaypointIndex = 0;
 
+   
+
     public Turret turret;
     public Turret2 turret2;
     public GameController gC;
@@ -49,9 +51,11 @@ public class LeftEnemies : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector2 dir = target.position - transform.position;
-        transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
-
+        if (gC.canMove == true)
+        {
+            Vector2 dir = target.position - transform.position;
+            transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
+        }
     }
 
     public void UpdateHealth()

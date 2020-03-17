@@ -22,6 +22,8 @@ public class GameController : MonoBehaviour
     public GameObject WinButtons;
     public GameObject pause;
 
+    public bool canMove = true;
+
     public GameObject loseObjects;
 
     
@@ -61,18 +63,20 @@ public class GameController : MonoBehaviour
 
     public void PauseGame() 
     {
-        enemyParent.SetActive(false);
+        //enemyParent.SetActive(false);
         spawner.gameObject.SetActive(false);
         bS.gameObject.SetActive(false);
         pause.SetActive(true);
+        canMove = false;
     }
 
     public void UnPauseGame() 
     {
-        enemyParent.SetActive(true);
+        //enemyParent.SetActive(true);
         spawner.gameObject.SetActive(true);
         bS.gameObject.SetActive(true);
         pause.SetActive(false);
+        canMove = true;
     }
 
     public void AdWatched()
@@ -88,6 +92,7 @@ public class GameController : MonoBehaviour
     {
         WinButtons.SetActive(true);
         bS.gameObject.SetActive(false);
+        spawner.gameObject.SetActive(false);
     }
 
    
