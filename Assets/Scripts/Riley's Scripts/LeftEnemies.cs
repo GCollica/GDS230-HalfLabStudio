@@ -20,7 +20,7 @@ public class LeftEnemies : MonoBehaviour
     public Turret turret;
     public Turret2 turret2;
     public GameController gC;
-    
+
 
     void Start()
     {

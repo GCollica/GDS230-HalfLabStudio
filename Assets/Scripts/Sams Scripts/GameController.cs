@@ -84,12 +84,14 @@ public class GameController : MonoBehaviour
         health += 5;
         canMove = true;
         spawner.waveIndex -= 1;
+        spawner.gameObject.SetActive(true);
         bS.gameObject.SetActive(true);
         loseObjects.SetActive(false);
     }
 
     public void Win() 
     {
+
         WinButtons.SetActive(true);
         bS.gameObject.SetActive(false);
         spawner.gameObject.SetActive(false);

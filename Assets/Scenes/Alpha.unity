@@ -2285,7 +2285,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 647296740}
   waveCountdown: 20
   gameStartTimer: 1
-  waveIndex: 14
+  waveIndex: 0
   waveNumber: 15
   timeBetweenSpawns: 3
 --- !u!4 &1456734867
@@ -3286,7 +3286,7 @@ PrefabInstance:
     - target: {fileID: 2115182836470235560, guid: 1b350cfe684aeb94888e556a9a8925d5,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2115182836470235561, guid: 1b350cfe684aeb94888e556a9a8925d5,
         type: 3}
