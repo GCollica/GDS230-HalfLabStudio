@@ -16,22 +16,24 @@ public class GameController : MonoBehaviour
     public Transform[] waypoints;
     public bool upgradeWindow = false;
     public bool purchaseTurretWindow = false;
+
     public GameObject enemyParent;
     public GameObject enemyParentPrefab;
     public GameObject ePP;
     public GameObject WinButtons;
     public GameObject pause;
-
+    
+    //canMove sets the speed for the enemies to 0, and pauses their spawning in the BasicWaveSpawner
     public bool canMove = true;
 
     public GameObject loseObjects;
 
-    
-
-
     //these two scripts are stored for the end game scenario
     public BasicWaveSpawner spawner;
     public ButtonScript bS;
+
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -64,7 +66,7 @@ public class GameController : MonoBehaviour
     public void PauseGame() 
     {
         //enemyParent.SetActive(false);
-        spawner.gameObject.SetActive(false);
+        //spawner.gameObject.SetActive(false);
         bS.gameObject.SetActive(false);
         pause.SetActive(true);
         canMove = false;
@@ -73,7 +75,7 @@ public class GameController : MonoBehaviour
     public void UnPauseGame() 
     {
         //enemyParent.SetActive(true);
-        spawner.gameObject.SetActive(true);
+        //spawner.gameObject.SetActive(true);
         bS.gameObject.SetActive(true);
         pause.SetActive(false);
         canMove = true;

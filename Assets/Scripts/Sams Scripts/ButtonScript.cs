@@ -46,10 +46,10 @@ public class ButtonScript : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0))
         {
-
+            openWindow = true;
             if (openWindow == true) { CloseTurretWindow(); }
             if(openWindow == true) { CloseUpgradeWindow(); }
-            openWindow = true;
+            
         }
         
 

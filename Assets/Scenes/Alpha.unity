@@ -2275,7 +2275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveCountdownText: {fileID: 1638266898}
-  gC: {fileID: 0}
+  gC: {fileID: 134282133}
   enemyParent: {fileID: 0}
   leftEnemyPrefab: {fileID: 7095584537015850625, guid: 42ae0a64432cb984086b2d35d369e9df,
     type: 3}
@@ -3192,17 +3192,17 @@ PrefabInstance:
     - target: {fileID: 561223181767148260, guid: 6fae95bd20b4aee4bbf5aa7b0eacd6ec,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -959.96
+      value: -959.95
       objectReference: {fileID: 0}
     - target: {fileID: 561223181767148260, guid: 6fae95bd20b4aee4bbf5aa7b0eacd6ec,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -540.15
+      value: -541.2
       objectReference: {fileID: 0}
     - target: {fileID: 561223181767148260, guid: 6fae95bd20b4aee4bbf5aa7b0eacd6ec,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 92.362
+      value: 92.555
       objectReference: {fileID: 0}
     - target: {fileID: 561223181767148260, guid: 6fae95bd20b4aee4bbf5aa7b0eacd6ec,
         type: 3}
@@ -3247,17 +3247,17 @@ PrefabInstance:
     - target: {fileID: 561223181767148260, guid: 6fae95bd20b4aee4bbf5aa7b0eacd6ec,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.0074906214
+      value: 0.005652198
       objectReference: {fileID: 0}
     - target: {fileID: 561223181767148260, guid: 6fae95bd20b4aee4bbf5aa7b0eacd6ec,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.0074906214
+      value: 0.005652198
       objectReference: {fileID: 0}
     - target: {fileID: 561223181767148260, guid: 6fae95bd20b4aee4bbf5aa7b0eacd6ec,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.0074906214
+      value: 0.005652198
       objectReference: {fileID: 0}
     - target: {fileID: 561223182624575042, guid: 6fae95bd20b4aee4bbf5aa7b0eacd6ec,
         type: 3}

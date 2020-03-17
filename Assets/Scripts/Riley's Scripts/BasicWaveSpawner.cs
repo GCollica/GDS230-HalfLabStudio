@@ -26,13 +26,17 @@ public class BasicWaveSpawner : MonoBehaviour
 
     void Update()
     {
+        
         if (gameStartTimer <= 0f)
         {
             StartCoroutine(WaveSpawn());
             gameStartTimer = waveCountdown;
         }
 
-        gameStartTimer -= Time.deltaTime;
+        if (gC.canMove == true) 
+        {
+            gameStartTimer -= Time.deltaTime;
+        }
 
         gameStartTimer = Mathf.Clamp(gameStartTimer, 0f, Mathf.Infinity);
 
@@ -55,7 +59,11 @@ public class BasicWaveSpawner : MonoBehaviour
 
     void SpawnEnemy()
     {
-        Instantiate(leftEnemyPrefab, spawnPoint.position, spawnPoint.rotation);
-        Instantiate(rightEnemyPrefab, spawnPoint.position + rightEnemyOffset, spawnPoint.rotation);
+        //canMove sets the speed for the enemies to 0, and pauses their spawning
+        if (gC.canMove == true)
+        {
+            Instantiate(leftEnemyPrefab, spawnPoint.position, spawnPoint.rotation);
+            Instantiate(rightEnemyPrefab, spawnPoint.position + rightEnemyOffset, spawnPoint.rotation);
+        }
     }
 }
