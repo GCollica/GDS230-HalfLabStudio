@@ -9,6 +9,11 @@ public class RightEnemies : MonoBehaviour
     public Slider slides;
     public GameObject healthBar;
 
+    public SpriteRenderer spriteRenderer;
+    public bool getHit;
+    private float colourCountdown = 0.1f;
+
+
     public float speed = 5f;
 
     private Transform target;
@@ -68,6 +73,18 @@ public class RightEnemies : MonoBehaviour
 
 
         slides.value = health;
+
+        if (getHit == true)
+        {
+            spriteRenderer.color = Color.red;
+            colourCountdown -= Time.deltaTime;
+        }
+        if (colourCountdown <= 0)
+        {
+            spriteRenderer.color = Color.white;
+            getHit = false;
+            colourCountdown = 0.1f;
+        }
     }
 
     void IncreaseHealthPerWave()
@@ -131,6 +148,7 @@ public class RightEnemies : MonoBehaviour
         {
             health -= turret.damage;
             showHealth = true;
+            getHit = true;
             Destroy(collision.gameObject);
         }
 
@@ -138,6 +156,7 @@ public class RightEnemies : MonoBehaviour
         {
             health -= turret2.damage;
             showHealth = true;
+            getHit = true;
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "Turret3")

@@ -376,6 +376,8 @@ MonoBehaviour:
   showHealth: 0
   slides: {fileID: 4865178343510193128}
   healthBar: {fileID: 8710428500773045744}
+  spriteRenderer: {fileID: 7095584537015850626}
+  getHit: 0
   speed: 0.5
   turret: {fileID: 0}
   turret2: {fileID: 0}
@@ -396,7 +398,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.04
+  m_Radius: 0.47
 --- !u!50 &3675018542167903325
 Rigidbody2D:
   serializedVersion: 4
@@ -503,7 +505,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 5
   m_WholeNumbers: 0
-  m_Value: 5
+  m_Value: 4.7
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:

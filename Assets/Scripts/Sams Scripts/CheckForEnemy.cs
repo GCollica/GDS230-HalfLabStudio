@@ -9,6 +9,7 @@ public class CheckForEnemy : MonoBehaviour
     public BasicWaveSpawner spawner;
     public GameObject enemy;
 
+    public GameObject skipCountDown;
 
     private void Update()
     {
@@ -17,6 +18,24 @@ public class CheckForEnemy : MonoBehaviour
         {
             gC.Win();
         }
+
+        if (enemy == null && spawner.gameStartTimer >= 0.5 && spawner.waveIndex >= 1) 
+        {
+            skipCountDown.SetActive(true);
+        }
+
+        if (enemy) 
+        {
+            skipCountDown.SetActive(false);
+        }
+    }
+
+    public void NextWave() 
+    {
+        skipCountDown.SetActive(false);
+        spawner.gameStartTimer = 0;
+        gC.researchPoints += 100;
+        
     }
 
 

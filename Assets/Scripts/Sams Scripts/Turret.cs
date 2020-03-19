@@ -55,7 +55,7 @@ public class Turret : MonoBehaviour
     void Update()
     {
 
-        if (fireCountDown == true) 
+        if (fireCountDown == true && gC.canMove == true) 
         {
             fireTimer -= 0.8f * Time.deltaTime;
         }
@@ -83,6 +83,7 @@ public class Turret : MonoBehaviour
             Fire();
             //fireTimer -= 0.8f * Time.deltaTime;
         }
+
         
     }
 

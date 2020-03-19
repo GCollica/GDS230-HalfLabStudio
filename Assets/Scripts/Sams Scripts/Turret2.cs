@@ -41,7 +41,7 @@ public class Turret2 : MonoBehaviour
 
     private void Update()
     {
-        if (fireCountDown == true)
+        if (fireCountDown == true && gC.canMove == true)
         {
             fireTimer -= 0.8f * Time.deltaTime;
         }

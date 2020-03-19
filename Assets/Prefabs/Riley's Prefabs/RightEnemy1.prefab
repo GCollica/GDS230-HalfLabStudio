@@ -476,6 +476,8 @@ MonoBehaviour:
   showHealth: 0
   slides: {fileID: 8337128674847054260}
   healthBar: {fileID: 109669075940932621}
+  spriteRenderer: {fileID: 5477876673659567539}
+  getHit: 0
   speed: 0.5
   spawner: {fileID: 0}
   turret: {fileID: 0}
@@ -496,7 +498,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.04
+  m_Radius: 0.44
 --- !u!50 &3839730073296331363
 Rigidbody2D:
   serializedVersion: 4

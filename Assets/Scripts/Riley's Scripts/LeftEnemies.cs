@@ -10,6 +10,10 @@ public class LeftEnemies : MonoBehaviour
     public Slider slides;
     public GameObject healthBar;
 
+    public SpriteRenderer spriteRenderer;
+    public bool getHit;
+    private float colourCountdown = 0.1f;
+
     public float speed = 5f;
 
     private Transform target;
@@ -70,6 +74,19 @@ public class LeftEnemies : MonoBehaviour
 
 
         slides.value = health;
+
+        if (getHit == true)
+        {
+            spriteRenderer.color = Color.red;
+            colourCountdown -= Time.deltaTime;
+        }
+        if (colourCountdown <= 0)
+        {
+            spriteRenderer.color = Color.white;
+            getHit = false;
+            colourCountdown = 0.1f;
+        }
+
     }
 
     void IncreaseHealthPerWave()
@@ -117,6 +134,8 @@ public class LeftEnemies : MonoBehaviour
             
         }
         
+
+
         if (collision.tag == "EnemyExit")
         {
             gC.health -= 1;
@@ -138,13 +157,18 @@ public class LeftEnemies : MonoBehaviour
         {
             health -= turret.damage;
             showHealth = true;
+            getHit = true;
+            
             Destroy(collision.gameObject);
+
+            
         }
 
         if (collision.gameObject.name == "T2Projectile(Clone)")
         {
             health -= turret2.damage;
             showHealth = true;
+            getHit = true;
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "Turret3")
@@ -155,7 +179,14 @@ public class LeftEnemies : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        speed = 0.5f;
+        if (collision.gameObject.tag == "Turret3")
+        {
+            speed = 0.5f;
+        }
+        if (collision.gameObject.name == "T1Projectile(Clone)") 
+        {
+            
+        }
     }
 
 }
