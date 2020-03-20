@@ -93,8 +93,8 @@ public class Turret : MonoBehaviour
         if (collision.gameObject == enemy)
         {
             enemy = null;
+            fireCountDown = false;
         }
-        fireCountDown = false;
     }
 
 

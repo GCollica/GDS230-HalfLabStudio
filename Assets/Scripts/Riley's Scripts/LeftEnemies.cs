@@ -171,7 +171,7 @@ public class LeftEnemies : MonoBehaviour
             getHit = true;
             Destroy(collision.gameObject);
         }
-        if (collision.gameObject.tag == "Turret3")
+        if (collision.gameObject.name == "T3Projectile(Clone)")
         {
             speed = 0.25f;
         }
@@ -183,9 +183,9 @@ public class LeftEnemies : MonoBehaviour
         {
             speed = 0.5f;
         }
-        if (collision.gameObject.name == "T1Projectile(Clone)") 
+        if (collision.gameObject.name == "T3Projectile(Clone)") 
         {
-            
+            speed = 0.5f;
         }
     }
 

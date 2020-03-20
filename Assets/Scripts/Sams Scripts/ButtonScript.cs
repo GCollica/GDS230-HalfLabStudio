@@ -160,10 +160,10 @@ public class ButtonScript : MonoBehaviour
     public void SpawnTurret3()
     {
         openWindow = false;
-        if (gC.researchPoints >= 500) 
+        if (gC.researchPoints >= 750) 
         {
             Instantiate(turrets[2], new Vector3(buyingTurretScript.transform.position.x, buyingTurretScript.transform.position.y, buyingTurretScript.transform.position.z - 0.05f), Quaternion.identity);
-            gC.researchPoints -= 500;
+            gC.researchPoints -= 750;
             purchaseTurretButtons[0].SetActive(false);
             purchaseTurretButtons[1].SetActive(false);
             gC.purchaseTurretWindow = false;

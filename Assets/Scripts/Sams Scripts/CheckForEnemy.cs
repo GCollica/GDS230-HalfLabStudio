@@ -34,7 +34,7 @@ public class CheckForEnemy : MonoBehaviour
     {
         skipCountDown.SetActive(false);
         spawner.gameStartTimer = 0;
-        gC.researchPoints += 100;
+        gC.researchPoints += 50;
         
     }
 

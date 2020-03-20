@@ -26,7 +26,7 @@ public class Turret2 : MonoBehaviour
 
     public CircleCollider2D cCol;
 
-    public int upgradeDamage = 150;
+    public int upgradeDamage = 250;
     public int upgradeRange = 150;
     public int sellTurret = 30;
 
@@ -65,7 +65,7 @@ public class Turret2 : MonoBehaviour
         damageUpgradedTimes += 1;
         damage += 0.5f;
         gC.researchPoints -= upgradeDamage;
-        upgradeDamage += 100;
+        upgradeDamage += 200;
         sellTurret += 10;
     }
 
@@ -156,8 +156,9 @@ public class Turret2 : MonoBehaviour
         if (collision.gameObject == enemy)
         {
             enemy = null;
+            fireCountDown = false;
         }
-        fireCountDown = false;
+        
     }
 
 }

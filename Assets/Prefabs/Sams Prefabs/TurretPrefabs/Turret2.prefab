@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 988416673003811930}
   m_Layer: 0
-  m_Name: GameObject (3)
+  m_Name: Firepoint4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3822285638986519764}
   m_Layer: 0
-  m_Name: GameObject (2)
+  m_Name: Firepoint3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -150,7 +150,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1385629031326946009}
   m_Layer: 0
-  m_Name: GameObject (4)
+  m_Name: Firepoint5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -180,7 +180,7 @@ GameObject:
   m_Component:
   - component: {fileID: 780212948849153611}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Firepoint1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -210,7 +210,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1641952524764376140}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: Firepoint2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -465,6 +465,7 @@ MonoBehaviour:
   - {fileID: 0}
   enemy: {fileID: 0}
   damage: 0.5
+  damageUpgradedTimes: 0
   projectile: {fileID: 4090978583008761406, guid: deae804c73b0d4c4197bc5e17d069af7,
     type: 3}
   firepoints:
@@ -476,10 +477,12 @@ MonoBehaviour:
   fireTimer: 1.5
   gC: {fileID: 0}
   col: {fileID: 8126753836428069358}
+  rangeUpgradedTimes: 0
   cCol: {fileID: 6412196409959397751}
-  upgradeDamage: 150
+  upgradeDamage: 250
   upgradeRange: 150
   sellTurret: 30
+  fireCountDown: 0
 --- !u!58 &6412196409959397751
 CircleCollider2D:
   m_ObjectHideFlags: 0

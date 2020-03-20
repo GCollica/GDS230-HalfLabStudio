@@ -159,7 +159,7 @@ public class RightEnemies : MonoBehaviour
             getHit = true;
             Destroy(collision.gameObject);
         }
-        if (collision.gameObject.tag == "Turret3")
+        if (collision.gameObject.name == "T3Projectile(Clone)")
         {
             speed = 0.25f;
         }
