@@ -21,11 +21,13 @@ public class BasicWaveSpawner : MonoBehaviour
     public float waveCountdown;
     public float gameStartTimer;
     public int waveIndex = 0;
+    public Text waveUpdate;
     public int waveNumber;
     public float timeBetweenSpawns;
 
     void Update()
     {
+        
         
         if (gameStartTimer <= 0f)
         {
@@ -40,7 +42,7 @@ public class BasicWaveSpawner : MonoBehaviour
 
         gameStartTimer = Mathf.Clamp(gameStartTimer, 0f, Mathf.Infinity);
 
-        waveCountdownText.text = string.Format("{0:00.00}", gameStartTimer);
+        waveCountdownText.text = gameStartTimer.ToString("F0") + " Wave Count: " + waveIndex;
     }
 
     IEnumerator WaveSpawn()
