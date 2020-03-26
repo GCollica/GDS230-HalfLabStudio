@@ -7,7 +7,7 @@ public class T1Spinner : MonoBehaviour
 
     public Transform target;
 
-    public float turnSpeed = 200;
+    public float turnSpeed = 20;
 
     public Turret turret;
 
@@ -25,7 +25,14 @@ public class T1Spinner : MonoBehaviour
           //  turret.Turn();
           //  turret.Fire();
             turret.fireCountDown = true;
+            target.position = transform.position;
+
         }
+        if (!turret.enemy) 
+        {
+            target.position = new Vector2(1, 1);
+        }
+
     }
 
 

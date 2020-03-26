@@ -124,36 +124,7 @@ public class ButtonScript : MonoBehaviour
                 gC.purchaseTurretWindow = true;
             }
 
-        }/* <html lang="en" dir="ltr" class="inited" style="
-    background-color: cornflowerblue;
-"><head><title>
-        Sono Chi no Sadame
-    </title>
-    </head><body style="
-    margin-left: 10%;
-">
-
-        <img src="https://media1.tenor.com/images/bb9e03a5f4f699c8a6cb222d0f7dd22d/tenor.gif" alt="Ohhhh NOOO!" height="500" width="700" style="
-    margin-left: 25%;
-">
-    
-
-
-
-<p style="
-    margin-left: 30%;
-    font-weight: bold;
-    font-size: 300%;
-">
-       Nigerundayo Smokey!!!
-</p>
-    
-    
-    
-
-
-
-</body></html> */
+        }
 
     }
 

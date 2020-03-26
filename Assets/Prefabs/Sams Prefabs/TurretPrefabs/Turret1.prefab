@@ -116,7 +116,7 @@ MonoBehaviour:
   projectile: {fileID: 2070428980856779352, guid: 522401860252f0c448152da1d5cc0d1e,
     type: 3}
   firePoint: {fileID: 3615924775364888396}
-  fireTimer: 1
+  fireTimer: 1.75
   enemy: {fileID: 0}
   damage: 2.5
   damageIncreaseCost: 100
