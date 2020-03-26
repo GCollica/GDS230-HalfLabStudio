@@ -356,9 +356,9 @@ GameObject:
   - component: {fileID: 1986002995670578501}
   - component: {fileID: 2745643518980828710}
   - component: {fileID: 2469252051902969592}
-  - component: {fileID: 7141296916150533230}
+  - component: {fileID: 2090871364539963428}
   m_Layer: 0
-  m_Name: LeftEnemy2
+  m_Name: RightEnemy2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -466,7 +466,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &7141296916150533230
+--- !u!114 &2090871364539963428
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -475,7 +475,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7856571479593038031}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4be48b776a84c1e40b51134ce659921a, type: 3}
+  m_Script: {fileID: 11500000, guid: a745af62eb75b0649bbfee2ed048a4bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 2
@@ -485,10 +485,10 @@ MonoBehaviour:
   spriteRenderer: {fileID: 1986002995670578501}
   getHit: 0
   speed: 1
+  spawner: {fileID: 0}
   turret: {fileID: 0}
   turret2: {fileID: 0}
   gC: {fileID: 0}
-  spawner: {fileID: 0}
 --- !u!1 &8616292445354796188
 GameObject:
   m_ObjectHideFlags: 0

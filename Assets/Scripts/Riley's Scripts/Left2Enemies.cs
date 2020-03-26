@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Left2Enemies : MonoBehaviour
 {
-    public float health = 2.5f;
+    public float health = 2f;
     public bool showHealth;
     public Slider slides;
     public GameObject healthBar;
@@ -14,7 +14,7 @@ public class Left2Enemies : MonoBehaviour
     public bool getHit;
     private float colourCountdown = 0.1f;
 
-    public float speed = 7.5f;
+    public float speed = 1f;
 
     private Transform target;
     private int leftWaypointIndex = 0;
@@ -173,19 +173,16 @@ public class Left2Enemies : MonoBehaviour
         }
         if (collision.gameObject.name == "T3Projectile(Clone)")
         {
-            speed = 0.25f;
+            speed = 0.5f;
         }
     }
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Turret3")
-        {
-            speed = 0.5f;
-        }
+        
         if (collision.gameObject.name == "T3Projectile(Clone)")
         {
-            speed = 0.5f;
+            speed = 1f;
         }
     }
 

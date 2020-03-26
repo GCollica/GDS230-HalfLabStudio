@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class RightEnemies : MonoBehaviour
+public class Right2Enemies : MonoBehaviour
 {
-    public float health = 4.7f;
+    public float health = 2f;
     public bool showHealth;
     public Slider slides;
     public GameObject healthBar;
@@ -14,7 +14,7 @@ public class RightEnemies : MonoBehaviour
     private float colourCountdown = 0.1f;
 
 
-    public float speed = 5f;
+    public float speed = 1f;
 
     private Transform target;
     private int rightWaypointIndex = 0;
@@ -161,13 +161,16 @@ public class RightEnemies : MonoBehaviour
         }
         if (collision.gameObject.name == "T3Projectile(Clone)")
         {
-            speed = 0.25f;
+            speed = 0.5f;
         }
     }
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        speed = 0.5f;
+        if (collision.gameObject.name == "T3Projectile(Clone)") 
+        {
+            speed = 1f;
+        }
     }
 
 
