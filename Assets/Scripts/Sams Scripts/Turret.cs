@@ -72,7 +72,7 @@ public class Turret : MonoBehaviour
         if (collision.tag == "Enemy")
         {
             //if enemy is not yet set, set it to the one that is currently inside your collider
-            if (enemy == null)
+            if (enemy == null && gC.targetFirst == false)
             {
                 enemy = collision.gameObject;
                 

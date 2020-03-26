@@ -32,6 +32,8 @@ public class GameController : MonoBehaviour
     public BasicWaveSpawner spawner;
     public ButtonScript bS;
 
+    public bool targetFirst;
+
 
 
 
