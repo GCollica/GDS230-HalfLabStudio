@@ -63,14 +63,14 @@ public class Turret3 : MonoBehaviour
             Turn();
             Fire();
         }
-        if (collision.name == "T3Projectile(Clone)") 
-        {
-            if (!projectileSpawned) 
-            {
-                projectileSpawned = collision.gameObject;
+        //if (collision.name == "T3Projectile(Clone)") 
+        //{
+        //    if (!projectileSpawned) 
+        //    {
+        //        projectileSpawned = collision.gameObject;
                 
-            }
-        }
+        //    }
+        //}
 
     }
 
@@ -82,10 +82,10 @@ public class Turret3 : MonoBehaviour
             fireCountDown = false;
         }
 
-        if (collision.gameObject == projectileSpawned) 
+        if (collision.gameObject == projectileSpawned)
         {
             projectileSpawned = null;
-            
+
         }
 
     }

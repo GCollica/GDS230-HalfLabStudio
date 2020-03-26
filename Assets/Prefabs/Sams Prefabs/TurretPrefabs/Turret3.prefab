@@ -163,6 +163,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3112750293406409270}
   - component: {fileID: 2947194189306599203}
+  - component: {fileID: 4399094198584544862}
   m_Layer: 0
   m_Name: Turret3Check
   m_TagString: Untagged
@@ -210,6 +211,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &4399094198584544862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8140423916069944353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 280210efda4e0b6469bf03ebe71a6bf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turret3: {fileID: 6158154719199447480}
 --- !u!1 &8710510671837094461
 GameObject:
   m_ObjectHideFlags: 0

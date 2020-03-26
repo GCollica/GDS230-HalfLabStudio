@@ -42,7 +42,8 @@ public class BasicWaveSpawner : MonoBehaviour
 
         gameStartTimer = Mathf.Clamp(gameStartTimer, 0f, Mathf.Infinity);
 
-        waveCountdownText.text = gameStartTimer.ToString("F0") + " Wave Count: " + waveIndex;
+        waveCountdownText.text = "Next Wave In: " + gameStartTimer.ToString("F0");
+        waveUpdate.text = "Wave Count: " + waveIndex.ToString();
     }
 
     IEnumerator WaveSpawn()

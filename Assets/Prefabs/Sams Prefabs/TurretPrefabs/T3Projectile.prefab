@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7659408983720849960}
   - component: {fileID: 7579848689743143209}
   - component: {fileID: 2143527087346896907}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: T3Check
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 8475777798425831346}
   - component: {fileID: 1788705039292503313}
   - component: {fileID: 4192718397342258218}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: T3Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}

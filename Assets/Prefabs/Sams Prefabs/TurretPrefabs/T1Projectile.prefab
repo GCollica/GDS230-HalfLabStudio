@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8137189614056154280}
   - component: {fileID: 1657215642139234822}
   - component: {fileID: 6475704885031251645}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: T1Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 5055732476013728924}
   - component: {fileID: 5357767502504292373}
   - component: {fileID: 4229327911912892079}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
