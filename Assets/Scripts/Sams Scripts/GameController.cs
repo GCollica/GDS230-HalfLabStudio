@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour
 {
     public int health = 10;
     public SpriteRenderer healthSprite;
+    public Animator healthAnim;
     public Color32 green;
     public Color32 orange;
     public Color32 red;
@@ -66,7 +67,7 @@ public class GameController : MonoBehaviour
         {
             healthSprite.color = orange;
         }
-        if (health == Mathf.Clamp(health, 1, 3))
+        if (health == Mathf.Clamp(health, -1, 3))
         {
             healthSprite.color = red;
         }
@@ -77,6 +78,7 @@ public class GameController : MonoBehaviour
     {
         if (health <= 0) 
         {
+            healthAnim.SetBool("Lose", true);
             canMove = false;
             spawner.gameObject.SetActive(false);
             if (bS.openWindow == true) { bS.CloseTurretWindow(); }
@@ -107,6 +109,7 @@ public class GameController : MonoBehaviour
 
     public void AdWatched()
     {
+        healthAnim.SetBool("Lose", false);
         health += 5;
         canMove = true;
         spawner.waveIndex -= 1;
