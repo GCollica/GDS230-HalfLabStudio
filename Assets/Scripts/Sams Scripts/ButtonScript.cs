@@ -176,6 +176,7 @@ public class ButtonScript : MonoBehaviour
         purchaseTurretButtons[0].SetActive(false);
         purchaseTurretButtons[1].SetActive(false);
         gC.purchaseTurretWindow = false;
+        
     }
 
     public void CloseUpgradeWindow()
@@ -197,6 +198,7 @@ public class ButtonScript : MonoBehaviour
         }
         UpgradingTurretsObjects[5].SetActive(false);
         upgradingTurretsBool = false;
+        
     }
 
     public void IncreaseTurret1Damage()

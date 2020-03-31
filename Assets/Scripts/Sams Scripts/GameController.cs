@@ -10,7 +10,10 @@ public class GameController : MonoBehaviour
     public Color32 green;
     public Color32 orange;
     public Color32 red;
-    
+
+    public GameObject watchAd;
+    public GameObject gameOver;
+
     public GameObject enemyPlacer;
     public Vector3 mouse;
     public Text researchText;
@@ -110,6 +113,8 @@ public class GameController : MonoBehaviour
         spawner.gameObject.SetActive(true);
         bS.gameObject.SetActive(true);
         loseObjects.SetActive(false);
+        watchAd.SetActive(false);
+        gameOver.transform.position += new Vector3(2.5f, 0, 0);
         foreach (Transform child in enemyParent.transform) 
         {
             GameObject.Destroy(child.gameObject);
