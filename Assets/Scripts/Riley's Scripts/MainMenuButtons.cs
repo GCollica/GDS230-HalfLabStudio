@@ -8,9 +8,13 @@ public class MainMenuButtons : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    public void PlayGame()
+    public void LoadLvl1()
     {
         SceneManager.LoadScene(1);
+    }
+    public void LoadLvl2()
+    {
+        SceneManager.LoadScene(4);
     }
 
     public void OpenOptions()

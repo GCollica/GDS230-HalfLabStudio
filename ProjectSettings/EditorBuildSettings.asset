@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Disease_Compendium.unity
     guid: 50e852fb079f94a4c8d0b36f00ec8dff
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: 886b41c4274ce004d8cf69a6f544495a
   m_configObjects: {}
