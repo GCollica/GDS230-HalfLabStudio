@@ -100,12 +100,12 @@ public class LeftEnemies : MonoBehaviour
         if (spawner.waveIndex == 7) { health += 0.35f; }
         if (spawner.waveIndex == 8) { health += 0.4f; }
         if (spawner.waveIndex == 9) { health += 0.45f; }
-        if (spawner.waveIndex == 10) { health += 1f; }
-        if (spawner.waveIndex == 11) { health += 2f; }
-        if (spawner.waveIndex == 12) { health += 3f; }
-        if (spawner.waveIndex == 13) { health += 4f; }
-        if (spawner.waveIndex == 14) { health += 5f; }
-        if (spawner.waveIndex == 15) { health += 6f; }
+        if (spawner.waveIndex == 10) { health += 1f; slides.maxValue = 5.75f; }
+        if (spawner.waveIndex == 11) { health += 2f; slides.maxValue = 6.75f; }
+        if (spawner.waveIndex == 12) { health += 3f; slides.maxValue = 7.75f; }
+        if (spawner.waveIndex == 13) { health += 4f; slides.maxValue = 8.75f; }
+        if (spawner.waveIndex == 14) { health += 5f; slides.maxValue = 9.75f; }
+        if (spawner.waveIndex == 15) { health += 6f; slides.maxValue = 10.75f; }
     }
 
 
