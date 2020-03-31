@@ -48,8 +48,8 @@ public class ButtonScript : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             if (openWindow == true) { CloseTurretWindow(); }
-            if(openWindow == true) { CloseUpgradeWindow(); }
-            openWindow = true;
+            if (openWindow == true) { CloseUpgradeWindow(); }
+            
         }
         
 
@@ -74,7 +74,7 @@ public class ButtonScript : MonoBehaviour
         {
             turretScript = collider.gameObject.GetComponentInParent<Turret>();
 
-            //openWindow = true;
+            openWindow = true;
             UpgradingTurretsObjects[0] = turretScript.upgradeButtons[0];
             UpgradingTurretsObjects[0].SetActive(true);
             UpgradingTurretsObjects[1].SetActive(true);
@@ -90,7 +90,7 @@ public class ButtonScript : MonoBehaviour
 
             UpgradingTurretsObjects[2] = turret2Script.upgradeWindows[0];
 
-            //openWindow = true;
+            openWindow = true;
 
             UpgradingTurretsObjects[2].SetActive(true);
             UpgradingTurretsObjects[3].SetActive(true);
@@ -102,7 +102,7 @@ public class ButtonScript : MonoBehaviour
             turret3Script = collider.gameObject.GetComponentInParent<Turret3>();
             UpgradingTurretsObjects[4] = turret3Script.upgradeWindows;
 
-            //openWindow = true;
+            openWindow = true;
 
             UpgradingTurretsObjects[4].SetActive(true);
             UpgradingTurretsObjects[5].SetActive(true);
@@ -119,7 +119,7 @@ public class ButtonScript : MonoBehaviour
                 purchaseTurretButtons[0].SetActive(true);
                 purchaseTurretButtons[1].SetActive(true);
 
-                //openWindow = true;
+                openWindow = true;
 
                 gC.purchaseTurretWindow = true;
             }

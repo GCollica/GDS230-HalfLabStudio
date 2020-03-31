@@ -6,8 +6,11 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour
 {
     public int health = 10;
-    public Text healthText;
-
+    public SpriteRenderer healthSprite;
+    public Color32 green;
+    public Color32 orange;
+    public Color32 red;
+    
     public GameObject enemyPlacer;
     public Vector3 mouse;
     public Text researchText;
@@ -49,8 +52,22 @@ public class GameController : MonoBehaviour
     {
         LoseState();
 
-        healthText.text = "Health: " + health;
-        researchText.text = "Research Points: " + researchPoints;
+        
+        researchText.text = researchPoints.ToString();
+
+        if (health == Mathf.Clamp(health, 7, 10))
+        {
+            healthSprite.color = green;
+        }
+        if (health == Mathf.Clamp(health, 4, 6))
+        {
+            healthSprite.color = orange;
+        }
+        if (health == Mathf.Clamp(health, 1, 3))
+        {
+            healthSprite.color = red;
+        }
+
     }
 
     void LoseState() 
@@ -93,6 +110,10 @@ public class GameController : MonoBehaviour
         spawner.gameObject.SetActive(true);
         bS.gameObject.SetActive(true);
         loseObjects.SetActive(false);
+        foreach (Transform child in enemyParent.transform) 
+        {
+            GameObject.Destroy(child.gameObject);
+        }
     }
 
     public void Win() 

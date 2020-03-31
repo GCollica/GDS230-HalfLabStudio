@@ -74,7 +74,7 @@ public class LeftEnemies : MonoBehaviour
 
 
         slides.value = health;
-
+        
         if (getHit == true)
         {
             spriteRenderer.color = Color.red;
