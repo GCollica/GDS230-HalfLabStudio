@@ -60,6 +60,7 @@ public class Turret : MonoBehaviour
             fireTimer -= 0.8f * Time.deltaTime;
         }
 
+        Fire();
 
 
     }
@@ -80,8 +81,7 @@ public class Turret : MonoBehaviour
             fireCountDown = true;
 
             Turn();
-            Fire();
-            //fireTimer -= 0.8f * Time.deltaTime;
+            
         }
 
         
@@ -92,7 +92,9 @@ public class Turret : MonoBehaviour
         //if enemy leaves your range stop targeting them
         if (collision.gameObject == enemy)
         {
+
             enemy = null;
+            
             fireCountDown = false;
         }
     }
@@ -110,14 +112,15 @@ public class Turret : MonoBehaviour
 
     void Fire()
     {
-
-        if (fireTimer <= 1.5f)
+        //if the enemy is being targeted play the fire animation
+        if (enemy)
         {
             anim.SetBool("Fire", true);
         }
+        //if the enemy is not targeted stop the fire animation
         else 
         {
-                anim.SetBool("Fire", false);
+            anim.SetBool("Fire", false);
         }
         if (fireTimer <= 0f)
         {
@@ -139,20 +142,20 @@ public class Turret : MonoBehaviour
 
     public void IncreaseDamage() 
     {
-            damageUpgradedAmount += 1;
-            damage += 0.25f;
-            gC.researchPoints -= damageIncreaseCost;
-            damageIncreaseCost += 100;
-            sellTurret += 5;
+        damageUpgradedAmount += 1;
+        damage += 0.25f;
+        gC.researchPoints -= damageIncreaseCost;
+        damageIncreaseCost += 100;
+        sellTurret += 5;
     }
 
     public void IncreaseRange() 
     {
-            rangeUpgradedAmount += 1;
-            cC2D.radius += 0.5f;
-            gC.researchPoints -= rangeIncreaseCost;
-            rangeIncreaseCost += 200;
-            sellTurret += 10;
+        rangeUpgradedAmount += 1;
+        cC2D.radius += 0.5f;
+        gC.researchPoints -= rangeIncreaseCost;
+        rangeIncreaseCost += 200;
+        sellTurret += 10;
     }
     
 

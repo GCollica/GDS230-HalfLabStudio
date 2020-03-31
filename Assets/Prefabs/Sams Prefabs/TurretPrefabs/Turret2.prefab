@@ -258,7 +258,7 @@ Transform:
   m_GameObject: {fileID: 5422737751656831630}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0.001, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.87, y: 0.87, z: 0.87}
   m_Children: []
   m_Father: {fileID: 6412196409959397749}
   m_RootOrder: 2
@@ -347,7 +347,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.066667
+  m_Radius: 1.07
 --- !u!1 &6412196409959397755
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,6 +482,7 @@ MonoBehaviour:
   upgradeDamage: 250
   upgradeRange: 150
   sellTurret: 30
+  anim: {fileID: 2955692379233123072}
   fireCountDown: 0
 --- !u!58 &6412196409959397751
 CircleCollider2D:

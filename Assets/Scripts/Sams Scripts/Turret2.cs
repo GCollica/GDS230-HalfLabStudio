@@ -30,6 +30,8 @@ public class Turret2 : MonoBehaviour
     public int upgradeRange = 150;
     public int sellTurret = 30;
 
+    public Animator anim;
+
     public bool fireCountDown;
 
     // Start is called before the first frame update
@@ -45,6 +47,8 @@ public class Turret2 : MonoBehaviour
         {
             fireTimer -= 0.8f * Time.deltaTime;
         }
+
+        Fire();
     }
 
     public void OpenUpgradeWindow()
@@ -96,6 +100,16 @@ public class Turret2 : MonoBehaviour
 
     void Fire() 
     {
+        //if the enemy is being targeted play the fire animation
+        if (enemy)
+        {
+            anim.SetBool("Fire", true);
+        }
+        //if the enemy is not targeted stop the fire animation
+        else
+        {
+            anim.SetBool("Fire", false);
+        }
         if (fireTimer <= 0f)
         {
             Instantiate(projectile, firepoints[0].transform.position, firepoints[0].transform.rotation);
@@ -144,7 +158,7 @@ public class Turret2 : MonoBehaviour
             }
             fireCountDown = true;
             Turn();
-            Fire();
+        
         }
     }
 
@@ -156,6 +170,7 @@ public class Turret2 : MonoBehaviour
         if (collision.gameObject == enemy)
         {
             enemy = null;
+           
             fireCountDown = false;
         }
         
