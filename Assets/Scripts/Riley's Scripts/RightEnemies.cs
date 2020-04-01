@@ -30,8 +30,8 @@ public class RightEnemies : MonoBehaviour
     {
 
         target = RightWaypoints.rightWaypoints[0];
-        gC = GameObject.Find("GameController").GetComponent<GameController>();
-        spawner = GameObject.Find("Spawner").GetComponent<BasicWaveSpawner>();
+      //  gC = GameObject.Find("GameController").GetComponent<GameController>();
+       // spawner = GameObject.Find("Spawner").GetComponent<BasicWaveSpawner>();
         gameObject.transform.SetParent(GameObject.Find("EnemyParent").transform);
         healthBar.SetActive(false);
         IncreaseHealthPerWave();
@@ -40,11 +40,11 @@ public class RightEnemies : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (gC.canMove == true)
-        {
+      //  if (gC.canMove == true)
+      //  {
             Vector2 dir = target.position - transform.position;
             transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
-        }
+      //  }
     }
     void Update()
     {
@@ -55,11 +55,11 @@ public class RightEnemies : MonoBehaviour
             GetNextWaypoint();
         }
 
-        if (health <= 0)
-        {
-            gC.researchPoints += 25;
-            Destroy(gameObject);
-        }
+       // if (health <= 0)
+       // {
+        //    gC.researchPoints += 25;
+        //    Destroy(gameObject);
+       // }
 
         UpdateHealth();
     }
@@ -89,21 +89,21 @@ public class RightEnemies : MonoBehaviour
 
     void IncreaseHealthPerWave()
     {
-        if (spawner.waveIndex == 1) { health += 0.05f; }
-        if (spawner.waveIndex == 2) { health += 0.1f; }
-        if (spawner.waveIndex == 3) { health += 0.15f; }
-        if (spawner.waveIndex == 4) { health += 0.2f; }
-        if (spawner.waveIndex == 5) { health += 0.25f; }
-        if (spawner.waveIndex == 6) { health += 0.3f; }
-        if (spawner.waveIndex == 7) { health += 0.35f; }
-        if (spawner.waveIndex == 8) { health += 0.4f; }
-        if (spawner.waveIndex == 9) { health += 0.45f; }
-        if (spawner.waveIndex == 10) { health += 1f; slides.maxValue = 5.75f; }
-        if (spawner.waveIndex == 11) { health += 2f; slides.maxValue = 6.75f; }
-        if (spawner.waveIndex == 12) { health += 3f; slides.maxValue = 7.75f; }
-        if (spawner.waveIndex == 13) { health += 4f; slides.maxValue = 8.75f; }
-        if (spawner.waveIndex == 14) { health += 5f; slides.maxValue = 9.75f; }
-        if (spawner.waveIndex == 15) { health += 6f; slides.maxValue = 10.75f; }
+        /*  if (spawner.waveIndex == 1) { health += 0.05f; }
+          if (spawner.waveIndex == 2) { health += 0.1f; }
+          if (spawner.waveIndex == 3) { health += 0.15f; }
+          if (spawner.waveIndex == 4) { health += 0.2f; }
+          if (spawner.waveIndex == 5) { health += 0.25f; }
+          if (spawner.waveIndex == 6) { health += 0.3f; }
+          if (spawner.waveIndex == 7) { health += 0.35f; }
+          if (spawner.waveIndex == 8) { health += 0.4f; }
+          if (spawner.waveIndex == 9) { health += 0.45f; }
+          if (spawner.waveIndex == 10) { health += 1f; slides.maxValue = 5.75f; }
+          if (spawner.waveIndex == 11) { health += 2f; slides.maxValue = 6.75f; }
+          if (spawner.waveIndex == 12) { health += 3f; slides.maxValue = 7.75f; }
+          if (spawner.waveIndex == 13) { health += 4f; slides.maxValue = 8.75f; }
+          if (spawner.waveIndex == 14) { health += 5f; slides.maxValue = 9.75f; }
+          if (spawner.waveIndex == 15) { health += 6f; slides.maxValue = 10.75f; }*/
     }
 
     void GetNextWaypoint()
@@ -131,7 +131,7 @@ public class RightEnemies : MonoBehaviour
 
         if (collision.tag == "EnemyExit")
         {
-            gC.health -= 1;
+           // gC.health -= 1;
             Destroy(gameObject);
         }
 

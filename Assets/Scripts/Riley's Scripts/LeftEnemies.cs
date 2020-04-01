@@ -30,8 +30,8 @@ public class LeftEnemies : MonoBehaviour
     void Start()
     {
         target = LeftWaypoints.leftWaypoints[0];
-        gC = GameObject.Find("GameController").GetComponent<GameController>();
-        spawner = GameObject.Find("Spawner").GetComponent<BasicWaveSpawner>();
+       // gC = GameObject.Find("GameController").GetComponent<GameController>();
+       //spawner = GameObject.Find("Spawner").GetComponent<BasicWaveSpawner>();
         gameObject.transform.SetParent(GameObject.Find("EnemyParent").transform);
         healthBar.SetActive(false);
         IncreaseHealthPerWave();
@@ -48,7 +48,7 @@ public class LeftEnemies : MonoBehaviour
 
         if (health <= 0f) 
         {
-            gC.researchPoints += 25;
+        //    gC.researchPoints += 25;
             Destroy(gameObject);
         }
 
@@ -58,11 +58,11 @@ public class LeftEnemies : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (gC.canMove == true)
-        {
+       // if (gC.canMove == true)
+      //  {
             Vector2 dir = target.position - transform.position;
             transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
-        }
+       // }
     }
 
     public void UpdateHealth()
@@ -91,7 +91,7 @@ public class LeftEnemies : MonoBehaviour
 
     void IncreaseHealthPerWave()
     {
-        if (spawner.waveIndex == 1) { health += 0.05f; }
+      /*  if (spawner.waveIndex == 1) { health += 0.05f; }
         if (spawner.waveIndex == 2) { health += 0.1f; }
         if (spawner.waveIndex == 3) { health += 0.15f; }
         if (spawner.waveIndex == 4) { health += 0.2f; }
@@ -105,7 +105,7 @@ public class LeftEnemies : MonoBehaviour
         if (spawner.waveIndex == 12) { health += 3f; slides.maxValue = 7.75f; }
         if (spawner.waveIndex == 13) { health += 4f; slides.maxValue = 8.75f; }
         if (spawner.waveIndex == 14) { health += 5f; slides.maxValue = 9.75f; }
-        if (spawner.waveIndex == 15) { health += 6f; slides.maxValue = 10.75f; }
+        if (spawner.waveIndex == 15) { health += 6f; slides.maxValue = 10.75f; }*/
     }
 
 
@@ -138,7 +138,7 @@ public class LeftEnemies : MonoBehaviour
 
         if (collision.tag == "EnemyExit")
         {
-            gC.health -= 1;
+        //    gC.health -= 1;
             Destroy(gameObject);
         }
 
