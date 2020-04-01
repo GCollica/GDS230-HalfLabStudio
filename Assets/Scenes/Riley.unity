@@ -150,6 +150,75 @@ Transform:
   m_Father: {fileID: 1779069908}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &142066854
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6701838643150369290, guid: 680f1a83b8b61fc45aab205c98cc4558,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemyParent
+      objectReference: {fileID: 0}
+    - target: {fileID: 6701838643150369291, guid: 680f1a83b8b61fc45aab205c98cc4558,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6701838643150369291, guid: 680f1a83b8b61fc45aab205c98cc4558,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6701838643150369291, guid: 680f1a83b8b61fc45aab205c98cc4558,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6701838643150369291, guid: 680f1a83b8b61fc45aab205c98cc4558,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6701838643150369291, guid: 680f1a83b8b61fc45aab205c98cc4558,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6701838643150369291, guid: 680f1a83b8b61fc45aab205c98cc4558,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6701838643150369291, guid: 680f1a83b8b61fc45aab205c98cc4558,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6701838643150369291, guid: 680f1a83b8b61fc45aab205c98cc4558,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6701838643150369291, guid: 680f1a83b8b61fc45aab205c98cc4558,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6701838643150369291, guid: 680f1a83b8b61fc45aab205c98cc4558,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6701838643150369291, guid: 680f1a83b8b61fc45aab205c98cc4558,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 680f1a83b8b61fc45aab205c98cc4558, type: 3}
 --- !u!1 &145655042
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,7 +773,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 915090301}
-  - component: {fileID: 915090302}
   - component: {fileID: 915090303}
   m_Layer: 0
   m_Name: GameController
@@ -727,33 +795,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &915090302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 915090300}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c9be568f3ad8f64480d53342846e92b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waveCountdownText: {fileID: 1770855614}
-  gC: {fileID: 0}
-  enemyParent: {fileID: 0}
-  leftEnemyPrefab: {fileID: 7095584537015850625, guid: 42ae0a64432cb984086b2d35d369e9df,
-    type: 3}
-  rightEnemyPrefab: {fileID: 5477876673659567538, guid: 78329d0e038a73745984d596f0ab48bf,
-    type: 3}
-  rightEnemyOffset: {x: 0, y: 0.7, z: 0}
-  spawnPoint: {fileID: 1195825182}
-  waveCountdown: 10
-  gameStartTimer: 10
-  waveIndex: 0
-  waveUpdate: {fileID: 0}
-  waveNumber: 15
-  timeBetweenSpawns: 1.25
 --- !u!114 &915090303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -777,21 +818,21 @@ MonoBehaviour:
   - enemyPrefab: {fileID: 7095584537015850627, guid: 42ae0a64432cb984086b2d35d369e9df,
       type: 3}
     count: 2
-    rate: 2
+    rate: 0.8
   - enemyPrefab: {fileID: 7095584537015850627, guid: 42ae0a64432cb984086b2d35d369e9df,
       type: 3}
     count: 4
-    rate: 2
+    rate: 0.8
   - enemyPrefab: {fileID: 7095584537015850627, guid: 42ae0a64432cb984086b2d35d369e9df,
       type: 3}
     count: 6
-    rate: 2
+    rate: 0.8
   - enemyPrefab: {fileID: 5477876673659567537, guid: 78329d0e038a73745984d596f0ab48bf,
       type: 3}
     count: 6
-    rate: 2
+    rate: 0.8
   spawnPoint: {fileID: 1195825182}
-  waveCountdown: 2
+  waveCountdown: 10
   gameStartTimer: 2
   timeBetweenSpawns: 0
   waveIndex: 0
