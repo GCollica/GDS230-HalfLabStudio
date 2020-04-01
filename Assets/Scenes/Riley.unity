@@ -576,6 +576,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1770855613}
+  - {fileID: 1159983777}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -704,6 +705,7 @@ GameObject:
   m_Component:
   - component: {fileID: 915090301}
   - component: {fileID: 915090302}
+  - component: {fileID: 915090303}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -732,7 +734,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 915090300}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c9be568f3ad8f64480d53342846e92b, type: 3}
   m_Name: 
@@ -749,8 +751,52 @@ MonoBehaviour:
   waveCountdown: 10
   gameStartTimer: 10
   waveIndex: 0
+  waveUpdate: {fileID: 0}
   waveNumber: 15
   timeBetweenSpawns: 1.25
+--- !u!114 &915090303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915090300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8372b489efa439a4fb1cdc3b09cf5817, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveCountdownText: {fileID: 1770855614}
+  gC: {fileID: 0}
+  enemyParent: {fileID: 0}
+  waves:
+  - enemyPrefab: {fileID: 7095584537015850627, guid: 42ae0a64432cb984086b2d35d369e9df,
+      type: 3}
+    count: 1
+    rate: 2
+  - enemyPrefab: {fileID: 7095584537015850627, guid: 42ae0a64432cb984086b2d35d369e9df,
+      type: 3}
+    count: 2
+    rate: 2
+  - enemyPrefab: {fileID: 7095584537015850627, guid: 42ae0a64432cb984086b2d35d369e9df,
+      type: 3}
+    count: 4
+    rate: 2
+  - enemyPrefab: {fileID: 7095584537015850627, guid: 42ae0a64432cb984086b2d35d369e9df,
+      type: 3}
+    count: 6
+    rate: 2
+  - enemyPrefab: {fileID: 5477876673659567537, guid: 78329d0e038a73745984d596f0ab48bf,
+      type: 3}
+    count: 6
+    rate: 2
+  spawnPoint: {fileID: 1195825182}
+  waveCountdown: 2
+  gameStartTimer: 2
+  timeBetweenSpawns: 0
+  waveIndex: 0
+  waveUpdate: {fileID: 1159983775}
+  waveNumber: 0
 --- !u!1 &946474329
 GameObject:
   m_ObjectHideFlags: 0
@@ -1012,6 +1058,83 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1159983774
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1159983777}
+  - component: {fileID: 1159983776}
+  - component: {fileID: 1159983775}
+  m_Layer: 5
+  m_Name: WaveUpdate
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1159983775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159983774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Test
+--- !u!222 &1159983776
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159983774}
+  m_CullTransparentMesh: 0
+--- !u!224 &1159983777
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159983774}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 742256600}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.020545335, y: 0.7985615}
+  m_AnchorMax: {x: 0.23065966, y: 0.87100005}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: -1}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1195825181
 GameObject:
   m_ObjectHideFlags: 0
@@ -1347,7 +1470,7 @@ GameObject:
   - component: {fileID: 1770855615}
   - component: {fileID: 1770855614}
   m_Layer: 5
-  m_Name: Text
+  m_Name: WaveCountdown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
