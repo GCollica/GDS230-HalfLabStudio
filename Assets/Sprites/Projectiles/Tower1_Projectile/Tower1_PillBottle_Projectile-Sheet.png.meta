@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: c56be778a20c0044ea9bb3a52e0ae5f5
+guid: 94f378f210b3ae04bae0c456704f12f8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3304367148017403097
-    second: AntidoteProjectile-Sheet_0
+      213: 4169045170392904879
+    second: Tower1_PillBottle_Projectile-Sheet_0
   - first:
-      213: 6402306474990814385
-    second: AntidoteProjectile-Sheet_1
+      213: 2743301616303942404
+    second: Tower1_PillBottle_Projectile-Sheet_1
   - first:
-      213: -8174077526091133035
-    second: AntidoteProjectile-Sheet_2
+      213: 9078844891388716750
+    second: Tower1_PillBottle_Projectile-Sheet_2
   - first:
-      213: 6163166710251478275
-    second: AntidoteProjectile-Sheet_3
+      213: -6458596652226650288
+    second: Tower1_PillBottle_Projectile-Sheet_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -57,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 80
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AntidoteProjectile-Sheet_0
+      name: Tower1_PillBottle_Projectile-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,41 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23ce0f4c6fdabf642b487e2d760149ae
-      internalID: 3304367148017403097
+      spriteID: c74188cf18dd7244d9f354eb109d078f
+      internalID: 4169045170392904879
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AntidoteProjectile-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b87af0eb86eb20849b2d96c56370e616
-      internalID: 6402306474990814385
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AntidoteProjectile-Sheet_2
+      name: Tower1_PillBottle_Projectile-Sheet_1
       rect:
         serializedVersion: 2
         x: 64
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cde4d546ee826264889858c849d35aaa
-      internalID: -8174077526091133035
+      spriteID: 2c98133661d5ade418ee745cf221b296
+      internalID: 2743301616303942404
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AntidoteProjectile-Sheet_3
+      name: Tower1_PillBottle_Projectile-Sheet_2
       rect:
         serializedVersion: 2
-        x: 96
+        x: 128
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,8 +166,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83a2d0d7ac21a524986c11d8c91843f5
-      internalID: 6163166710251478275
+      spriteID: bba9d5dddcbcc4241a2d282935810311
+      internalID: 9078844891388716750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower1_PillBottle_Projectile-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 099bc79bf4312ec43898ebdcc3764ed8
+      internalID: -6458596652226650288
       vertices: []
       indices: 
       edges: []
