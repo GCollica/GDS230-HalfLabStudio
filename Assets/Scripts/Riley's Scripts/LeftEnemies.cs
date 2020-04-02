@@ -50,6 +50,7 @@ public class LeftEnemies : MonoBehaviour
         {
         //    gC.researchPoints += 25;
             Destroy(gameObject);
+            AdvancedWaveSpawner.EnemiesAlive--;
         }
 
         UpdateHealth();
@@ -114,6 +115,7 @@ public class LeftEnemies : MonoBehaviour
         if (leftWaypointIndex >= LeftWaypoints.leftWaypoints.Length - 1)
         {
             Destroy(gameObject);
+            AdvancedWaveSpawner.EnemiesAlive--;
             return;
         }
         leftWaypointIndex++;
