@@ -55,11 +55,12 @@ public class RightEnemies : MonoBehaviour
             GetNextWaypoint();
         }
 
-       // if (health <= 0)
-       // {
+       if (health <= 0)
+        {
         //    gC.researchPoints += 25;
-        //    Destroy(gameObject);
-       // }
+            Destroy(gameObject);
+            AdvancedWaveSpawner.EnemiesAlive--;
+        }
 
         UpdateHealth();
     }
@@ -111,6 +112,7 @@ public class RightEnemies : MonoBehaviour
         if (rightWaypointIndex >= RightWaypoints.rightWaypoints.Length - 1)
         {
             Destroy(gameObject);
+            AdvancedWaveSpawner.EnemiesAlive--;
             return;
         }
         rightWaypointIndex++;
