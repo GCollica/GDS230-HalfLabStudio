@@ -126,7 +126,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 4633545004726569915}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1064610122}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c3b3e16b67f75541b59ccb1cc31064f, type: 3}
@@ -138,7 +138,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 4633545004726569915}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1064610122}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2c3c6bf3aa6a6c488a45dbf10d21f5b, type: 3}
@@ -635,6 +635,54 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6645860820309910719}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1064610122 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4633545004592377897, guid: da248099c0047c346bfca4804dda6086,
+    type: 3}
+  m_PrefabInstance: {fileID: 4633545004726569915}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1064610123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064610122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8372b489efa439a4fb1cdc3b09cf5817, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveCountdownText: {fileID: 473101484}
+  gC: {fileID: 134282133}
+  enemyParent: {fileID: 599771159}
+  waves:
+  - enemyPrefab: {fileID: 7095584537015850627, guid: 42ae0a64432cb984086b2d35d369e9df,
+      type: 3}
+    count: 1
+    rate: 0.8
+  - enemyPrefab: {fileID: 7095584537015850627, guid: 42ae0a64432cb984086b2d35d369e9df,
+      type: 3}
+    count: 2
+    rate: 0.8
+  - enemyPrefab: {fileID: 7095584537015850627, guid: 42ae0a64432cb984086b2d35d369e9df,
+      type: 3}
+    count: 4
+    rate: 0.8
+  - enemyPrefab: {fileID: 7095584537015850627, guid: 42ae0a64432cb984086b2d35d369e9df,
+      type: 3}
+    count: 6
+    rate: 0.8
+  - enemyPrefab: {fileID: 5477876673659567537, guid: 78329d0e038a73745984d596f0ab48bf,
+      type: 3}
+    count: 6
+    rate: 0.8
+  spawnPoint: {fileID: 647296740}
+  enemies: 0
+  waveCountdown: 10
+  gameStartTimer: 2
+  waveIndex: 0
+  waveUpdate: {fileID: 707387455}
 --- !u!1001 &1127341837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1323,6 +1371,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spawner
       objectReference: {fileID: 0}
+    - target: {fileID: 683692483460165490, guid: a2aa5195fbac5834b84cfcbc5a6c0b6c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 683692483460165489, guid: a2aa5195fbac5834b84cfcbc5a6c0b6c,
         type: 3}
       propertyPath: waveCountdownText
@@ -1689,7 +1742,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2284072992318645035, guid: a3146d0c07d8dde4ea77177579a0dd2c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4389901141112569244, guid: a3146d0c07d8dde4ea77177579a0dd2c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1410641778993911628, guid: a3146d0c07d8dde4ea77177579a0dd2c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3876951013243934319, guid: a3146d0c07d8dde4ea77177579a0dd2c,
         type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1799,11 +1867,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4389901141112569244, guid: a3146d0c07d8dde4ea77177579a0dd2c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4389901141112569243, guid: a3146d0c07d8dde4ea77177579a0dd2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1813,11 +1876,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 4.58
-      objectReference: {fileID: 0}
-    - target: {fileID: 3876951013243934319, guid: a3146d0c07d8dde4ea77177579a0dd2c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3876951013243934318, guid: a3146d0c07d8dde4ea77177579a0dd2c,
         type: 3}
@@ -1843,11 +1901,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -2.669983
-      objectReference: {fileID: 0}
-    - target: {fileID: 2284072992318645035, guid: a3146d0c07d8dde4ea77177579a0dd2c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 98592276148916792, guid: a3146d0c07d8dde4ea77177579a0dd2c,
         type: 3}

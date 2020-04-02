@@ -16,7 +16,8 @@ public class AdvancedWaveSpawner : MonoBehaviour
     [Header("Enemy Attributes")]
     public Transform spawnPoint;
     public static int EnemiesAlive = 0;
-    public Text enemiesAliveText;
+    public int enemies;
+    //public Text enemiesAliveText;
 
     [Header("Wave Attributes")]
     public float waveCountdown;
@@ -27,6 +28,7 @@ public class AdvancedWaveSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        enemies = EnemiesAlive;
         if (EnemiesAlive > 0)
         {
             return;
@@ -44,7 +46,7 @@ public class AdvancedWaveSpawner : MonoBehaviour
 
         waveCountdownText.text = "Next Wave In: " + gameStartTimer.ToString("F0");
         waveUpdate.text = "Wave Count: " + waveIndex.ToString();
-        enemiesAliveText.text = "Enemies: " + EnemiesAlive.ToString();
+        //enemiesAliveText.text = "Enemies: " + EnemiesAlive.ToString();
     }
 
     IEnumerator WaveSpawn()

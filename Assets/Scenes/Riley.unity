@@ -157,11 +157,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6701838643150369290, guid: 680f1a83b8b61fc45aab205c98cc4558,
-        type: 3}
-      propertyPath: m_Name
-      value: EnemyParent
-      objectReference: {fileID: 0}
     - target: {fileID: 6701838643150369291, guid: 680f1a83b8b61fc45aab205c98cc4558,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -216,6 +211,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6701838643150369290, guid: 680f1a83b8b61fc45aab205c98cc4558,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemyParent
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 680f1a83b8b61fc45aab205c98cc4558, type: 3}
@@ -334,6 +334,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 749cc1815337ee34dbc7ab61424340c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &507535841 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6701838643150369290, guid: 680f1a83b8b61fc45aab205c98cc4558,
+    type: 3}
+  m_PrefabInstance: {fileID: 142066854}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &518975943
 GameObject:
   m_ObjectHideFlags: 0
@@ -775,6 +781,7 @@ GameObject:
   m_Component:
   - component: {fileID: 915090301}
   - component: {fileID: 915090303}
+  - component: {fileID: 915090302}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -796,6 +803,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &915090302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915090300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2c3c6bf3aa6a6c488a45dbf10d21f5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  healthSprite: {fileID: 0}
+  healthAnim: {fileID: 0}
+  green:
+    serializedVersion: 2
+    rgba: 0
+  orange:
+    serializedVersion: 2
+    rgba: 0
+  red:
+    serializedVersion: 2
+    rgba: 0
+  watchAd: {fileID: 0}
+  gameOver: {fileID: 0}
+  enemyPlacer: {fileID: 0}
+  mouse: {x: 0, y: 0, z: 0}
+  researchText: {fileID: 0}
+  researchPoints: 0
+  turret1: {fileID: 0}
+  waypoints: []
+  upgradeWindow: 0
+  purchaseTurretWindow: 0
+  enemyParent: {fileID: 0}
+  WinButtons: {fileID: 0}
+  pause: {fileID: 0}
+  canMove: 1
+  endingAddMoney: 1
+  loseObjects: {fileID: 0}
+  spawner: {fileID: 0}
+  bS: {fileID: 0}
+  targetFirst: 0
 --- !u!114 &915090303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -809,8 +859,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveCountdownText: {fileID: 1770855614}
-  gC: {fileID: 0}
-  enemyParent: {fileID: 0}
+  gC: {fileID: 915090302}
+  enemyParent: {fileID: 507535841}
   waves:
   - enemyPrefab: {fileID: 7095584537015850627, guid: 42ae0a64432cb984086b2d35d369e9df,
       type: 3}
@@ -833,7 +883,7 @@ MonoBehaviour:
     count: 6
     rate: 0.8
   spawnPoint: {fileID: 1195825182}
-  enemiesAliveText: {fileID: 1494282051}
+  enemies: 0
   waveCountdown: 3
   gameStartTimer: 2
   waveIndex: 0
