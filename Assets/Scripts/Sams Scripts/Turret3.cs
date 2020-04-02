@@ -6,8 +6,9 @@ public class Turret3 : MonoBehaviour
 {
     public GameController gC;
 
-    public GameObject upgradeWindows;
+    public GameObject[] upgradeWindows;
     public GameObject enemy;
+
 
     public GameObject projectilePrefab;
     public GameObject projectileSpawned;

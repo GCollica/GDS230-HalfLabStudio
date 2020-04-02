@@ -49,7 +49,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gC: {fileID: 0}
-  upgradeWindows: {fileID: 8710510671837094461}
+  upgradeWindows:
+  - {fileID: 8710510671837094461}
   enemy: {fileID: 0}
   projectilePrefab: {fileID: 3839955514387411714, guid: c9725db992e9fc54aa7e18c55208b770,
     type: 3}
@@ -307,7 +308,7 @@ GameObject:
   - component: {fileID: 5475832893347357916}
   - component: {fileID: 7949591367524945991}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: Selected
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -30,7 +30,7 @@ public class RightEnemies : MonoBehaviour
     {
 
         target = RightWaypoints.rightWaypoints[0];
-      //  gC = GameObject.Find("GameController").GetComponent<GameController>();
+        gC = GameObject.Find("GameController").GetComponent<GameController>();
        // spawner = GameObject.Find("Spawner").GetComponent<BasicWaveSpawner>();
         gameObject.transform.SetParent(GameObject.Find("EnemyParent").transform);
         healthBar.SetActive(false);
@@ -40,11 +40,11 @@ public class RightEnemies : MonoBehaviour
 
     void FixedUpdate()
     {
-      //  if (gC.canMove == true)
-      //  {
+        if (gC.canMove == true)
+        {
             Vector2 dir = target.position - transform.position;
             transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
-      //  }
+        }
     }
     void Update()
     {
@@ -57,7 +57,7 @@ public class RightEnemies : MonoBehaviour
 
        if (health <= 0)
         {
-        //    gC.researchPoints += 25;
+            gC.researchPoints += 25;
             Destroy(gameObject);
             AdvancedWaveSpawner.EnemiesAlive--;
         }
@@ -133,7 +133,7 @@ public class RightEnemies : MonoBehaviour
 
         if (collision.tag == "EnemyExit")
         {
-           // gC.health -= 1;
+            gC.health -= 1;
             Destroy(gameObject);
         }
 
