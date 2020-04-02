@@ -10,6 +10,7 @@ public class Turret : MonoBehaviour
     public Text[] upgradeText;
 
     public CircleCollider2D cC2D;
+    public SpriteRenderer rangeSprite;
     public int rangeIncreaseCost = 200;
     public int rangeUpgradedAmount = 0;
 
@@ -154,6 +155,7 @@ public class Turret : MonoBehaviour
     {
         rangeUpgradedAmount += 1;
         cC2D.radius += 0.5f;
+        rangeSprite.size += new Vector2(0.5f,0.5f);
         gC.researchPoints -= rangeIncreaseCost;
         rangeIncreaseCost += 200;
         sellTurret += 10;

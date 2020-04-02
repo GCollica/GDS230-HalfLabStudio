@@ -30,7 +30,7 @@ public class LeftEnemies : MonoBehaviour
     void Start()
     {
         target = LeftWaypoints.leftWaypoints[0];
-       // gC = GameObject.Find("GameController").GetComponent<GameController>();
+        gC = GameObject.Find("GameController").GetComponent<GameController>();
        //spawner = GameObject.Find("Spawner").GetComponent<BasicWaveSpawner>();
         gameObject.transform.SetParent(GameObject.Find("EnemyParent").transform);
         healthBar.SetActive(false);
@@ -48,7 +48,7 @@ public class LeftEnemies : MonoBehaviour
 
         if (health <= 0f) 
         {
-        //    gC.researchPoints += 25;
+            gC.researchPoints += 25;
             Destroy(gameObject);
             AdvancedWaveSpawner.EnemiesAlive--;
         }
@@ -59,11 +59,11 @@ public class LeftEnemies : MonoBehaviour
 
     void FixedUpdate()
     {
-       // if (gC.canMove == true)
-      //  {
+        if (gC.canMove == true)
+        {
             Vector2 dir = target.position - transform.position;
             transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
-       // }
+        }
     }
 
     public void UpdateHealth()
@@ -140,7 +140,7 @@ public class LeftEnemies : MonoBehaviour
 
         if (collision.tag == "EnemyExit")
         {
-        //    gC.health -= 1;
+            gC.health -= 1;
             Destroy(gameObject);
         }
 
