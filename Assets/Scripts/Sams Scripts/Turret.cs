@@ -112,22 +112,23 @@ public class Turret : MonoBehaviour
 
     void Fire()
     {
-        //if the enemy is being targeted play the fire animation
-        if (enemy)
-        {
-            anim.SetBool("Fire", true);
-        }
-        //if the enemy is not targeted stop the fire animation
-        else 
-        {
-            anim.SetBool("Fire", false);
-        }
+        
         if (fireTimer <= 0f)
         {
+           
             Instantiate(projectile, firePoint.transform.position, transform.rotation);
             fireTimer = 1.75f;
         }
-        
+        if (fireTimer <= 0.4f)
+        {
+            anim.SetBool("Fire", true);
+        }
+        else
+        {
+            anim.SetBool("Fire", false);
+        }
+
+
     }
     
     public void CloseUpgradeWindow() 
