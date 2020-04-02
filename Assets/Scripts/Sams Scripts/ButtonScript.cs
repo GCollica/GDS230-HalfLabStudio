@@ -240,7 +240,6 @@ public class ButtonScript : MonoBehaviour
             turretScript.IncreaseDamage();
 
         }
-        if (gC.researchPoints <= turretScript.damageIncreaseCost) { openWindow = true; }
     }
 
     public void IncreaseTurret1Range() 
@@ -252,7 +251,6 @@ public class ButtonScript : MonoBehaviour
             turretScript.IncreaseRange();
 
         }
-        if (gC.researchPoints <= turretScript.rangeIncreaseCost) { openWindow = true; }
     }
 
     public void DestroyTurret1() 
@@ -274,7 +272,6 @@ public class ButtonScript : MonoBehaviour
             openWindow = false;
         }
 
-        if (gC.researchPoints <= turret2Script.upgradeDamage) { openWindow = true; }
     }
 
     public void IncreaseTurret2Range() 
@@ -286,7 +283,6 @@ public class ButtonScript : MonoBehaviour
             turret2Script.UpgradeRange();
             
         }
-        if (gC.researchPoints <= turret2Script.upgradeRange) { openWindow = true; }
     }
 
     public void DestroyTurret2() 
