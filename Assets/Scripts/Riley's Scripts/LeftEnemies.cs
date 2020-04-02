@@ -115,7 +115,6 @@ public class LeftEnemies : MonoBehaviour
         if (leftWaypointIndex >= LeftWaypoints.leftWaypoints.Length - 1)
         {
             Destroy(gameObject);
-            AdvancedWaveSpawner.EnemiesAlive--;
             return;
         }
         leftWaypointIndex++;
@@ -142,6 +141,7 @@ public class LeftEnemies : MonoBehaviour
         {
             gC.health -= 1;
             Destroy(gameObject);
+            AdvancedWaveSpawner.EnemiesAlive--;
         }
 
         if (collision.gameObject.tag == "Turret2")

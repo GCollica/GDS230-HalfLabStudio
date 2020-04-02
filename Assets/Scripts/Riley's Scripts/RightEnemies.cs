@@ -112,7 +112,6 @@ public class RightEnemies : MonoBehaviour
         if (rightWaypointIndex >= RightWaypoints.rightWaypoints.Length - 1)
         {
             Destroy(gameObject);
-            AdvancedWaveSpawner.EnemiesAlive--;
             return;
         }
         rightWaypointIndex++;
@@ -135,6 +134,7 @@ public class RightEnemies : MonoBehaviour
         {
             gC.health -= 1;
             Destroy(gameObject);
+            AdvancedWaveSpawner.EnemiesAlive--;
         }
 
         if (collision.gameObject.tag == "Turret2")
