@@ -834,12 +834,10 @@ MonoBehaviour:
     rate: 0.8
   spawnPoint: {fileID: 1195825182}
   enemiesAliveText: {fileID: 1494282051}
-  waveCountdown: 10
+  waveCountdown: 3
   gameStartTimer: 2
-  timeBetweenSpawns: 0
   waveIndex: 0
   waveUpdate: {fileID: 1159983775}
-  waveNumber: 0
 --- !u!1 &946474329
 GameObject:
   m_ObjectHideFlags: 0

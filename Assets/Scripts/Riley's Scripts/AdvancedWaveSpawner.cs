@@ -21,14 +21,17 @@ public class AdvancedWaveSpawner : MonoBehaviour
     [Header("Wave Attributes")]
     public float waveCountdown;
     public float gameStartTimer;
-    public float timeBetweenSpawns;
     public int waveIndex = 0;
     public Text waveUpdate;
-    public int waveNumber;
 
     // Update is called once per frame
     void Update()
     {
+        if (EnemiesAlive > 0)
+        {
+            return;
+        }
+
         if (gameStartTimer <= 0f)
         {
             StartCoroutine(WaveSpawn());
@@ -47,6 +50,7 @@ public class AdvancedWaveSpawner : MonoBehaviour
     IEnumerator WaveSpawn()
     {
         Waves wave = waves[waveIndex];
+        waveIndex++;
 
         for (int i = 0; i < wave.count; i++)
         {
@@ -54,13 +58,10 @@ public class AdvancedWaveSpawner : MonoBehaviour
             yield return new WaitForSeconds(1f / wave.rate);
         }
 
-        if (waveIndex < 5)
-        {
-            waveIndex++;
-        }
-        else
+        if (waveIndex >= waves.Length)
         {
             Debug.Log("You Win!");
+            this.enabled = false;
         }
     }
 
