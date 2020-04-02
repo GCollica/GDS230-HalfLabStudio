@@ -16,6 +16,7 @@ public class AdvancedWaveSpawner : MonoBehaviour
     [Header("Enemy Attributes")]
     public Transform spawnPoint;
     public static int EnemiesAlive = 0;
+    public Text enemiesAliveText;
 
     [Header("Wave Attributes")]
     public float waveCountdown;
@@ -40,6 +41,7 @@ public class AdvancedWaveSpawner : MonoBehaviour
 
         waveCountdownText.text = "Next Wave In: " + gameStartTimer.ToString("F0");
         waveUpdate.text = "Wave Count: " + waveIndex.ToString();
+        enemiesAliveText.text = "Enemies: " + EnemiesAlive.ToString();
     }
 
     IEnumerator WaveSpawn()
@@ -51,7 +53,15 @@ public class AdvancedWaveSpawner : MonoBehaviour
             SpawnEnemy(wave.enemyPrefab);
             yield return new WaitForSeconds(1f / wave.rate);
         }
-        waveIndex++;
+
+        if (waveIndex < 5)
+        {
+            waveIndex++;
+        }
+        else
+        {
+            Debug.Log("You Win!");
+        }
     }
 
     void SpawnEnemy(GameObject enemy)
