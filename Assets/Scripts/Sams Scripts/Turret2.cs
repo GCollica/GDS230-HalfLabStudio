@@ -20,11 +20,11 @@ public class Turret2 : MonoBehaviour
 
     public GameController gC;
 
-    public CapsuleCollider2D col;
-
     public int rangeUpgradedTimes;
 
     public CircleCollider2D cCol;
+    public SpriteRenderer rangeSprite;
+    public Vector3 temp;
 
     public int upgradeDamage = 250;
     public int upgradeRange = 150;
@@ -38,6 +38,7 @@ public class Turret2 : MonoBehaviour
     void Start()
     {
         gC = FindObjectOfType<GameController>();
+        rangeSprite.gameObject.transform.parent = null;
 
     }
 
@@ -78,9 +79,13 @@ public class Turret2 : MonoBehaviour
     {
         rangeUpgradedTimes += 1;
         cCol.radius += 0.5f;
+        temp = rangeSprite.transform.localScale;
+        temp.x += 4f;
+        temp.y += 4f;
+        rangeSprite.transform.localScale = temp;
         gC.researchPoints -= upgradeRange;
         upgradeRange += 150;
-        col.size += new Vector2(0.5f, 0.5f);
+       
         sellTurret += 15;
     }
 

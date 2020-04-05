@@ -14,7 +14,7 @@ public class ProjectileT2 : MonoBehaviour
     }
     private void Update()
     {
-        deathCountDown -= 0.3f * Time.deltaTime;
+        deathCountDown -= 0.2f * Time.deltaTime;
         if (deathCountDown <= 0) 
         {
             Destroy(gameObject);

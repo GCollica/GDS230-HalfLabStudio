@@ -109,6 +109,7 @@ MonoBehaviour:
   - {fileID: 0}
   cC2D: {fileID: 1209650461054667133}
   rangeSprite: {fileID: 8512758692757667073}
+  temp: {x: 0, y: 0, z: 0}
   rangeIncreaseCost: 200
   rangeUpgradedAmount: 0
   gC: {fileID: 0}

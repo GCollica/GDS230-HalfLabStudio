@@ -11,6 +11,7 @@ public class Turret : MonoBehaviour
 
     public CircleCollider2D cC2D;
     public SpriteRenderer rangeSprite;
+    public Vector3 temp;
     public int rangeIncreaseCost = 200;
     public int rangeUpgradedAmount = 0;
 
@@ -48,7 +49,7 @@ public class Turret : MonoBehaviour
     {
         
         gC = FindObjectOfType<GameController>();
-      
+        rangeSprite.gameObject.transform.parent = null;
         
 
     }
@@ -155,7 +156,10 @@ public class Turret : MonoBehaviour
     {
         rangeUpgradedAmount += 1;
         cC2D.radius += 0.5f;
-        rangeSprite.size += new Vector2(0.5f,0.5f);
+        temp = rangeSprite.transform.localScale;
+        temp.x += 4f;
+        temp.y += 4f;
+        rangeSprite.transform.localScale = temp;
         gC.researchPoints -= rangeIncreaseCost;
         rangeIncreaseCost += 200;
         sellTurret += 10;
@@ -166,6 +170,7 @@ public class Turret : MonoBehaviour
     {
         Instantiate(towerSpawnPoint, new Vector3(transform.position.x, transform.position.y, 40), Quaternion.identity);
         gC.researchPoints += sellTurret;
+        Destroy(rangeSprite.gameObject);
         Destroy(upgradeButtons[0]);
         Destroy(upgradeButtons[1]);
         Destroy(upgradeButtons[2]);

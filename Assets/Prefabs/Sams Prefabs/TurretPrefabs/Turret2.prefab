@@ -128,7 +128,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 0.96867335, b: 0, a: 0.49803922}
   m_FlipX: 0
@@ -300,7 +300,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 1134979463256749869, guid: 0e12546e11fec4f47aadae8c1b3f1cb1,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -557,9 +557,10 @@ MonoBehaviour:
   - {fileID: 2213021598653063759}
   fireTimer: 1.5
   gC: {fileID: 0}
-  col: {fileID: 8126753836428069358}
   rangeUpgradedTimes: 0
   cCol: {fileID: 6412196409959397751}
+  rangeSprite: {fileID: 1622014087725804953}
+  temp: {x: 0, y: 0, z: 0}
   upgradeDamage: 250
   upgradeRange: 150
   sellTurret: 30

@@ -311,6 +311,7 @@ public class ButtonScript : MonoBehaviour
         CloseUpgradeWindow();
         upgradingTurretsBool = false;
         buyingTurretScript.turretSpawned = false;
+        Destroy(turretScript.rangeSprite.gameObject);
         Destroy(turretScript.gameObject);
     }
 
@@ -324,7 +325,7 @@ public class ButtonScript : MonoBehaviour
         }
         openWindow = false;
         pauseMovement = true;
-        transform.position = turretScript.gameObject.transform.position;
+        transform.position = turret2Script.gameObject.transform.position;
 
     }
 
@@ -337,7 +338,7 @@ public class ButtonScript : MonoBehaviour
         }
         openWindow = false;
         pauseMovement = true;
-        transform.position = turretScript.gameObject.transform.position;
+        transform.position = turret2Script.gameObject.transform.position;
 
     }
 
