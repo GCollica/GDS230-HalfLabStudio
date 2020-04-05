@@ -23,15 +23,42 @@ public class ButtonScript : MonoBehaviour
     public bool upgradingTurretsBool;
 
     public bool openWindow;
-    
-    
+    public float windowTimer = 0.2f;
+
+    //this bool helps to reset the buttonscript object so when the player taps the screen again the trigger is exiting
+    public bool pauseMovement;
    
    
 
     // Update is called once per frame
     void Update()
     {
-        OnClickEvent();
+        if (pauseMovement == false)
+        {
+            OnClickEvent();
+
+        }
+        if (openWindow == false) 
+        {
+            windowTimer -= Time.deltaTime;
+            if (windowTimer <= 0) { openWindow = true; windowTimer = 0.2f; }
+        }
+
+        if (turretScript)
+        {
+            upgradesText[0].text = "Upgrade Damage - " + turretScript.damageIncreaseCost + " Research Points";
+            upgradesText[1].text = "Upgrade Range  - " + turretScript.rangeIncreaseCost + " Research Points";
+            upgradesText[2].text = "Destroy Tower   + " + turretScript.sellTurret + " Research Points";
+        }
+
+        if (turret2Script)
+        {
+            upgradesText[3].text = "Upgrade Damage - " + turret2Script.upgradeDamage + " Research Points";
+            upgradesText[4].text = "Upgrade Range - " + turret2Script.upgradeRange + " Research Points";
+            upgradesText[5].text = "Destroy Tower + " + turret2Script.sellTurret + " Research Points";
+        }
+
+  
 
     }
 
@@ -44,24 +71,9 @@ public class ButtonScript : MonoBehaviour
             transform.position = Camera.main.ScreenToWorldPoint(pos);
             
         }
-
-        
-        
-
-        if (turretScript) 
-        { 
-            upgradesText[0].text = "Upgrade Damage - " + turretScript.damageIncreaseCost + " Research Points";
-            upgradesText[1].text = "Upgrade Range  - " + turretScript.rangeIncreaseCost + " Research Points";
-            upgradesText[2].text = "Destroy Tower   + " + turretScript.sellTurret + " Research Points";
-        }
-
-        if (turret2Script) 
-        {
-            upgradesText[3].text = "Upgrade Damage - " + turret2Script.upgradeDamage + " Research Points";
-            upgradesText[4].text = "Upgrade Range - " + turret2Script.upgradeRange + " Research Points";
-            upgradesText[5].text = "Destroy Tower + " + turret2Script.sellTurret + " Research Points";
-        }
     }
+
+    
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -78,6 +90,14 @@ public class ButtonScript : MonoBehaviour
 
             upgradingTurretsBool = true;
 
+
+        }
+
+        // this if statement is only used to reset test to false so that OnClickEvent() starts being called again
+        if (collision.gameObject.name == "Turret1Check") 
+        {
+
+            if (pauseMovement == true) { pauseMovement = false; }
         }
 
         //using turret2check so the range collider doesnt trigger
@@ -95,6 +115,14 @@ public class ButtonScript : MonoBehaviour
 
             upgradingTurretsBool = true;
         }
+
+        // this if statement is only used to reset test to false so that OnClickEvent() starts being called again
+        if (collision.gameObject.name == "Turret2Check")
+        {
+
+            if (pauseMovement == true) { pauseMovement = false; }
+        }
+
         if (collision.gameObject.name == "Turret3Check" && upgradingTurretsBool == false)
         {
             turret3Script = collision.gameObject.GetComponentInParent<Turret3>();
@@ -106,6 +134,13 @@ public class ButtonScript : MonoBehaviour
             UpgradingTurretsObjects[7].SetActive(true);
 
             upgradingTurretsBool = true;
+        }
+
+        // this if statement is only used to reset test to false so that OnClickEvent() starts being called again
+        if (collision.gameObject.name == "Turret3Check")
+        {
+
+            if (pauseMovement == true) { pauseMovement = false; }
         }
 
         if (collision.gameObject.tag == "TurretZone" && gC.purchaseTurretWindow == false)
@@ -123,28 +158,42 @@ public class ButtonScript : MonoBehaviour
             }
 
         }
+        // this if statement is only used to reset test to false so that OnClickEvent() starts being called again
+        if (collision.gameObject.name == "TurretZone")
+        {
+
+            if (pauseMovement == true) { pauseMovement = false; }
+        }
     }
 
+    
     private void OnTriggerExit2D(Collider2D collision)
     {
+        //this if statement is used to close the turretWindow & the upgradeWindow so the player doesnt need to use the button
         if (collision.gameObject.name == "Turret1Check")
         {
             if (openWindow == true) CloseTurretWindow();
             if (openWindow == true) CloseUpgradeWindow();
 
         }
+        
+        //this if statement is used to close the turretWindow & the upgradeWindow so the player doesnt need to use the button
         if (collision.gameObject.name == "Turret2Check")
         {
             if (openWindow == true) CloseTurretWindow();
             if (openWindow == true) CloseUpgradeWindow();
 
         }
+
+        //this if statement is used to close the turretWindow & the upgradeWindow so the player doesnt need to use the button
         if (collision.gameObject.name == "Turret3Check")
         {
             if (openWindow == true) CloseTurretWindow();
             if (openWindow == true) CloseUpgradeWindow();
 
         }
+
+        //this if statement is used to close the turretWindow & the upgradeWindow so the player doesnt need to use the button
         if (collision.gameObject.tag == "TurretZone")
         {
              if (openWindow == true) CloseTurretWindow(); 
@@ -159,7 +208,7 @@ public class ButtonScript : MonoBehaviour
         
         if (gC.researchPoints >= 150)
         {
-            openWindow = false;
+           
             Instantiate(turrets[0], new Vector3(buyingTurretScript.transform.position.x, buyingTurretScript.transform.position.y, buyingTurretScript.transform.position.z -0.05f), Quaternion.identity);
             gC.researchPoints -= 150;
             purchaseTurretButtons[0].SetActive(false);
@@ -174,7 +223,7 @@ public class ButtonScript : MonoBehaviour
         
         if (gC.researchPoints >= 300) 
         {
-            openWindow = false;
+         
             Instantiate(turrets[1], new Vector3(buyingTurretScript.transform.position.x, buyingTurretScript.transform.position.y, buyingTurretScript.transform.position.z - 0.05f), Quaternion.identity);
             gC.researchPoints -= 300;
             purchaseTurretButtons[0].SetActive(false);
@@ -189,7 +238,7 @@ public class ButtonScript : MonoBehaviour
         
         if (gC.researchPoints >= 750) 
         {
-            openWindow = false;
+     
             Instantiate(turrets[2], new Vector3(buyingTurretScript.transform.position.x, buyingTurretScript.transform.position.y, buyingTurretScript.transform.position.z - 0.05f), Quaternion.identity);
             gC.researchPoints -= 750;
             purchaseTurretButtons[0].SetActive(false);
@@ -224,7 +273,6 @@ public class ButtonScript : MonoBehaviour
         if (UpgradingTurretsObjects[6]) 
         {
             UpgradingTurretsObjects[6].SetActive(false);
-           // UpgradingTurretsObjects[7].SetActive(false);
         }
         UpgradingTurretsObjects[7].SetActive(false);
         upgradingTurretsBool = false;
@@ -233,13 +281,15 @@ public class ButtonScript : MonoBehaviour
 
     public void IncreaseTurret1Damage()
     {
-        
+
         if (gC.researchPoints >= turretScript.damageIncreaseCost && turretScript.damageUpgradedAmount <= 4)
         {
-            openWindow = false;
             turretScript.IncreaseDamage();
 
         }
+        openWindow = false;
+        pauseMovement = true;
+        transform.position = turretScript.gameObject.transform.position;
     }
 
     public void IncreaseTurret1Range() 
@@ -247,10 +297,12 @@ public class ButtonScript : MonoBehaviour
       
         if (gC.researchPoints >= turretScript.rangeIncreaseCost && turretScript.rangeUpgradedAmount <= 3) 
         {
-            openWindow = false;
             turretScript.IncreaseRange();
-
+            
         }
+        openWindow = false;
+        pauseMovement = true;
+        transform.position = turretScript.gameObject.transform.position;
     }
 
     public void DestroyTurret1() 
@@ -269,8 +321,10 @@ public class ButtonScript : MonoBehaviour
         if (gC.researchPoints >= turret2Script.upgradeDamage && turret2Script.damageUpgradedTimes <= 2) 
         {
             turret2Script.UpgradeDamage();
-            openWindow = false;
         }
+        openWindow = false;
+        pauseMovement = true;
+        transform.position = turretScript.gameObject.transform.position;
 
     }
 
@@ -279,10 +333,12 @@ public class ButtonScript : MonoBehaviour
 
         if (gC.researchPoints >= turret2Script.upgradeRange && turret2Script.rangeUpgradedTimes <= 3) 
         {
-            openWindow = false;
             turret2Script.UpgradeRange();
-            
         }
+        openWindow = false;
+        pauseMovement = true;
+        transform.position = turretScript.gameObject.transform.position;
+
     }
 
     public void DestroyTurret2() 
