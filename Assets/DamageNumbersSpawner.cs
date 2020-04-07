@@ -18,7 +18,7 @@ public class DamageNumbersSpawner : MonoBehaviour
     {
         GameObject chosenSpawnPoint;
 
-        int randomInt = Mathf.RoundToInt(Random.Range(0f, spawnPoints.Length));
+        int randomInt = Mathf.RoundToInt(Random.Range(1f, spawnPoints.Length));
         chosenSpawnPoint = spawnPoints[(randomInt - 1)];
 
         return chosenSpawnPoint;
