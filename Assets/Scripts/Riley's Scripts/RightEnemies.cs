@@ -25,6 +25,13 @@ public class RightEnemies : MonoBehaviour
     public Turret2 turret2;
     public GameController gC;
 
+    private DamageNumbersSpawner damageNumbersSpawnerScript;
+
+    private void Awake()
+    {
+        damageNumbersSpawnerScript = gameObject.GetComponentInChildren<DamageNumbersSpawner>();
+    }
+
 
     void Start()
     {
@@ -151,6 +158,7 @@ public class RightEnemies : MonoBehaviour
             health -= turret.damage;
             showHealth = true;
             getHit = true;
+            damageNumbersSpawnerScript.SpawnDamageNumber(Mathf.RoundToInt(turret.damage));
             Destroy(collision.gameObject);
         }
 
@@ -159,6 +167,7 @@ public class RightEnemies : MonoBehaviour
             health -= turret2.damage;
             showHealth = true;
             getHit = true;
+            damageNumbersSpawnerScript.SpawnDamageNumber(Mathf.RoundToInt(turret2.damage));
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.name == "T3Projectile(Clone)")

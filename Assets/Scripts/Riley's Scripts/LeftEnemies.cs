@@ -26,6 +26,13 @@ public class LeftEnemies : MonoBehaviour
     public GameController gC;
     public BasicWaveSpawner spawner;
 
+    private DamageNumbersSpawner damageNumbersSpawnerScript;
+
+    private void Awake()
+    {
+        damageNumbersSpawnerScript = gameObject.GetComponentInChildren<DamageNumbersSpawner>();
+    }
+
 
     void Start()
     {
@@ -160,6 +167,7 @@ public class LeftEnemies : MonoBehaviour
             health -= turret.damage;
             showHealth = true;
             getHit = true;
+            damageNumbersSpawnerScript.SpawnDamageNumber(Mathf.RoundToInt(turret.damage));
             
             Destroy(collision.gameObject);
 
@@ -171,8 +179,11 @@ public class LeftEnemies : MonoBehaviour
             health -= turret2.damage;
             showHealth = true;
             getHit = true;
+            damageNumbersSpawnerScript.SpawnDamageNumber(Mathf.RoundToInt(turret2.damage));
+
             Destroy(collision.gameObject);
         }
+
         if (collision.gameObject.name == "T3Projectile(Clone)")
         {
             speed = 0.25f;
