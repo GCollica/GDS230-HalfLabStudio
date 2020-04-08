@@ -6,7 +6,7 @@ public class CheckForEnemy : MonoBehaviour
 {
 
     public GameController gC;
-    public BasicWaveSpawner spawner;
+    public AdvancedWaveSpawner spawner;
     public GameObject enemy;
 
     public GameObject skipCountDown;

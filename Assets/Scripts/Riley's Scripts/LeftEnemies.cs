@@ -24,7 +24,7 @@ public class LeftEnemies : MonoBehaviour
     public Turret turret;
     public Turret2 turret2;
     public GameController gC;
-    public BasicWaveSpawner spawner;
+    public AdvancedWaveSpawner spawner;
 
     private DamageNumbersSpawner damageNumbersSpawnerScript;
 
@@ -38,7 +38,7 @@ public class LeftEnemies : MonoBehaviour
     {
         target = LeftWaypoints.leftWaypoints[0];
         gC = GameObject.Find("GameController").GetComponent<GameController>();
-       //spawner = GameObject.Find("Spawner").GetComponent<BasicWaveSpawner>();
+       spawner = GameObject.Find("GameController").GetComponent<AdvancedWaveSpawner>();
         gameObject.transform.SetParent(GameObject.Find("EnemyParent").transform);
         healthBar.SetActive(false);
         IncreaseHealthPerWave();
@@ -99,7 +99,7 @@ public class LeftEnemies : MonoBehaviour
 
     void IncreaseHealthPerWave()
     {
-      /*  if (spawner.waveIndex == 1) { health += 0.05f; }
+        if (spawner.waveIndex == 1) { health += 0.05f; }
         if (spawner.waveIndex == 2) { health += 0.1f; }
         if (spawner.waveIndex == 3) { health += 0.15f; }
         if (spawner.waveIndex == 4) { health += 0.2f; }
@@ -113,7 +113,7 @@ public class LeftEnemies : MonoBehaviour
         if (spawner.waveIndex == 12) { health += 3f; slides.maxValue = 7.75f; }
         if (spawner.waveIndex == 13) { health += 4f; slides.maxValue = 8.75f; }
         if (spawner.waveIndex == 14) { health += 5f; slides.maxValue = 9.75f; }
-        if (spawner.waveIndex == 15) { health += 6f; slides.maxValue = 10.75f; }*/
+        if (spawner.waveIndex == 15) { health += 6f; slides.maxValue = 10.75f; }
     }
 
 

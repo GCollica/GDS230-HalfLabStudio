@@ -36,7 +36,7 @@ public class GameController : MonoBehaviour
     public GameObject loseObjects;
 
     //these two scripts are stored for the end game scenario
-    public BasicWaveSpawner spawner;
+    public AdvancedWaveSpawner spawner;
     public ButtonScript bS;
 
     public bool targetFirst;

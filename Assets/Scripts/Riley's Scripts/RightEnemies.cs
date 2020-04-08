@@ -19,7 +19,7 @@ public class RightEnemies : MonoBehaviour
     private Transform target;
     private int rightWaypointIndex = 0;
 
-    public BasicWaveSpawner spawner;
+    public AdvancedWaveSpawner spawner;
 
     public Turret turret;
     public Turret2 turret2;
@@ -38,7 +38,7 @@ public class RightEnemies : MonoBehaviour
 
         target = RightWaypoints.rightWaypoints[0];
         gC = GameObject.Find("GameController").GetComponent<GameController>();
-       // spawner = GameObject.Find("Spawner").GetComponent<BasicWaveSpawner>();
+        spawner = GameObject.Find("GameController").GetComponent<AdvancedWaveSpawner>();
         gameObject.transform.SetParent(GameObject.Find("EnemyParent").transform);
         healthBar.SetActive(false);
         IncreaseHealthPerWave();
@@ -97,7 +97,7 @@ public class RightEnemies : MonoBehaviour
 
     void IncreaseHealthPerWave()
     {
-        /*  if (spawner.waveIndex == 1) { health += 0.05f; }
+          if (spawner.waveIndex == 1) { health += 0.05f; }
           if (spawner.waveIndex == 2) { health += 0.1f; }
           if (spawner.waveIndex == 3) { health += 0.15f; }
           if (spawner.waveIndex == 4) { health += 0.2f; }
@@ -111,7 +111,7 @@ public class RightEnemies : MonoBehaviour
           if (spawner.waveIndex == 12) { health += 3f; slides.maxValue = 7.75f; }
           if (spawner.waveIndex == 13) { health += 4f; slides.maxValue = 8.75f; }
           if (spawner.waveIndex == 14) { health += 5f; slides.maxValue = 9.75f; }
-          if (spawner.waveIndex == 15) { health += 6f; slides.maxValue = 10.75f; }*/
+          if (spawner.waveIndex == 15) { health += 6f; slides.maxValue = 10.75f; }
     }
 
     void GetNextWaypoint()

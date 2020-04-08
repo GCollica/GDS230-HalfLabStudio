@@ -96,7 +96,6 @@ public class ButtonScript : MonoBehaviour
         // this if statement is only used to reset test to false so that OnClickEvent() starts being called again
         if (collision.gameObject.name == "Turret1Check") 
         {
-
             if (pauseMovement == true) { pauseMovement = false; }
         }
 
@@ -119,7 +118,6 @@ public class ButtonScript : MonoBehaviour
         // this if statement is only used to reset test to false so that OnClickEvent() starts being called again
         if (collision.gameObject.name == "Turret2Check")
         {
-
             if (pauseMovement == true) { pauseMovement = false; }
         }
 
@@ -139,7 +137,6 @@ public class ButtonScript : MonoBehaviour
         // this if statement is only used to reset test to false so that OnClickEvent() starts being called again
         if (collision.gameObject.name == "Turret3Check")
         {
-
             if (pauseMovement == true) { pauseMovement = false; }
         }
 
@@ -156,13 +153,6 @@ public class ButtonScript : MonoBehaviour
 
                 gC.purchaseTurretWindow = true;
             }
-
-        }
-        // this if statement is only used to reset test to false so that OnClickEvent() starts being called again
-        if (collision.gameObject.name == "TurretZone")
-        {
-
-            if (pauseMovement == true) { pauseMovement = false; }
         }
     }
 
