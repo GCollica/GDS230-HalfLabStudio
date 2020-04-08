@@ -56,7 +56,11 @@ public class AdvancedWaveSpawner : MonoBehaviour
 
         for (int i = 0; i < wave.count; i++)
         {
-            SpawnEnemy(wave.enemyPrefab);
+            if (wave.enemyPrefabs[0]) { SpawnEnemy(wave.enemyPrefabs[0]); }
+            if (wave.enemyPrefabs[1]) { SpawnEnemy(wave.enemyPrefabs[1]); }
+            if (wave.enemyPrefabs[2]) { SpawnEnemy(wave.enemyPrefabs[2]); }
+            if (wave.enemyPrefabs[3]) { SpawnEnemy(wave.enemyPrefabs[3]); }
+
             yield return new WaitForSeconds(1f / wave.rate);
         }
 

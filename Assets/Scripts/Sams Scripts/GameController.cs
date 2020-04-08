@@ -80,7 +80,7 @@ public class GameController : MonoBehaviour
         {
             healthAnim.SetBool("Lose", true);
             canMove = false;
-            spawner.gameObject.SetActive(false);
+            spawner.enabled = false;
             if (bS.openWindow == true) { bS.CloseTurretWindow(); }
             if (bS.openWindow == true) { bS.CloseUpgradeWindow(); }
             bS.gameObject.SetActive(false);
@@ -113,7 +113,7 @@ public class GameController : MonoBehaviour
         health += 5;
         canMove = true;
         spawner.waveIndex -= 1;
-        spawner.gameObject.SetActive(true);
+        spawner.enabled = true;
         bS.gameObject.SetActive(true);
         loseObjects.SetActive(false);
         watchAd.SetActive(false);
@@ -131,7 +131,7 @@ public class GameController : MonoBehaviour
         if (bS.openWindow == true) { bS.CloseTurretWindow(); }
         if (bS.openWindow == true) { bS.CloseUpgradeWindow(); }
         bS.gameObject.SetActive(false);
-        spawner.gameObject.SetActive(false);
+        spawner.enabled = false;
         EndingHealthIncrease();
     }
 

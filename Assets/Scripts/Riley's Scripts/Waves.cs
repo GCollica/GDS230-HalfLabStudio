@@ -3,7 +3,7 @@
 [System.Serializable]
 public class Waves
 {
-    public GameObject enemyPrefab;
+    public GameObject[] enemyPrefabs;
     public int count;
     public float rate;
 }

@@ -657,24 +657,39 @@ MonoBehaviour:
   gC: {fileID: 134282133}
   enemyParent: {fileID: 599771159}
   waves:
-  - enemyPrefab: {fileID: 7095584537015850627, guid: 42ae0a64432cb984086b2d35d369e9df,
-      type: 3}
+  - enemyPrefabs:
+    - {fileID: 7095584537015850627, guid: 42ae0a64432cb984086b2d35d369e9df, type: 3}
+    - {fileID: 5477876673659567537, guid: 78329d0e038a73745984d596f0ab48bf, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
     count: 1
     rate: 0.8
-  - enemyPrefab: {fileID: 7095584537015850627, guid: 42ae0a64432cb984086b2d35d369e9df,
-      type: 3}
+  - enemyPrefabs:
+    - {fileID: 7095584537015850627, guid: 42ae0a64432cb984086b2d35d369e9df, type: 3}
+    - {fileID: 5477876673659567537, guid: 78329d0e038a73745984d596f0ab48bf, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
     count: 2
     rate: 0.8
-  - enemyPrefab: {fileID: 7095584537015850627, guid: 42ae0a64432cb984086b2d35d369e9df,
-      type: 3}
+  - enemyPrefabs:
+    - {fileID: 7095584537015850627, guid: 42ae0a64432cb984086b2d35d369e9df, type: 3}
+    - {fileID: 5477876673659567537, guid: 78329d0e038a73745984d596f0ab48bf, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
     count: 4
     rate: 0.8
-  - enemyPrefab: {fileID: 7095584537015850627, guid: 42ae0a64432cb984086b2d35d369e9df,
-      type: 3}
+  - enemyPrefabs:
+    - {fileID: 7095584537015850627, guid: 42ae0a64432cb984086b2d35d369e9df, type: 3}
+    - {fileID: 5477876673659567537, guid: 78329d0e038a73745984d596f0ab48bf, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
     count: 6
     rate: 0.8
-  - enemyPrefab: {fileID: 5477876673659567537, guid: 78329d0e038a73745984d596f0ab48bf,
-      type: 3}
+  - enemyPrefabs:
+    - {fileID: 7095584537015850627, guid: 42ae0a64432cb984086b2d35d369e9df, type: 3}
+    - {fileID: 5477876673659567537, guid: 78329d0e038a73745984d596f0ab48bf, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
     count: 6
     rate: 0.8
   spawnPoint: {fileID: 647296740}
