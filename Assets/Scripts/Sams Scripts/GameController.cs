@@ -122,6 +122,7 @@ public class GameController : MonoBehaviour
         {
             GameObject.Destroy(child.gameObject);
         }
+        spawner.enemies = 0;
     }
 
     public void Win() 

@@ -240,7 +240,8 @@ public class ButtonScript : MonoBehaviour
 
     public void CloseTurretWindow() 
     {
-        purchaseTurretButtons[0].SetActive(false);
+        if (purchaseTurretButtons[0]) {purchaseTurretButtons[0].SetActive(false); }
+
         purchaseTurretButtons[1].SetActive(false);
         gC.purchaseTurretWindow = false;
         
