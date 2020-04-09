@@ -6,6 +6,9 @@ public class Turret3 : MonoBehaviour
 {
     public GameController gC;
 
+    //Creating Animator Reference - Gian
+    private Animator towerAnimator;
+
     public GameObject[] upgradeWindows;
     public GameObject enemy;
 
@@ -19,16 +22,19 @@ public class Turret3 : MonoBehaviour
 
     public bool fireCountDown;
 
-    private void Start()
+    private void Awake()
     {
         gC = FindObjectOfType<GameController>();
+
+        //Referencing this game objects Animator - Gian
+        towerAnimator = this.gameObject.GetComponentInChildren<Animator>();
     }
 
     private void Update()
     {
-        if (fireCountDown == true && gC.canMove == true && !projectileSpawned) 
+        if (fireCountDown == true && gC.canMove == true) //Removed "&& !projectileSpawned" as logic isn't correct - Gian 
         {
-            fireTimer -= 0.8f * Time.deltaTime;
+            fireTimer -= 1.0f * Time.deltaTime;
         }
     }
 
@@ -44,10 +50,20 @@ public class Turret3 : MonoBehaviour
     {
         if (fireTimer <= 0f) 
         {
-            Instantiate(projectilePrefab, firePoint.transform.position, firePoint.transform.rotation);
+            //See below - Gian
+            //Instantiate(projectilePrefab, firePoint.transform.position, firePoint.transform.rotation);
+
+            //Reworked how firing works, this now just starts the animation, the animation has events which do the rest - Gian
+            towerAnimator.SetInteger("AnimState", 1);
+            print("Set int");
             
-            fireTimer = 3f;
+            fireTimer = 4f;
         }
+    }
+
+    public void SpawnProjectile()
+    {
+        Instantiate(projectilePrefab, firePoint.transform.position, firePoint.transform.rotation);
     }
 
 
@@ -83,11 +99,11 @@ public class Turret3 : MonoBehaviour
             fireCountDown = false;
         }
 
-        if (collision.gameObject == projectileSpawned)
+        /*if (collision.gameObject == projectileSpawned) //Removed for the same reason mentioned above where it was used - Gian
         {
             projectileSpawned = null;
 
-        }
+        }*/
 
     }
 
