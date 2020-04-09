@@ -322,6 +322,7 @@ GameObject:
   - component: {fileID: 4866464186460717647}
   - component: {fileID: 2656278516369493033}
   - component: {fileID: 8280971752876070664}
+  - component: {fileID: 1724658206131973996}
   m_Layer: 0
   m_Name: Animator
   m_TagString: Untagged
@@ -412,6 +413,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1724658206131973996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6508979187240706821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbca6a332443b4f43bec771c33c0476c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turret1Script: {fileID: 1209650461054667134}
 --- !u!1 &7464209993997280830
 GameObject:
   m_ObjectHideFlags: 0

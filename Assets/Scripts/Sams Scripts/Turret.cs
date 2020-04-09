@@ -114,23 +114,18 @@ public class Turret : MonoBehaviour
 
     void Fire()
     {
-        
         if (fireTimer <= 0f)
         {
-           
-            Instantiate(projectile, firePoint.transform.position, transform.rotation);
+
+            anim.SetInteger("AnimState", 1);
+
             fireTimer = 1.75f;
         }
-        if (fireTimer <= 0.4f)
-        {
-            anim.SetBool("Fire", true);
-        }
-        else
-        {
-            anim.SetBool("Fire", false);
-        }
+    }
 
-
+    public void SpawnProjectile()
+    {
+        Instantiate(projectile, firePoint.transform.position, transform.rotation);
     }
     
     public void CloseUpgradeWindow() 
