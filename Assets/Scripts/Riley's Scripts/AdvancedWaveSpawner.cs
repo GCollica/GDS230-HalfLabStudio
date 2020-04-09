@@ -86,7 +86,10 @@ public class AdvancedWaveSpawner : MonoBehaviour
 
     void SpawnEnemy(GameObject enemy)
     {
-        Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
-        EnemiesAlive++;
+        if (gC.canMove == true) 
+        {
+            Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
+            EnemiesAlive++;
+        }
     }
 }

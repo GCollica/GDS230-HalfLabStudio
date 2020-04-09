@@ -491,6 +491,10 @@ PrefabInstance:
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 262611703}
+    - target: {fileID: 1064610123, guid: da248099c0047c346bfca4804dda6086, type: 3}
+      propertyPath: waveIndex
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da248099c0047c346bfca4804dda6086, type: 3}
 --- !u!114 &228790509 stripped
