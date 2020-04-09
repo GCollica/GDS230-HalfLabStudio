@@ -106,7 +106,7 @@ public class Turret2 : MonoBehaviour
     void Fire() 
     {
         //if the enemy is being targeted play the fire animation
-        if (enemy)
+        /*if (enemy)
         {
             anim.SetBool("Fire", true);
         }
@@ -114,10 +114,11 @@ public class Turret2 : MonoBehaviour
         else
         {
             anim.SetBool("Fire", false);
-        }
+        }*/
+
         if (fireTimer <= 0f)
         {
-            Instantiate(projectile, firepoints[0].transform.position, firepoints[0].transform.rotation);
+            /*Instantiate(projectile, firepoints[0].transform.position, firepoints[0].transform.rotation);
             Instantiate(projectile, firepoints[0].transform.position, firepoints[0].transform.rotation);
             Instantiate(projectile, firepoints[1].transform.position, firepoints[1].transform.rotation);
             Instantiate(projectile, firepoints[1].transform.position, firepoints[1].transform.rotation);
@@ -126,7 +127,9 @@ public class Turret2 : MonoBehaviour
             Instantiate(projectile, firepoints[3].transform.position, firepoints[3].transform.rotation);
             Instantiate(projectile, firepoints[3].transform.position, firepoints[3].transform.rotation);
             Instantiate(projectile, firepoints[4].transform.position, firepoints[4].transform.rotation);
-            Instantiate(projectile, firepoints[4].transform.position, firepoints[4].transform.rotation);
+            Instantiate(projectile, firepoints[4].transform.position, firepoints[4].transform.rotation);*/
+
+            anim.SetInteger("AnimState", 1);
             fireTimer = 3f;
         }
 
@@ -179,6 +182,11 @@ public class Turret2 : MonoBehaviour
             fireCountDown = false;
         }
         
+    }
+
+    public void SpawnProjectile(int spawnPoint)
+    {
+        Instantiate(projectile, firepoints[spawnPoint].transform.position, firepoints[spawnPoint].transform.rotation);
     }
 
 }
