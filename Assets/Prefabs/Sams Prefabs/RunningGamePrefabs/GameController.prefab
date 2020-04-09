@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4633545004592377896}
   - component: {fileID: 4633545004592377902}
   - component: {fileID: 4633545004592377903}
+  - component: {fileID: 1064610123}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -46,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   healthSprite: {fileID: 0}
+  healthAnim: {fileID: 0}
   green:
     serializedVersion: 2
     rgba: 4279333632
@@ -71,7 +73,7 @@ MonoBehaviour:
   canMove: 1
   endingAddMoney: 1
   loseObjects: {fileID: 0}
-  spawner: {fileID: 0}
+  spawner: {fileID: 1064610123}
   bS: {fileID: 0}
   targetFirst: 0
 --- !u!114 &4633545004592377903
@@ -86,3 +88,130 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c3b3e16b67f75541b59ccb1cc31064f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1064610123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4633545004592377897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8372b489efa439a4fb1cdc3b09cf5817, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveCountdownText: {fileID: 0}
+  gC: {fileID: 4633545004592377902}
+  enemyParent: {fileID: 0}
+  waves:
+  - enemyPrefabs:
+    - {fileID: 7095584537015850627, guid: 42ae0a64432cb984086b2d35d369e9df, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    count: 1
+    rate: 0.8
+  - enemyPrefabs:
+    - {fileID: 0}
+    - {fileID: 5477876673659567537, guid: 78329d0e038a73745984d596f0ab48bf, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
+    count: 1
+    rate: 0.8
+  - enemyPrefabs:
+    - {fileID: 7095584537015850627, guid: 42ae0a64432cb984086b2d35d369e9df, type: 3}
+    - {fileID: 5477876673659567537, guid: 78329d0e038a73745984d596f0ab48bf, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
+    count: 4
+    rate: 0.8
+  - enemyPrefabs:
+    - {fileID: 7095584537015850627, guid: 42ae0a64432cb984086b2d35d369e9df, type: 3}
+    - {fileID: 5477876673659567537, guid: 78329d0e038a73745984d596f0ab48bf, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
+    count: 6
+    rate: 0.8
+  - enemyPrefabs:
+    - {fileID: 7095584537015850627, guid: 42ae0a64432cb984086b2d35d369e9df, type: 3}
+    - {fileID: 5477876673659567537, guid: 78329d0e038a73745984d596f0ab48bf, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
+    count: 6
+    rate: 0.8
+  - enemyPrefabs:
+    - {fileID: 7095584537015850627, guid: 42ae0a64432cb984086b2d35d369e9df, type: 3}
+    - {fileID: 5477876673659567537, guid: 78329d0e038a73745984d596f0ab48bf, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
+    count: 6
+    rate: 0.8
+  - enemyPrefabs:
+    - {fileID: 7095584537015850627, guid: 42ae0a64432cb984086b2d35d369e9df, type: 3}
+    - {fileID: 5477876673659567537, guid: 78329d0e038a73745984d596f0ab48bf, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
+    count: 6
+    rate: 0.8
+  - enemyPrefabs:
+    - {fileID: 7095584537015850627, guid: 42ae0a64432cb984086b2d35d369e9df, type: 3}
+    - {fileID: 5477876673659567537, guid: 78329d0e038a73745984d596f0ab48bf, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
+    count: 6
+    rate: 0.8
+  - enemyPrefabs:
+    - {fileID: 7095584537015850627, guid: 42ae0a64432cb984086b2d35d369e9df, type: 3}
+    - {fileID: 5477876673659567537, guid: 78329d0e038a73745984d596f0ab48bf, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
+    count: 6
+    rate: 0.8
+  - enemyPrefabs:
+    - {fileID: 7095584537015850627, guid: 42ae0a64432cb984086b2d35d369e9df, type: 3}
+    - {fileID: 5477876673659567537, guid: 78329d0e038a73745984d596f0ab48bf, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
+    count: 6
+    rate: 0.8
+  - enemyPrefabs:
+    - {fileID: 7095584537015850627, guid: 42ae0a64432cb984086b2d35d369e9df, type: 3}
+    - {fileID: 5477876673659567537, guid: 78329d0e038a73745984d596f0ab48bf, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
+    count: 6
+    rate: 0.8
+  - enemyPrefabs:
+    - {fileID: 7095584537015850627, guid: 42ae0a64432cb984086b2d35d369e9df, type: 3}
+    - {fileID: 5477876673659567537, guid: 78329d0e038a73745984d596f0ab48bf, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
+    count: 6
+    rate: 0.8
+  - enemyPrefabs:
+    - {fileID: 7095584537015850627, guid: 42ae0a64432cb984086b2d35d369e9df, type: 3}
+    - {fileID: 5477876673659567537, guid: 78329d0e038a73745984d596f0ab48bf, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
+    count: 6
+    rate: 0.8
+  - enemyPrefabs:
+    - {fileID: 7095584537015850627, guid: 42ae0a64432cb984086b2d35d369e9df, type: 3}
+    - {fileID: 5477876673659567537, guid: 78329d0e038a73745984d596f0ab48bf, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
+    count: 6
+    rate: 0.8
+  - enemyPrefabs:
+    - {fileID: 7095584537015850627, guid: 42ae0a64432cb984086b2d35d369e9df, type: 3}
+    - {fileID: 5477876673659567537, guid: 78329d0e038a73745984d596f0ab48bf, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
+    count: 30
+    rate: 0.8
+  spawnPoint: {fileID: 0}
+  enemies: 0
+  waveCountdown: 10
+  gameStartTimer: 2
+  waveIndex: 0
+  waveUpdate: {fileID: 0}
