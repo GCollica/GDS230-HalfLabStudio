@@ -27,8 +27,13 @@ public class AdvancedWaveSpawner : MonoBehaviour
 
     private void Start()
     {
+        ResetEnemiesAlive();
+    }
+
+    public void ResetEnemiesAlive() 
+    {
+        EnemiesAlive = 0; 
         enemies = 0;
-        EnemiesAlive = 0;
     }
 
     // Update is called once per frame
@@ -45,8 +50,10 @@ public class AdvancedWaveSpawner : MonoBehaviour
             StartCoroutine(WaveSpawn());
             gameStartTimer = waveCountdown;
         }
-
-        gameStartTimer -= Time.deltaTime;
+        if (gC.canMove)
+        {
+            gameStartTimer -= Time.deltaTime;
+        }
 
         gameStartTimer = Mathf.Clamp(gameStartTimer, 0f, Mathf.Infinity);
 

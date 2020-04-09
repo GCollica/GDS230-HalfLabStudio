@@ -29,7 +29,8 @@ public class GameController : MonoBehaviour
     public GameObject WinButtons;
     public GameObject pause;
     
-    //canMove sets the speed for the enemies to 0, and pauses their spawning in the BasicWaveSpawner
+    //canMove sets the speed for the enemies to 0, and pauses their spawning in the AdvancedWaveSpawner
+    //pausing is done this way so the buttons can still operate in runtime
     public bool canMove = true;
     public bool endingAddMoney = true;
 
@@ -122,7 +123,8 @@ public class GameController : MonoBehaviour
         {
             GameObject.Destroy(child.gameObject);
         }
-        spawner.enemies = 0;
+        spawner.ResetEnemiesAlive();
+
     }
 
     public void Win() 
