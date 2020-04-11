@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -125,11 +126,14 @@ public class ButtonScript : MonoBehaviour
         {
             turret3Script = collision.gameObject.GetComponentInParent<Turret3>();
             UpgradingTurretsObjects[6] = turret3Script.upgradeWindows[0];
+            UpgradingTurretsObjects[8] = turret3Script.upgradeWindows[1];
             openWindow = true;
 
             UpgradingTurretsObjects[6].SetActive(true);
        
             UpgradingTurretsObjects[7].SetActive(true);
+
+            UpgradingTurretsObjects[8].SetActive(true);
 
             upgradingTurretsBool = true;
         }
@@ -264,6 +268,7 @@ public class ButtonScript : MonoBehaviour
         if (UpgradingTurretsObjects[6]) 
         {
             UpgradingTurretsObjects[6].SetActive(false);
+            UpgradingTurretsObjects[8].SetActive(false);
         }
         UpgradingTurretsObjects[7].SetActive(false);
         upgradingTurretsBool = false;
@@ -340,6 +345,7 @@ public class ButtonScript : MonoBehaviour
         upgradingTurretsBool = false;
         buyingTurretScript.turretSpawned = false;
         Destroy(turret2Script.gameObject);
+        Destroy(turret2Script.rangeSprite.gameObject);
     }
 
     public void DestroyTurret3()
@@ -349,6 +355,7 @@ public class ButtonScript : MonoBehaviour
         upgradingTurretsBool = false;
         buyingTurretScript.turretSpawned = false;
         Destroy(turret3Script.gameObject);
+        Destroy(turret3Script.upgradeWindows[1]);
     }
 
 }

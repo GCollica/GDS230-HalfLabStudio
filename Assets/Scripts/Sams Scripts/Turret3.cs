@@ -25,7 +25,7 @@ public class Turret3 : MonoBehaviour
     private void Awake()
     {
         gC = FindObjectOfType<GameController>();
-
+        upgradeWindows[1].transform.parent = null;
         //Referencing this game objects Animator - Gian
         towerAnimator = this.gameObject.GetComponentInChildren<Animator>();
     }
