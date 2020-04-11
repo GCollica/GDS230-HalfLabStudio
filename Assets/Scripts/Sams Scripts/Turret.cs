@@ -23,7 +23,7 @@ public class Turret : MonoBehaviour
 
     public GameObject projectile;
     public GameObject firePoint;
-    public float fireTimer = 3f;
+    private float fireTimer = 0f;
 
     //the transform of the enemy within range
     public GameObject enemy;

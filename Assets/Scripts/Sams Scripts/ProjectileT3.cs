@@ -7,10 +7,15 @@ public class ProjectileT3 : MonoBehaviour
 
     public Rigidbody2D rb;
     private float thrust = 10f;
-    public float deathCountDown = 10f;
+    private float deathCountDown = 5f;
+
+    public Animator projectileAnimator;
 
 
-   
+    private void Awake()
+    {
+        projectileAnimator = GetComponentInChildren<Animator>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +36,11 @@ public class ProjectileT3 : MonoBehaviour
 
             
         
+    }
+
+    public void ChangeAnimState(int state)
+    {
+        projectileAnimator.SetInteger("AnimState", state);
     }
     
 

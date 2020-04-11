@@ -16,7 +16,7 @@ public class Turret3 : MonoBehaviour
     public GameObject projectilePrefab;
     public GameObject projectileSpawned;
     public GameObject firePoint;
-    public float fireTimer = 1.5f;
+    private float fireTimer = 0f;
     public ProjectileT3 pT3;
 
 
@@ -57,7 +57,7 @@ public class Turret3 : MonoBehaviour
             towerAnimator.SetInteger("AnimState", 1);
             print("Set int");
             
-            fireTimer = 4f;
+            fireTimer = 7.5f;
         }
     }
 

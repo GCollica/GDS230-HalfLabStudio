@@ -9,13 +9,26 @@ public class ProjectileT3Check : MonoBehaviour
 
     public Rigidbody2D rb;
 
+    private ProjectileT3 parentProjectileScript;
+
+    private void Awake()
+    {
+        parentProjectileScript = GetComponentInParent<ProjectileT3>();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Enemy")
         {
-            rb.velocity = Vector3.zero;
-            rb.angularVelocity = 0.0f;
+            parentProjectileScript.ChangeAnimState(1);
+            Invoke("StopMovement", 0.075f);           
         }
+    }
+
+    private void StopMovement()
+    {
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = 0.0f;
     }
 
 

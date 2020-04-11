@@ -130,8 +130,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 695035265038663585, guid: bcfc7b247b195d44a98f2dd12e74f298, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -152,7 +152,7 @@ Animator:
   m_GameObject: {fileID: 3161403179719462547}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 26c85ffa7c7d9cd44914d4345c589663, type: 2}
+  m_Controller: {fileID: 9100000, guid: 64203568794ed954fa168081cd9126d2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -276,6 +276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 4192718397342258218}
   deathCountDown: 10
+  projectileAnimator: {fileID: 0}
 --- !u!50 &4192718397342258218
 Rigidbody2D:
   serializedVersion: 4

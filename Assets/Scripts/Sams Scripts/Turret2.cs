@@ -16,7 +16,7 @@ public class Turret2 : MonoBehaviour
 
     public GameObject projectile;
     public GameObject[] firepoints;
-    public float fireTimer = 1.5f;
+    private float fireTimer = 0f;
 
     public GameController gC;
 
@@ -46,7 +46,7 @@ public class Turret2 : MonoBehaviour
     {
         if (fireCountDown == true && gC.canMove == true)
         {
-            fireTimer -= 0.8f * Time.deltaTime;
+            fireTimer -= 1f * Time.deltaTime;
         }
 
         Fire();
