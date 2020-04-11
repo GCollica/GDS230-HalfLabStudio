@@ -56,6 +56,8 @@ public class RightEnemies : MonoBehaviour
             Vector2 dir = target.position - transform.position;
             transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
         }
+
+        StartMoving();
     }
 
     void StartMoving() 
@@ -63,16 +65,17 @@ public class RightEnemies : MonoBehaviour
         if (startMoving == false) 
         {
             moveCountDown -= Time.deltaTime;
+            gameObject.tag = "Untagged";
         }
         if (moveCountDown <= 0f) 
         {
+            gameObject.tag = "Enemy";
             startMoving = true;
         }
     }
 
     void Update()
     {
-        StartMoving();
 
         if (Vector2.Distance(transform.position, target.position) <= 0.4f)
         {
