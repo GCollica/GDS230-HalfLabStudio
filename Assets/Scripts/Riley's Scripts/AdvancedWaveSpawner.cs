@@ -25,6 +25,7 @@ public class AdvancedWaveSpawner : MonoBehaviour
     public int waveIndex = 0;
     public Text waveUpdate;
 
+    
     private void Start()
     {
         ResetEnemiesAlive();
@@ -39,7 +40,7 @@ public class AdvancedWaveSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        enemies = EnemiesAlive;
+        
         if (EnemiesAlive > 0)
         {
             return;

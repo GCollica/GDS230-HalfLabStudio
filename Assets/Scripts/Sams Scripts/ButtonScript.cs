@@ -47,15 +47,31 @@ public class ButtonScript : MonoBehaviour
 
         if (turretScript)
         {
-            upgradesText[0].text = "Upgrade Damage - " + turretScript.damageIncreaseCost + " Research Points";
-            upgradesText[1].text = "Upgrade Range  - " + turretScript.rangeIncreaseCost + " Research Points";
+            if (turretScript.damageUpgradedAmount == 5)
+            {
+                upgradesText[0].text = " Upgrades at Max";
+            }
+            else 
+            {
+                upgradesText[0].text = "Upgrade Tower - " + turretScript.damageIncreaseCost + " Research Points";
+            }
+
+            //     upgradesText[1].text = "Upgrade Range  - " + turretScript.rangeIncreaseCost + " Research Points";
             upgradesText[2].text = "Destroy Tower   + " + turretScript.sellTurret + " Research Points";
         }
 
         if (turret2Script)
         {
-            upgradesText[3].text = "Upgrade Damage - " + turret2Script.upgradeDamage + " Research Points";
-            upgradesText[4].text = "Upgrade Range - " + turret2Script.upgradeRange + " Research Points";
+            if (turret2Script.damageUpgradedTimes == 3)
+            {
+                upgradesText[3].text = "Upgrades at Max";
+            }
+            else 
+            {
+                upgradesText[3].text = "Upgrade Tower - " + turret2Script.upgradeDamage + " Research Points";
+            }
+          
+      //      upgradesText[4].text = "Upgrade Range - " + turret2Script.upgradeRange + " Research Points";
             upgradesText[5].text = "Destroy Tower + " + turret2Script.sellTurret + " Research Points";
         }
 
@@ -281,7 +297,7 @@ public class ButtonScript : MonoBehaviour
         if (gC.researchPoints >= turretScript.damageIncreaseCost && turretScript.damageUpgradedAmount <= 4)
         {
             turretScript.IncreaseDamage();
-
+            turretScript.IncreaseRange();
         }
         openWindow = false;
         pauseMovement = true;
@@ -318,6 +334,7 @@ public class ButtonScript : MonoBehaviour
         if (gC.researchPoints >= turret2Script.upgradeDamage && turret2Script.damageUpgradedTimes <= 2) 
         {
             turret2Script.UpgradeDamage();
+            turret2Script.UpgradeRange();
         }
         openWindow = false;
         pauseMovement = true;

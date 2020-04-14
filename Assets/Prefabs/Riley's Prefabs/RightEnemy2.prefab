@@ -297,7 +297,7 @@ GameObject:
   - component: {fileID: -6203309356227362430}
   - component: {fileID: 3839730073296331363}
   m_Layer: 0
-  m_Name: RightEnemy1
+  m_Name: RightEnemy2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -357,7 +357,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 4571762025625966215, guid: 1d6baaeb0809fa3459bd47afe0e4e303,
+  m_Sprite: {fileID: 7557088518249877522, guid: 4afbe4ee9e3aeea4499fcbf8bb142d8d,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -379,7 +379,7 @@ Animator:
   m_GameObject: {fileID: 5477876673659567537}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 22096f97b1fa4b74b8d00aa8990b9d70, type: 2}
+  m_Controller: {fileID: 9100000, guid: 120505c3c22df4d4abdd44dec42ecb16, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -406,7 +406,7 @@ MonoBehaviour:
   healthBar: {fileID: 109669075940932621}
   spriteRenderer: {fileID: 5477876673659567539}
   getHit: 0
-  speed: 0.6
+  speed: 0.7
   spawner: {fileID: 0}
   turret: {fileID: 0}
   turret2: {fileID: 0}

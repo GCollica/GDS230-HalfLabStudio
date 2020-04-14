@@ -83,8 +83,8 @@ public class Turret2 : MonoBehaviour
         temp.x += 4f;
         temp.y += 4f;
         rangeSprite.transform.localScale = temp;
-        gC.researchPoints -= upgradeRange;
-        upgradeRange += 150;
+      //  gC.researchPoints -= upgradeRange;
+       // upgradeRange += 150;
        
         sellTurret += 15;
     }

@@ -155,8 +155,8 @@ public class Turret : MonoBehaviour
         temp.x += 4f;
         temp.y += 4f;
         rangeSprite.transform.localScale = temp;
-        gC.researchPoints -= rangeIncreaseCost;
-        rangeIncreaseCost += 200;
+      //  gC.researchPoints -= rangeIncreaseCost;
+       // rangeIncreaseCost += 200;
         sellTurret += 10;
     }
     

@@ -305,7 +305,7 @@ MonoBehaviour:
   healthBar: {fileID: 8710428500773045744}
   spriteRenderer: {fileID: 7095584537015850626}
   getHit: 0
-  speed: 0.5
+  speed: 0.6
   turret: {fileID: 0}
   turret2: {fileID: 0}
   gC: {fileID: 0}

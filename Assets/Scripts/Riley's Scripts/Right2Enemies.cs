@@ -4,7 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Right2Enemies : MonoBehaviour
 {
-    public float health = 2f;
+    //this float/bool is used to controll the offset of the right enemies so they dont sit ontop of the left enemies
+    float moveCountDown = 0.5f;
+    bool startMoving;
+
+    public float health = 4.7f;
     public bool showHealth;
     public Slider slides;
     public GameObject healthBar;
@@ -19,11 +23,18 @@ public class Right2Enemies : MonoBehaviour
     private Transform target;
     private int rightWaypointIndex = 0;
 
-    public BasicWaveSpawner spawner;
+    public AdvancedWaveSpawner spawner;
 
     public Turret turret;
     public Turret2 turret2;
     public GameController gC;
+
+    private DamageNumbersSpawner damageNumbersSpawnerScript;
+
+    private void Awake()
+    {
+        damageNumbersSpawnerScript = gameObject.GetComponentInChildren<DamageNumbersSpawner>();
+    }
 
 
     void Start()
@@ -31,7 +42,7 @@ public class Right2Enemies : MonoBehaviour
 
         target = RightWaypoints.rightWaypoints[0];
         gC = GameObject.Find("GameController").GetComponent<GameController>();
-        spawner = GameObject.Find("Spawner").GetComponent<BasicWaveSpawner>();
+        spawner = GameObject.Find("GameController").GetComponent<AdvancedWaveSpawner>();
         gameObject.transform.SetParent(GameObject.Find("EnemyParent").transform);
         healthBar.SetActive(false);
         IncreaseHealthPerWave();
@@ -40,15 +51,31 @@ public class Right2Enemies : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (gC.canMove == true)
+        if (gC.canMove == true && startMoving == true)
         {
             Vector2 dir = target.position - transform.position;
             transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
         }
+
+        StartMoving();
     }
+
+    void StartMoving()
+    {
+        if (startMoving == false)
+        {
+            moveCountDown -= Time.deltaTime;
+            gameObject.layer = 9;
+        }
+        if (moveCountDown <= 0f)
+        {
+            gameObject.layer = 0;
+            startMoving = true;
+        }
+    }
+
     void Update()
     {
-
 
         if (Vector2.Distance(transform.position, target.position) <= 0.4f)
         {
@@ -59,6 +86,7 @@ public class Right2Enemies : MonoBehaviour
         {
             gC.researchPoints += 25;
             Destroy(gameObject);
+            AdvancedWaveSpawner.EnemiesAlive--;
         }
 
         UpdateHealth();
@@ -98,12 +126,12 @@ public class Right2Enemies : MonoBehaviour
         if (spawner.waveIndex == 7) { health += 0.35f; }
         if (spawner.waveIndex == 8) { health += 0.4f; }
         if (spawner.waveIndex == 9) { health += 0.45f; }
-        if (spawner.waveIndex == 10) { health += 1f; }
-        if (spawner.waveIndex == 11) { health += 2f; }
-        if (spawner.waveIndex == 12) { health += 3f; }
-        if (spawner.waveIndex == 13) { health += 4f; }
-        if (spawner.waveIndex == 14) { health += 5f; }
-        if (spawner.waveIndex == 15) { health += 6f; }
+        if (spawner.waveIndex == 10) { health += 1f; slides.maxValue = 5.75f; }
+        if (spawner.waveIndex == 11) { health += 2f; slides.maxValue = 6.75f; }
+        if (spawner.waveIndex == 12) { health += 3f; slides.maxValue = 7.75f; }
+        if (spawner.waveIndex == 13) { health += 4f; slides.maxValue = 8.75f; }
+        if (spawner.waveIndex == 14) { health += 5f; slides.maxValue = 9.75f; }
+        if (spawner.waveIndex == 15) { health += 6f; slides.maxValue = 10.75f; }
     }
 
     void GetNextWaypoint()
@@ -133,6 +161,7 @@ public class Right2Enemies : MonoBehaviour
         {
             gC.health -= 1;
             Destroy(gameObject);
+            AdvancedWaveSpawner.EnemiesAlive--;
         }
 
         if (collision.gameObject.tag == "Turret2")
@@ -149,6 +178,7 @@ public class Right2Enemies : MonoBehaviour
             health -= turret.damage;
             showHealth = true;
             getHit = true;
+            damageNumbersSpawnerScript.SpawnDamageNumber(Mathf.RoundToInt(turret.damage));
             Destroy(collision.gameObject);
         }
 
@@ -157,6 +187,7 @@ public class Right2Enemies : MonoBehaviour
             health -= turret2.damage;
             showHealth = true;
             getHit = true;
+            damageNumbersSpawnerScript.SpawnDamageNumber(Mathf.RoundToInt(turret2.damage));
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.name == "T3Projectile(Clone)")
@@ -167,7 +198,7 @@ public class Right2Enemies : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "T3Projectile(Clone)") 
+        if (collision.gameObject.name == "T3Projectile(Clone)")
         {
             speed = 1f;
         }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
@@ -49,8 +50,10 @@ public class GameController : MonoBehaviour
     void Start()
     {
         mouse = new Vector3(transform.position.x, transform.position.y, 10);
-        researchPoints = 400;
-        health = 10;
+        researchPoints = 325;
+        health = 10; 
+        
+        
     }
 
     private void Update()
@@ -86,7 +89,7 @@ public class GameController : MonoBehaviour
             if (bS.openWindow == true) { bS.CloseUpgradeWindow(); }
             bS.gameObject.SetActive(false);
             loseObjects.SetActive(true);
-            
+           
         }
     }
 
