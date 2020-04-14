@@ -29,12 +29,9 @@ public class Right2Enemies : MonoBehaviour
     public Turret2 turret2;
     public GameController gC;
 
-    private DamageNumbersSpawner damageNumbersSpawnerScript;
+    public DamageNumbersSpawner damageNumbersSpawnerScript;
 
-    private void Awake()
-    {
-        damageNumbersSpawnerScript = gameObject.GetComponentInChildren<DamageNumbersSpawner>();
-    }
+  
 
 
     void Start()
@@ -42,7 +39,7 @@ public class Right2Enemies : MonoBehaviour
 
         target = RightWaypoints.rightWaypoints[0];
         gC = GameObject.Find("GameController").GetComponent<GameController>();
-        spawner = GameObject.Find("GameController").GetComponent<AdvancedWaveSpawner>();
+        spawner = gC.spawner;
         gameObject.transform.SetParent(GameObject.Find("EnemyParent").transform);
         healthBar.SetActive(false);
         IncreaseHealthPerWave();
@@ -130,8 +127,6 @@ public class Right2Enemies : MonoBehaviour
         if (spawner.waveIndex == 11) { health += 2f; slides.maxValue = 6.75f; }
         if (spawner.waveIndex == 12) { health += 3f; slides.maxValue = 7.75f; }
         if (spawner.waveIndex == 13) { health += 4f; slides.maxValue = 8.75f; }
-        if (spawner.waveIndex == 14) { health += 5f; slides.maxValue = 9.75f; }
-        if (spawner.waveIndex == 15) { health += 6f; slides.maxValue = 10.75f; }
     }
 
     void GetNextWaypoint()

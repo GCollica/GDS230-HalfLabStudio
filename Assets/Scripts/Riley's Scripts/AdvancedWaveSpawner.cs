@@ -12,6 +12,7 @@ public class AdvancedWaveSpawner : MonoBehaviour
     public GameObject enemyParent;
 
     public Waves[] waves;
+    public int checkForEnemyCount;
 
     [Header("Enemy Attributes")]
     public Transform spawnPoint;
@@ -40,7 +41,7 @@ public class AdvancedWaveSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        checkForEnemyCount = EnemiesAlive;
         if (EnemiesAlive > 0)
         {
             return;
@@ -80,7 +81,6 @@ public class AdvancedWaveSpawner : MonoBehaviour
 
         if (waveIndex >= waves.Length)
         {
-            Debug.Log("You Win!");
             this.enabled = false;
         }
     }

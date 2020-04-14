@@ -13,28 +13,38 @@ public class CheckForEnemy : MonoBehaviour
 
     public GameObject skipCountDown;
 
+    private bool endGame;
+
     public string sceneName;
 
 
-   
+    private void Start()
+    {
+        sceneName = SceneManager.GetActiveScene().name;
+    }
+
     private void Update()
     {
-        enemy = GameObject.FindGameObjectWithTag("Enemy");
-        if (enemy == null && gC.health >= 0 && spawner.waveIndex >= 15 && sceneName == "Alpha")
+        
+        if (AdvancedWaveSpawner.EnemiesAlive <= 0 && gC.health >= 0 && spawner.waveIndex == 15 && sceneName == "Alpha")
         {
             gC.Win();
+            skipCountDown.SetActive(false);
+            endGame = true;
         }
-        if (enemy == null && gC.health >= 0 && spawner.waveIndex >= 25 && sceneName == "Level2")
+        if (AdvancedWaveSpawner.EnemiesAlive <= 0 && gC.health >= 0 && spawner.waveIndex == 20 && sceneName == "Level2")
         {
             gC.Win();
+            skipCountDown.SetActive(false);
+            endGame = true;
         }
 
-        if (enemy == null && spawner.gameStartTimer >= 0.5 && spawner.waveIndex >= 1) 
+        if (AdvancedWaveSpawner.EnemiesAlive <= 0 && endGame == false) 
         {
             skipCountDown.SetActive(true);
+            
         }
-
-        if (enemy) 
+        else
         {
             skipCountDown.SetActive(false);
         }
