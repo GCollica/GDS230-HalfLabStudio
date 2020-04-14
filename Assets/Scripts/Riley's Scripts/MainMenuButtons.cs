@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 public class MainMenuButtons : MonoBehaviour
 {
     public GameObject[] mainMenuButtons;
+    public Animator titleAnimator;
+    
     public void MenuScene()
     {
         SceneManager.LoadScene(0);
@@ -11,13 +13,13 @@ public class MainMenuButtons : MonoBehaviour
 
     public void LvlSelect() 
     {
-        mainMenuButtons[0].SetActive(false);
-        mainMenuButtons[1].SetActive(true);
+        HideTitleButtons();
+        StartAnimation();
     }
     public void BackToMainMenu() 
     {
-        mainMenuButtons[0].SetActive(true);
-        mainMenuButtons[1].SetActive(false);
+        HidePlayButtons();
+        ShowTitleButtons();
     }
 
     public void LoadLvl1()
@@ -33,4 +35,33 @@ public class MainMenuButtons : MonoBehaviour
     {
         SceneManager.LoadScene(2);
     }
+
+    public void StartAnimation()
+    {
+        titleAnimator.SetBool("ChangePage", true);
+    }
+
+    public void HideTitleButtons()
+    {
+        mainMenuButtons[0].SetActive(false);
+        mainMenuButtons[2].SetActive(false);
+    }
+
+    public void ShowTitleButtons()
+    {
+        mainMenuButtons[0].SetActive(true);
+        mainMenuButtons[2].SetActive(true);
+    }
+
+    public void HidePlayButtons()
+    {
+        mainMenuButtons[1].SetActive(false);
+    }
+
+    public void ShowPlayButtons()
+    {
+        mainMenuButtons[1].SetActive(true);
+    }
+
+
 }
