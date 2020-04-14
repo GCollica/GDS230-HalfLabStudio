@@ -28,6 +28,7 @@ public class CheckForEnemy : MonoBehaviour
         {
             skipCountDown.SetActive(false);
         }
+        
     }
 
     public void NextWave() 

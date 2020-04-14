@@ -120,7 +120,7 @@ MonoBehaviour:
     type: 3}
   firePoint: {fileID: 3615924775364888396}
   enemy: {fileID: 0}
-  damage: 2.5
+  damage: 2
   damageIncreaseCost: 100
   damageUpgradedAmount: 0
   sellTurret: 50
@@ -168,8 +168,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2826617925450560810}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.01, y: -0.102, z: -1.12}
-  m_LocalScale: {x: 11.526219, y: 11.526219, z: 11.526219}
+  m_LocalPosition: {x: 0.0000000081444, y: -0.0000000019004, z: 0}
+  m_LocalScale: {x: 18.557213, y: 18.557213, z: 18.557213}
   m_Children: []
   m_Father: {fileID: 1209650461054667132}
   m_RootOrder: 4
