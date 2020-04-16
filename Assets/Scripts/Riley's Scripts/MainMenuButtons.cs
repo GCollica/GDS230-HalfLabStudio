@@ -5,6 +5,9 @@ public class MainMenuButtons : MonoBehaviour
 {
     public GameObject[] mainMenuButtons;
     public Animator titleAnimator;
+    public Sprite titleBGSprite;
+    public Sprite blankBGSprite;
+    public GameObject backgroundGameObject;
     
     public void MenuScene()
     {
@@ -14,12 +17,12 @@ public class MainMenuButtons : MonoBehaviour
     public void LvlSelect() 
     {
         HideTitleButtons();
-        StartAnimation();
+        StartAnimation(2);
     }
     public void BackToMainMenu() 
-    {
+    {        
         HidePlayButtons();
-        ShowTitleButtons();
+        StartAnimation(1);
     }
 
     public void LoadLvl1()
@@ -36,32 +39,56 @@ public class MainMenuButtons : MonoBehaviour
         SceneManager.LoadScene(2);
     }
 
-    public void StartAnimation()
+    public void StartAnimation(int targetScreen)
     {
         titleAnimator.SetBool("ChangePage", true);
+        titleAnimator.SetInteger("TargetScreen", targetScreen);
     }
 
     public void HideTitleButtons()
     {
-        mainMenuButtons[0].SetActive(false);
-        mainMenuButtons[2].SetActive(false);
+        if(mainMenuButtons[0].activeInHierarchy == true && mainMenuButtons[2].activeInHierarchy == true)
+        {
+            mainMenuButtons[0].SetActive(false);
+            mainMenuButtons[2].SetActive(false);
+        }
     }
 
     public void ShowTitleButtons()
     {
-        mainMenuButtons[0].SetActive(true);
-        mainMenuButtons[2].SetActive(true);
+        if (mainMenuButtons[0].activeInHierarchy == false && mainMenuButtons[2].activeInHierarchy == false)
+        {
+            mainMenuButtons[0].SetActive(true);
+            mainMenuButtons[2].SetActive(true);
+        }       
     }
 
     public void HidePlayButtons()
     {
-        mainMenuButtons[1].SetActive(false);
+        if(mainMenuButtons[1].activeInHierarchy == true)
+        {
+            mainMenuButtons[1].SetActive(false);
+        }
     }
 
     public void ShowPlayButtons()
     {
-        mainMenuButtons[1].SetActive(true);
+        if(mainMenuButtons[1].activeInHierarchy == false)
+        {
+            mainMenuButtons[1].SetActive(true);
+        }
     }
 
+    /*public void SetBackground(int sprite)
+    {
+        if(sprite == 1)
+        {
+            backgroundGameObject.GetComponent<SpriteRenderer>().sprite = titleBGSprite;
+        }
 
+        if(sprite == 2)
+        {
+            backgroundGameObject.GetComponent<SpriteRenderer>().sprite = blankBGSprite;
+        }
+    }*/
 }
