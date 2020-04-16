@@ -138,7 +138,11 @@ public class LeftEnemies : MonoBehaviour
             
         }
         
-
+        if(collision.gameObject.name == "KillLeftEnemies") 
+        {
+            Destroy(gameObject);
+            AdvancedWaveSpawner.EnemiesAlive--;
+        }
 
         if (collision.tag == "EnemyExit")
         {

@@ -148,6 +148,12 @@ public class Right2Enemies : MonoBehaviour
 
         }
 
+        if (collision.gameObject.name == "KillRightEnemies")
+        {
+            Destroy(gameObject);
+            AdvancedWaveSpawner.EnemiesAlive--;
+        }
+
         if (collision.tag == "EnemyExit")
         {
             gC.health -= 1;

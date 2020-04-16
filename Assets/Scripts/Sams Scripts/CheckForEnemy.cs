@@ -15,24 +15,24 @@ public class CheckForEnemy : MonoBehaviour
 
     private bool endGame;
 
-    public string sceneName;
+    public int sceneInt;
 
 
     private void Start()
     {
-        sceneName = SceneManager.GetActiveScene().name;
+        sceneInt = SceneManager.GetActiveScene().buildIndex;
     }
 
     private void Update()
     {
         
-        if (AdvancedWaveSpawner.EnemiesAlive <= 0 && gC.health >= 0 && spawner.waveIndex == 15 && sceneName == "Alpha")
+        if (AdvancedWaveSpawner.EnemiesAlive <= 0 && gC.health >= 0 && spawner.waveIndex == 15 && sceneInt == 1)
         {
             gC.Win();
             skipCountDown.SetActive(false);
             endGame = true;
         }
-        if (AdvancedWaveSpawner.EnemiesAlive <= 0 && gC.health >= 0 && spawner.waveIndex == 20 && sceneName == "Level2")
+        if (AdvancedWaveSpawner.EnemiesAlive <= 0 && gC.health >= 0 && spawner.waveIndex == 20 && sceneInt == 4)
         {
             gC.Win();
             skipCountDown.SetActive(false);
