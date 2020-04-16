@@ -31,6 +31,11 @@ public class MainMenuButtons : MonoBehaviour
         SceneManager.LoadScene(4);
     }
 
+    public void LoadLvl3() 
+    {
+        SceneManager.LoadScene(5);
+    }
+
     public void OpenOptions()
     {
         SceneManager.LoadScene(2);

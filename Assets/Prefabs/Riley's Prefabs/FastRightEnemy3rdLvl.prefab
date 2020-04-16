@@ -293,11 +293,11 @@ GameObject:
   - component: {fileID: 5477876673659567538}
   - component: {fileID: 5477876673659567539}
   - component: {fileID: 5477876673659567536}
-  - component: {fileID: -440392543076628810}
   - component: {fileID: -6203309356227362430}
   - component: {fileID: 3839730073296331363}
+  - component: {fileID: 5153114871463367468}
   m_Layer: 0
-  m_Name: RightEnemy3rdLvl
+  m_Name: FastRightEnemy3rdLvl
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -357,7 +357,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -2
-  m_Sprite: {fileID: -2404021763181993788, guid: f38093062b6f42e45a257aba775e5370,
+  m_Sprite: {fileID: -4826544612612540713, guid: 49755f966ca1b5b4aa84bf1d7042ceeb,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -379,7 +379,7 @@ Animator:
   m_GameObject: {fileID: 5477876673659567537}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0c4536f1fd5b48c4c960d580767e2716, type: 2}
+  m_Controller: {fileID: 9100000, guid: aaa3dcb5f0d6d734c9ced0735414929b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -388,30 +388,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &-440392543076628810
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5477876673659567537}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a40cf0bb52287604fab2be6f183b63a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 4.7
-  showHealth: 0
-  slides: {fileID: 8337128674847054260}
-  healthBar: {fileID: 109669075940932621}
-  spriteRenderer: {fileID: 5477876673659567539}
-  getHit: 0
-  speed: 0.7
-  spawner: {fileID: 0}
-  turret: {fileID: 0}
-  turret2: {fileID: 0}
-  gC: {fileID: 0}
-  damageNumbersSpawnerScript: {fileID: 1025249742811644496}
 --- !u!58 &-6203309356227362430
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -449,6 +425,30 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5153114871463367468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5477876673659567537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a745af62eb75b0649bbfee2ed048a4bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1.5
+  showHealth: 0
+  slides: {fileID: 8337128674847054260}
+  healthBar: {fileID: 109669075940932621}
+  spriteRenderer: {fileID: 5477876673659567539}
+  getHit: 0
+  speed: 1.2
+  spawner: {fileID: 0}
+  turret: {fileID: 0}
+  turret2: {fileID: 0}
+  gC: {fileID: 0}
+  damageNumbersSpawnerScript: {fileID: 1025249742811644496}
 --- !u!1 &7269761303618128975
 GameObject:
   m_ObjectHideFlags: 0
