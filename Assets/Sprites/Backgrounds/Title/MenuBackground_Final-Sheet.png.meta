@@ -1,88 +1,91 @@
 fileFormatVersion: 2
-guid: 18b8d9992124e444c9c578f6c4364fe7
+guid: c0e844884fb655847acdbe03653f7cf5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1837395746931943166
-    second: MenuBackground-Sheet_0
+      213: -4573175261453297914
+    second: TitleIdle
   - first:
-      213: 5287700655623849300
-    second: MenuBackground-Sheet_1
+      213: -7230257191298962620
+    second: BlankIdle
   - first:
-      213: -8555811433081831302
-    second: MenuBackground-Sheet_2
+      213: 5563157732987639845
+    second: MenuBackground_Final-Sheet_2
   - first:
-      213: -171091798912140171
-    second: MenuBackground-Sheet_3
+      213: 8259152933568446519
+    second: MenuBackground_Final-Sheet_3
   - first:
-      213: 269167659213644774
-    second: MenuBackground-Sheet_4
+      213: 4165028930160575392
+    second: MenuBackground_Final-Sheet_4
   - first:
-      213: -590683329176107643
-    second: MenuBackground-Sheet_5
+      213: 840427906599971093
+    second: MenuBackground_Final-Sheet_5
   - first:
-      213: 379861148488423078
-    second: MenuBackground-Sheet_6
+      213: -804553434459035425
+    second: MenuBackground_Final-Sheet_6
   - first:
-      213: 6995057925917222466
-    second: MenuBackground-Sheet_7
+      213: -3850610163306550287
+    second: MenuBackground_Final-Sheet_7
   - first:
-      213: -8155265644983232596
-    second: MenuBackground-Sheet_8
+      213: -8465206472901558882
+    second: MenuBackground_Final-Sheet_8
   - first:
-      213: 4629432086058065946
-    second: MenuBackground-Sheet_9
+      213: 4669245309872658948
+    second: MenuBackground_Final-Sheet_9
   - first:
-      213: 7388597471306082533
-    second: MenuBackground-Sheet_10
+      213: 2984219453074927480
+    second: MenuBackground_Final-Sheet_10
   - first:
-      213: 2021963796312984773
-    second: MenuBackground-Sheet_11
+      213: -8066525768950861081
+    second: MenuBackground_Final-Sheet_11
   - first:
-      213: -4457863161291245490
-    second: MenuBackground-Sheet_12
+      213: 5062841818309335468
+    second: MenuBackground_Final-Sheet_12
   - first:
-      213: 6988479436587594849
-    second: MenuBackground-Sheet_13
+      213: -88149936773061032
+    second: MenuBackground_Final-Sheet_13
   - first:
-      213: -686195949149510109
-    second: MenuBackground-Sheet_14
+      213: 8575574020413010770
+    second: MenuBackground_Final-Sheet_14
   - first:
-      213: 7860051932179454049
-    second: MenuBackground-Sheet_15
+      213: -7023069635373511868
+    second: MenuBackground_Final-Sheet_15
   - first:
-      213: 5140056478816491711
-    second: MenuBackground-Sheet_16
+      213: 4063192658886001917
+    second: MenuBackground_Final-Sheet_16
   - first:
-      213: 4280946910051323199
-    second: MenuBackground-Sheet_17
+      213: -7692626312296420182
+    second: MenuBackground_Final-Sheet_17
   - first:
-      213: -8769866002744461951
-    second: MenuBackground-Sheet_18
+      213: 2530264287036972243
+    second: MenuBackground_Final-Sheet_18
   - first:
-      213: 6693137471805555559
-    second: MenuBackground-Sheet_19
+      213: -5151415167393026939
+    second: MenuBackground_Final-Sheet_19
   - first:
-      213: -4841295846376049438
-    second: MenuBackground-Sheet_20
+      213: 6537249970854596215
+    second: MenuBackground_Final-Sheet_20
   - first:
-      213: -3627857237948007726
-    second: MenuBackground-Sheet_21
+      213: 3677571286658145361
+    second: MenuBackground_Final-Sheet_21
   - first:
-      213: -9126754764538527798
-    second: MenuBackground-Sheet_22
+      213: 5880167312266787759
+    second: MenuBackground_Final-Sheet_22
   - first:
-      213: -3338375146105523611
-    second: MenuBackground-Sheet_23
+      213: 3954546126095735731
+    second: MenuBackground_Final-Sheet_23
   - first:
-      213: -2534614629655888041
-    second: MenuBackground-Sheet_24
+      213: 8522396626467438009
+    second: MenuBackground_Final-Sheet_24
   - first:
-      213: 5558829257809794702
-    second: MenuBackground-Sheet_25
+      213: 8109473015259541700
+    second: MenuBackground_Final-Sheet_25
   - first:
-      213: -8877053114759715082
-    second: MenuBackground-Sheet_26
+      213: -1829576152171255852
+    second: MenuBackground_Final-Sheet_26
+  - first:
+      213: -3562841452519067747
+    second: MenuBackground_Final-Sheet_27
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -179,7 +182,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MenuBackground-Sheet_0
+      name: TitleIdle
       rect:
         serializedVersion: 2
         x: 0
@@ -193,14 +196,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccd056f024b792546bd9bd995e123b87
-      internalID: -1837395746931943166
+      spriteID: d662906bab1aee8448f236008580deec
+      internalID: -4573175261453297914
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MenuBackground-Sheet_1
+      name: BlankIdle
       rect:
         serializedVersion: 2
         x: 256
@@ -214,14 +217,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9561a95227b087b46a8a91e195e0fcc0
-      internalID: 5287700655623849300
+      spriteID: 8212f9aa5a9ebb6499e87dbe517d0629
+      internalID: -7230257191298962620
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MenuBackground-Sheet_2
+      name: MenuBackground_Final-Sheet_2
       rect:
         serializedVersion: 2
         x: 512
@@ -235,14 +238,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7eabbb6d5da111c4a90c8dfec5a5d5f7
-      internalID: -8555811433081831302
+      spriteID: a0f7a4fd201ad694b844022f1f7385ee
+      internalID: 5563157732987639845
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MenuBackground-Sheet_3
+      name: MenuBackground_Final-Sheet_3
       rect:
         serializedVersion: 2
         x: 768
@@ -256,14 +259,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8bd8e57448bf2ec4e8c80baca4b77cc3
-      internalID: -171091798912140171
+      spriteID: d8d68f5097387a34d9c014a3cec63ada
+      internalID: 8259152933568446519
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MenuBackground-Sheet_4
+      name: MenuBackground_Final-Sheet_4
       rect:
         serializedVersion: 2
         x: 1024
@@ -277,14 +280,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4694ee7eb89cb64e96b081ad8daa90c
-      internalID: 269167659213644774
+      spriteID: 0cd2fd9f43f11774e981bd321f6f7771
+      internalID: 4165028930160575392
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MenuBackground-Sheet_5
+      name: MenuBackground_Final-Sheet_5
       rect:
         serializedVersion: 2
         x: 1280
@@ -298,14 +301,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a7a22ac0a76123419085a2cdfb35338
-      internalID: -590683329176107643
+      spriteID: a563bf33493e450449373bf92cd9180c
+      internalID: 840427906599971093
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MenuBackground-Sheet_6
+      name: MenuBackground_Final-Sheet_6
       rect:
         serializedVersion: 2
         x: 0
@@ -319,14 +322,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad44638a15c03724fbac3e7d17bb15cf
-      internalID: 379861148488423078
+      spriteID: 1e56caa3cb69e90479eccee4eff9aed9
+      internalID: -804553434459035425
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MenuBackground-Sheet_7
+      name: MenuBackground_Final-Sheet_7
       rect:
         serializedVersion: 2
         x: 256
@@ -340,14 +343,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ee842b18107fa04c9b05905d0c22296
-      internalID: 6995057925917222466
+      spriteID: 66f5758d07cfbe04e8db1ad4007bec59
+      internalID: -3850610163306550287
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MenuBackground-Sheet_8
+      name: MenuBackground_Final-Sheet_8
       rect:
         serializedVersion: 2
         x: 512
@@ -361,14 +364,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cefb2c50f29dada4f85d8f8450b73723
-      internalID: -8155265644983232596
+      spriteID: 9cf9f9a56dcfd05479853b026cf40075
+      internalID: -8465206472901558882
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MenuBackground-Sheet_9
+      name: MenuBackground_Final-Sheet_9
       rect:
         serializedVersion: 2
         x: 768
@@ -382,14 +385,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a1b4436b9b41d445856436cde2982f6
-      internalID: 4629432086058065946
+      spriteID: a6a89dd60879cef4d9b1ded3d5bfd498
+      internalID: 4669245309872658948
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MenuBackground-Sheet_10
+      name: MenuBackground_Final-Sheet_10
       rect:
         serializedVersion: 2
         x: 1024
@@ -403,14 +406,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e67f4cef3f0672449aaca8c7eb7be0a8
-      internalID: 7388597471306082533
+      spriteID: f6bcf6710d762ce4eaf1cbb2b89b5483
+      internalID: 2984219453074927480
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MenuBackground-Sheet_11
+      name: MenuBackground_Final-Sheet_11
       rect:
         serializedVersion: 2
         x: 1280
@@ -424,14 +427,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91d3a7309c6526748859929b38dcc8d6
-      internalID: 2021963796312984773
+      spriteID: 3f8b1cb5721af4449a63b88321c6c0e6
+      internalID: -8066525768950861081
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MenuBackground-Sheet_12
+      name: MenuBackground_Final-Sheet_12
       rect:
         serializedVersion: 2
         x: 0
@@ -445,14 +448,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f82ca68d59b5c74daae3a01fcd0efd4
-      internalID: -4457863161291245490
+      spriteID: b7487bfb6f9574d47a5870cf13dd7d87
+      internalID: 5062841818309335468
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MenuBackground-Sheet_13
+      name: MenuBackground_Final-Sheet_13
       rect:
         serializedVersion: 2
         x: 256
@@ -466,14 +469,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d75bd42df6e56494c9493d008677811a
-      internalID: 6988479436587594849
+      spriteID: b57cf310d208811478f6c98d98233191
+      internalID: -88149936773061032
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MenuBackground-Sheet_14
+      name: MenuBackground_Final-Sheet_14
       rect:
         serializedVersion: 2
         x: 512
@@ -487,14 +490,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31a7104ee4bc78d4482ba8609f4e858f
-      internalID: -686195949149510109
+      spriteID: 34ba5855bcedbef48b9d285f64a15215
+      internalID: 8575574020413010770
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MenuBackground-Sheet_15
+      name: MenuBackground_Final-Sheet_15
       rect:
         serializedVersion: 2
         x: 768
@@ -508,14 +511,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c7cc57c85de1e34b9ce93b3eb267359
-      internalID: 7860051932179454049
+      spriteID: 094d8be8def32d94383f9ca35a84dde8
+      internalID: -7023069635373511868
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MenuBackground-Sheet_16
+      name: MenuBackground_Final-Sheet_16
       rect:
         serializedVersion: 2
         x: 1024
@@ -529,14 +532,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4aa0630e73a484d4d8cd6426d4858f05
-      internalID: 5140056478816491711
+      spriteID: 2c964d79a4a15854990045b9511c2703
+      internalID: 4063192658886001917
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MenuBackground-Sheet_17
+      name: MenuBackground_Final-Sheet_17
       rect:
         serializedVersion: 2
         x: 1280
@@ -550,14 +553,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2a684aeb12a52c4a969c4f4fd2026bc
-      internalID: 4280946910051323199
+      spriteID: 41beb7656a2c0cd40a34d896eb50dd48
+      internalID: -7692626312296420182
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MenuBackground-Sheet_18
+      name: MenuBackground_Final-Sheet_18
       rect:
         serializedVersion: 2
         x: 0
@@ -571,14 +574,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ec50afc7a08ab54a8557c812711f3c3
-      internalID: -8769866002744461951
+      spriteID: 79680a1084fb2574eb861e88777cc1b3
+      internalID: 2530264287036972243
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MenuBackground-Sheet_19
+      name: MenuBackground_Final-Sheet_19
       rect:
         serializedVersion: 2
         x: 256
@@ -592,14 +595,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 842128de7bdd61c4ba8a866826ea1721
-      internalID: 6693137471805555559
+      spriteID: e19e9415a2a909743a2c0a5556ffe27d
+      internalID: -5151415167393026939
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MenuBackground-Sheet_20
+      name: MenuBackground_Final-Sheet_20
       rect:
         serializedVersion: 2
         x: 512
@@ -613,14 +616,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29e4b7c50115c394b92e8d192fabdcf8
-      internalID: -4841295846376049438
+      spriteID: f628b78f7f3d7f94ca36a213f2b2df57
+      internalID: 6537249970854596215
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MenuBackground-Sheet_21
+      name: MenuBackground_Final-Sheet_21
       rect:
         serializedVersion: 2
         x: 768
@@ -634,14 +637,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f79b7514a858a1f4888a90e79ae9d719
-      internalID: -3627857237948007726
+      spriteID: 14334b7eedec26942819be322b6aae4f
+      internalID: 3677571286658145361
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MenuBackground-Sheet_22
+      name: MenuBackground_Final-Sheet_22
       rect:
         serializedVersion: 2
         x: 1024
@@ -655,14 +658,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8793f3d607d5fff4d9ca6f219a9f3e76
-      internalID: -9126754764538527798
+      spriteID: 7ee5e95c19938c048aa2671cb05eef48
+      internalID: 5880167312266787759
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MenuBackground-Sheet_23
+      name: MenuBackground_Final-Sheet_23
       rect:
         serializedVersion: 2
         x: 1280
@@ -676,14 +679,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31affdbe6fe8e87409a80ba014d0834d
-      internalID: -3338375146105523611
+      spriteID: ddbad9a9672d7154b8a922c96bd4f35d
+      internalID: 3954546126095735731
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MenuBackground-Sheet_24
+      name: MenuBackground_Final-Sheet_24
       rect:
         serializedVersion: 2
         x: 0
@@ -697,14 +700,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a43dd2feb2bfdc4459cba282e7da198b
-      internalID: -2534614629655888041
+      spriteID: 6714189a62bb4b84eb61f544c330f06d
+      internalID: 8522396626467438009
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MenuBackground-Sheet_25
+      name: MenuBackground_Final-Sheet_25
       rect:
         serializedVersion: 2
         x: 256
@@ -718,14 +721,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31fa86dc5e1e75e4784eba218d033eb0
-      internalID: 5558829257809794702
+      spriteID: 2d963e5577198e74a9395083e3e429af
+      internalID: 8109473015259541700
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MenuBackground-Sheet_26
+      name: MenuBackground_Final-Sheet_26
       rect:
         serializedVersion: 2
         x: 512
@@ -739,8 +742,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ba3b44eee810fc4aadb23b5c65834d7
-      internalID: -8877053114759715082
+      spriteID: 0a089daf2681f3a4cb01c0c03e20186f
+      internalID: -1829576152171255852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuBackground_Final-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 256
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 586cae206b4b57a4abfc5ece43db880f
+      internalID: -3562841452519067747
       vertices: []
       indices: 
       edges: []

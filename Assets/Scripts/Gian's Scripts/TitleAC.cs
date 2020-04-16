@@ -14,7 +14,7 @@ public class TitleAC : MonoBehaviour
         titleAnimator = this.gameObject.GetComponent<Animator>();
     }
 
-    public void resetAnimState()
+    public void ResetAnimState()
     {
         titleAnimator.SetBool("ChangePage", false);
     }
@@ -28,4 +28,19 @@ public class TitleAC : MonoBehaviour
     {
         menuButtonsScript.ShowPlayButtons();
     }
+
+    public void HideTitleButtons()
+    {
+        menuButtonsScript.HideTitleButtons();
+    }
+
+    public void HidePlayButtons()
+    {
+        menuButtonsScript.HidePlayButtons();
+    }
+
+    /*public void SetBackground(int sprite)
+    {
+       menuButtonsScript.SetBackground(sprite);
+    }*/
 }
