@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Advertisements;
 
 public class GameController : MonoBehaviour
 {
@@ -119,6 +120,10 @@ public class GameController : MonoBehaviour
 
     public void AdWatched()
     {
+        if (Advertisement.IsReady("rewardedVideo")) 
+        {
+            Advertisement.Show("rewardedVideo");
+        }
         healthAnim.SetBool("Lose", false);
         health += 5;
         canMove = true;

@@ -705,10 +705,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: 68ea1de7-1f1d-4c77-83d4-f3b180b696d9
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: GDS230-HalfLabStudio (2)
+  organizationId: half-lab-studios
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
