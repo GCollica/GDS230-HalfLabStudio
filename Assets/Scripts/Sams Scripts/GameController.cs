@@ -40,6 +40,7 @@ public class GameController : MonoBehaviour
     //these two scripts are stored for the end game scenario
     public AdvancedWaveSpawner spawner;
     public ButtonScript bS;
+    public CheckForEnemy checkForEnemyScript;
 
     public bool targetFirst;
 
@@ -51,7 +52,12 @@ public class GameController : MonoBehaviour
     {
         mouse = new Vector3(transform.position.x, transform.position.y, 10);
         researchPoints = 325;
-        health = 10; 
+        health = 10;
+        if (checkForEnemyScript.sceneInt == 5) 
+        {
+            health = 15;
+            researchPoints = 450;
+        }
         
         
     }
