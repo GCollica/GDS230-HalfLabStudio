@@ -123,6 +123,7 @@ public class GameController : MonoBehaviour
         if (Advertisement.IsReady("rewardedVideo")) 
         {
             Advertisement.Show("rewardedVideo");
+            
         }
         healthAnim.SetBool("Lose", false);
         health += 5;
@@ -138,7 +139,7 @@ public class GameController : MonoBehaviour
             GameObject.Destroy(child.gameObject);
         }
         spawner.ResetEnemiesAlive();
-
+        
     }
 
     public void Win() 

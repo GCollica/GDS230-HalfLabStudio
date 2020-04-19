@@ -11,7 +11,7 @@ public class Turret : MonoBehaviour
 
     public CircleCollider2D cC2D;
     public SpriteRenderer rangeSprite;
-    public SpriteRenderer thisSprite;
+    public SpriteRenderer[] thisSprite;
     public Vector3 temp;
     public int rangeIncreaseCost = 200;
     public int rangeUpgradedAmount = 0;
@@ -51,9 +51,11 @@ public class Turret : MonoBehaviour
         
         gC = FindObjectOfType<GameController>();
         rangeSprite.gameObject.transform.parent = null;
-        if (gC.checkForEnemyScript.sceneInt == 5) 
+        if (gC.checkForEnemyScript.sceneInt == 5)
         {
-            thisSprite.sortingLayerID = -2;
+            thisSprite[0].sortingOrder = -2;
+            thisSprite[1].sortingOrder = -2;
+            thisSprite[2].sortingOrder = -2;
         }
 
     }
