@@ -24,23 +24,38 @@ public class TitleAC : MonoBehaviour
         menuButtonsScript.ShowTitleButtons();
     }
 
-    public void ShowPlayButtons()
-    {
-        menuButtonsScript.ShowPlayButtons();
-    }
-
     public void HideTitleButtons()
     {
         menuButtonsScript.HideTitleButtons();
     }
 
-    public void HidePlayButtons()
+    public void ShowLVL1Buttons()
     {
-        menuButtonsScript.HidePlayButtons();
+        menuButtonsScript.ShowLVL1Buttons();
     }
 
-    /*public void SetBackground(int sprite)
+    public void HideLVL1Buttons()
     {
-       menuButtonsScript.SetBackground(sprite);
-    }*/
+        menuButtonsScript.HideLVL1Buttons();
+    }
+
+    public void ShowLVL2Buttons()
+    {
+        menuButtonsScript.ShowLVL2Buttons();
+    }
+
+    public void HideLVL2Buttons()
+    {
+        menuButtonsScript.HideLVL2Buttons();
+    }
+
+    public void ShowLVL3Buttons()
+    {
+        menuButtonsScript.ShowLVL3Buttons();
+    }
+
+    public void HideLVL3Buttons()
+    {
+        menuButtonsScript.HideLVL3Buttons();
+    }
 }

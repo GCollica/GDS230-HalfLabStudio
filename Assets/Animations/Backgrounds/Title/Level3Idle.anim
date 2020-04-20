@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: LevelIdle
+  m_Name: Level3Idle
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,8 +20,7 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -7230257191298962620, guid: c0e844884fb655847acdbe03653f7cf5,
-        type: 3}
+      value: {fileID: 21300000, guid: 6d5c5d1d9b3674842adec6a77d5ba3bb, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -41,7 +40,7 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -7230257191298962620, guid: c0e844884fb655847acdbe03653f7cf5, type: 3}
+    - {fileID: 21300000, guid: 6d5c5d1d9b3674842adec6a77d5ba3bb, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -68,7 +67,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: ShowPlayButtons
+    functionName: ShowLVL3Buttons
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

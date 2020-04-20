@@ -14,14 +14,28 @@ public class MainMenuButtons : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    public void LvlSelect() 
+    public void Lvl1Select() 
     {
         HideTitleButtons();
+        HideLVL2Buttons();
         StartAnimation(2);
+    }
+
+    public void Lvl2Select()
+    {
+        HideLVL1Buttons();
+        HideLVL3Buttons();
+        StartAnimation(3);
+    }
+
+    public void Lvl3Select()
+    {
+        HideLVL2Buttons();
+        StartAnimation(4);
     }
     public void BackToMainMenu() 
     {        
-        HidePlayButtons();
+        HideLVL1Buttons();
         StartAnimation(1);
     }
 
@@ -52,48 +66,70 @@ public class MainMenuButtons : MonoBehaviour
 
     public void HideTitleButtons()
     {
-        if(mainMenuButtons[0].activeInHierarchy == true && mainMenuButtons[2].activeInHierarchy == true)
+        if(mainMenuButtons[0].activeInHierarchy == true && mainMenuButtons[1].activeInHierarchy == true)
         {
             mainMenuButtons[0].SetActive(false);
-            mainMenuButtons[2].SetActive(false);
+            mainMenuButtons[1].SetActive(false);
         }
     }
 
     public void ShowTitleButtons()
     {
-        if (mainMenuButtons[0].activeInHierarchy == false && mainMenuButtons[2].activeInHierarchy == false)
+        if (mainMenuButtons[0].activeInHierarchy == false && mainMenuButtons[1].activeInHierarchy == false)
         {
             mainMenuButtons[0].SetActive(true);
-            mainMenuButtons[2].SetActive(true);
+            mainMenuButtons[1].SetActive(true);
         }       
     }
 
-    public void HidePlayButtons()
+    public void HideLVL1Buttons()
     {
-        if(mainMenuButtons[1].activeInHierarchy == true)
+        if(mainMenuButtons[2].activeInHierarchy == true)
         {
-            mainMenuButtons[1].SetActive(false);
+            mainMenuButtons[2].SetActive(false);
         }
     }
 
-    public void ShowPlayButtons()
+    public void ShowLVL1Buttons()
     {
-        if(mainMenuButtons[1].activeInHierarchy == false)
+        if(mainMenuButtons[2].activeInHierarchy == false)
         {
-            mainMenuButtons[1].SetActive(true);
+            mainMenuButtons[2].SetActive(true);
         }
     }
 
-    /*public void SetBackground(int sprite)
+    public void HideLVL2Buttons()
     {
-        if(sprite == 1)
+        if(mainMenuButtons[3].activeInHierarchy == true)
         {
-            backgroundGameObject.GetComponent<SpriteRenderer>().sprite = titleBGSprite;
+            mainMenuButtons[3].SetActive(false);
         }
+    }
 
-        if(sprite == 2)
+    public void ShowLVL2Buttons()
+    {
+        if (mainMenuButtons[3].activeInHierarchy == false)
         {
-            backgroundGameObject.GetComponent<SpriteRenderer>().sprite = blankBGSprite;
+            mainMenuButtons[3].SetActive(true);
         }
-    }*/
+    }
+
+    public void HideLVL3Buttons()
+    {
+        if(mainMenuButtons[4].activeInHierarchy == true)
+        {
+            mainMenuButtons[4].SetActive(false);
+        }
+    }
+
+    public void ShowLVL3Buttons()
+    {
+        if(mainMenuButtons[4].activeInHierarchy == false)
+        {
+            mainMenuButtons[4].SetActive(true);
+        }
+    }
+
+
+
 }
