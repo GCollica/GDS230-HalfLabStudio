@@ -34,6 +34,8 @@ public class Turret2 : MonoBehaviour
 
     public bool fireCountDown;
 
+    public AudioSource source;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -130,6 +132,7 @@ public class Turret2 : MonoBehaviour
             Instantiate(projectile, firepoints[4].transform.position, firepoints[4].transform.rotation);*/
 
             anim.SetInteger("AnimState", 1);
+            source.Play();
             fireTimer = 3f;
         }
 

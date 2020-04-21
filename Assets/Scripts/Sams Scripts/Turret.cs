@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class Turret : MonoBehaviour
@@ -42,7 +43,7 @@ public class Turret : MonoBehaviour
     //the speed that the turret turns towards the enemy in range
     public float turnSpeed = 10f;
 
-    
+    public AudioSource source;
 
 
     // Start is called before the first frame update
@@ -57,7 +58,6 @@ public class Turret : MonoBehaviour
             thisSprite[1].sortingOrder = -2;
             thisSprite[2].sortingOrder = -2;
         }
-
     }
 
     void Update()
@@ -124,7 +124,7 @@ public class Turret : MonoBehaviour
         {
 
             anim.SetInteger("AnimState", 1);
-
+            source.Play();
             fireTimer = 2f;
         }
     }

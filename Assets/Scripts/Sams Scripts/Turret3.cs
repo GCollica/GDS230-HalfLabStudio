@@ -21,6 +21,7 @@ public class Turret3 : MonoBehaviour
 
 
     public bool fireCountDown;
+    public AudioSource source;
 
     private void Awake()
     {
@@ -56,7 +57,7 @@ public class Turret3 : MonoBehaviour
             //Reworked how firing works, this now just starts the animation, the animation has events which do the rest - Gian
             towerAnimator.SetInteger("AnimState", 1);
             print("Set int");
-            
+            source.Play();
             fireTimer = 7.5f;
         }
     }
