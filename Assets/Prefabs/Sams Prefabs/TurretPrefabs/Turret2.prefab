@@ -497,7 +497,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   enemy: {fileID: 0}
-  damage: 0.5
+  damage: 5
   damageUpgradedTimes: 0
   projectile: {fileID: 4090978583008761406, guid: deae804c73b0d4c4197bc5e17d069af7,
     type: 3}

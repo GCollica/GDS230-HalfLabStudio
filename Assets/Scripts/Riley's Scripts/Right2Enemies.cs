@@ -114,15 +114,15 @@ public class Right2Enemies : MonoBehaviour
 
     void IncreaseHealthPerWave()
     {
-        if (spawner.waveIndex == 1) { health += 0.05f; }
-        if (spawner.waveIndex == 2) { health += 0.1f; }
-        if (spawner.waveIndex == 3) { health += 0.15f; }
-        if (spawner.waveIndex == 4) { health += 0.2f; }
-        if (spawner.waveIndex == 5) { health += 0.25f; }
-        if (spawner.waveIndex == 6) { health += 0.3f; }
-        if (spawner.waveIndex == 7) { health += 0.35f; }
-        if (spawner.waveIndex == 8) { health += 0.4f; }
-        if (spawner.waveIndex == 9) { health += 0.45f; }
+        if (spawner.waveIndex == 1) { health += 0.5f; }
+        if (spawner.waveIndex == 2) { health += 1f; }
+        if (spawner.waveIndex == 3) { health += 1.5f; }
+        if (spawner.waveIndex == 4) { health += 2f; }
+        if (spawner.waveIndex == 5) { health += 2.5f; }
+        if (spawner.waveIndex == 6) { health += 3; }
+        if (spawner.waveIndex == 7) { health += 3.5f; }
+        if (spawner.waveIndex == 8) { health += 4f; }
+        if (spawner.waveIndex == 9) { health += 4.5f; }
     }
 
     void GetNextWaypoint()

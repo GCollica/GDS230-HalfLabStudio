@@ -55,14 +55,6 @@ public class GameController : MonoBehaviour
         mouse = new Vector3(transform.position.x, transform.position.y, 10);
         researchPoints = 325;
         health = 10;
-
-
-
-        
-            
-        
-
-
     }
 
     private void Update()

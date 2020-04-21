@@ -1684,6 +1684,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5477876673659567537, guid: 3864c72eec216aa4e8aad51b60e761b9,
         type: 3}
+    - target: {fileID: 1064610123, guid: da248099c0047c346bfca4804dda6086, type: 3}
+      propertyPath: gameStartTimer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4633545004592377896, guid: da248099c0047c346bfca4804dda6086,
         type: 3}
       propertyPath: m_LocalPosition.x

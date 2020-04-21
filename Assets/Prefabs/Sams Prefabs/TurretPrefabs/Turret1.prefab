@@ -124,7 +124,7 @@ MonoBehaviour:
     type: 3}
   firePoint: {fileID: 3615924775364888396}
   enemy: {fileID: 0}
-  damage: 1.65
+  damage: 16.5
   damageIncreaseCost: 150
   damageUpgradedAmount: 0
   sellTurret: 50

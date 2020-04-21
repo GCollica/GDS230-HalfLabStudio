@@ -68,7 +68,7 @@ public class Turret2 : MonoBehaviour
     public void UpgradeDamage()
     {
         damageUpgradedTimes += 1;
-        damage += 0.25f;
+        damage += 2.5f;
         gC.researchPoints -= upgradeDamage;
         upgradeDamage += 250;
         sellTurret += 10;
