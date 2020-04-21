@@ -45,6 +45,7 @@ public class GameController : MonoBehaviour
 
     public bool targetFirst;
 
+    public GameObject bannerAdPlaceholder;
 
 
 
@@ -136,10 +137,7 @@ public class GameController : MonoBehaviour
         if (bS.openWindow == true) { bS.CloseUpgradeWindow(); }
         pause.SetActive(true);
         canMove = false;
-        if (Advertisement.IsReady("BannerAd"))
-        {
-            Advertisement.Show("BannerAd");
-        }
+        bannerAdPlaceholder.SetActive(true);
     }
 
     public void UnPauseGame() 
@@ -148,6 +146,7 @@ public class GameController : MonoBehaviour
         bS.gameObject.SetActive(true);
         pause.SetActive(false);
         canMove = true;
+        bannerAdPlaceholder.SetActive(false);
     }
 
     public void AdWatched()

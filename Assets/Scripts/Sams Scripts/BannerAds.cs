@@ -2,28 +2,27 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using UnityEngine;
-using UnityEngine.Advertisements;
+
 public class BannerAds : MonoBehaviour
 {
-    public string gameId = "1234567";
-    public string placementId = "BannerAd";
-    public bool testMode = true;
-    // Start is called before the first frame update
-    void Start()
-    {
-        Advertisement.Initialize(gameId, testMode);
-        
-        
-    }
-
-    
+    public GameObject banner;
+    private bool stop;
+    private float startBanner = 2.5f;
 
     private void Update()
     {
-        if (Advertisement.IsReady("BannerAd"))
+
+        if (stop == false)
         {
-            Advertisement.Show("BannerAd");
+            startBanner -= Time.deltaTime;
         }
+        if (startBanner <= 0f) 
+        {
+            banner.SetActive(true);
+            stop = true;
+            startBanner = 5f;
+        }
+
     }
 
 }
