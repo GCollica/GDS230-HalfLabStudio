@@ -30,7 +30,7 @@ public class Turret : MonoBehaviour
     public GameObject enemy;
 
     public float damage = 2.5f;
-    public int damageIncreaseCost = 100;
+    public int damageIncreaseCost = 150;
     public int damageUpgradedAmount = 0;
 
     public int sellTurret = 50;
@@ -149,7 +149,7 @@ public class Turret : MonoBehaviour
         damageUpgradedAmount += 1;
         damage += 0.25f;
         gC.researchPoints -= damageIncreaseCost;
-        damageIncreaseCost += 100;
+        damageIncreaseCost += 200;
         sellTurret += 5;
     }
 

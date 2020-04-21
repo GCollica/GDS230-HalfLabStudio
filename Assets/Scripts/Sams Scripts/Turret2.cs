@@ -70,7 +70,7 @@ public class Turret2 : MonoBehaviour
         damageUpgradedTimes += 1;
         damage += 0.25f;
         gC.researchPoints -= upgradeDamage;
-        upgradeDamage += 200;
+        upgradeDamage += 250;
         sellTurret += 10;
     }
 

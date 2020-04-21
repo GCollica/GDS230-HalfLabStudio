@@ -1792,6 +1792,10 @@ PrefabInstance:
       propertyPath: checkForEnemyClass
       value: 
       objectReference: {fileID: 388378803}
+    - target: {fileID: 1064610123, guid: da248099c0047c346bfca4804dda6086, type: 3}
+      propertyPath: gameStartTimer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4633545004592377896, guid: da248099c0047c346bfca4804dda6086,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2144,6 +2148,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 134282133}
+    - target: {fileID: 2757946888477505446, guid: a3146d0c07d8dde4ea77177579a0dd2c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartAds
+      objectReference: {fileID: 0}
     - target: {fileID: 2757946888838583406, guid: a3146d0c07d8dde4ea77177579a0dd2c,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

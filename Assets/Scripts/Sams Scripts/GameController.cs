@@ -54,13 +54,14 @@ public class GameController : MonoBehaviour
         mouse = new Vector3(transform.position.x, transform.position.y, 10);
         researchPoints = 325;
         health = 10;
-        if (checkForEnemyScript.sceneInt == 5) 
-        {
-            health = 15;
-            researchPoints = 450;
-        }
+
+
+
         
+            
         
+
+
     }
 
     private void Update()
@@ -81,6 +82,7 @@ public class GameController : MonoBehaviour
         if (health == Mathf.Clamp(health, -1, 3))
         {
             healthSprite.color = red;
+            
         }
 
     }
@@ -100,6 +102,32 @@ public class GameController : MonoBehaviour
         }
     }
 
+    public void StartAds() 
+    {
+        if (Advertisement.IsReady("rewardedVideo")) 
+        {
+            var options = new ShowOptions { resultCallback = AdIsOver };
+            Advertisement.Show("rewardedVideo", options);
+        }
+    }
+
+    private void AdIsOver(ShowResult result) 
+    {
+        switch (result) 
+        {
+            case ShowResult.Finished:
+                Debug.Log("The Ad is over!");
+                AdWatched();
+                break;
+            case ShowResult.Skipped:
+                Debug.Log("The Ad is Skipped!");
+                break;
+            case ShowResult.Failed:
+                Debug.Log("The Ad was not shown!");
+                break;
+        }
+    }
+
     public void PauseGame() 
     {
      
@@ -108,6 +136,10 @@ public class GameController : MonoBehaviour
         if (bS.openWindow == true) { bS.CloseUpgradeWindow(); }
         pause.SetActive(true);
         canMove = false;
+        if (Advertisement.IsReady("BannerAd"))
+        {
+            Advertisement.Show("BannerAd");
+        }
     }
 
     public void UnPauseGame() 
@@ -120,11 +152,7 @@ public class GameController : MonoBehaviour
 
     public void AdWatched()
     {
-        if (Advertisement.IsReady("rewardedVideo")) 
-        {
-            Advertisement.Show("rewardedVideo");
-            
-        }
+       
         healthAnim.SetBool("Lose", false);
         health += 5;
         canMove = true;
