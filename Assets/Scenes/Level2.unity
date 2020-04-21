@@ -2047,7 +2047,7 @@ PrefabInstance:
     - target: {fileID: 4167645749907761704, guid: ecf8b8b5c4d9d694eac388ca5f41cd16,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4167645749907761702, guid: ecf8b8b5c4d9d694eac388ca5f41cd16,
         type: 3}
@@ -2129,25 +2129,40 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0.084
       objectReference: {fileID: 0}
+    - target: {fileID: 7086216330457032136, guid: ecf8b8b5c4d9d694eac388ca5f41cd16,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.22
+      objectReference: {fileID: 0}
     - target: {fileID: 4178407335080428871, guid: ecf8b8b5c4d9d694eac388ca5f41cd16,
         type: 3}
       propertyPath: m_Text
-      value: All of your money is belong
+      value: All of your money is belong Us
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244253846394906907, guid: ecf8b8b5c4d9d694eac388ca5f41cd16,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6655959992810729384, guid: ecf8b8b5c4d9d694eac388ca5f41cd16,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.893
+      value: 0.517
       objectReference: {fileID: 0}
     - target: {fileID: 6655959992810729384, guid: ecf8b8b5c4d9d694eac388ca5f41cd16,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.239
+      value: -0.36
       objectReference: {fileID: 0}
     - target: {fileID: 8318275852138782393, guid: ecf8b8b5c4d9d694eac388ca5f41cd16,
         type: 3}
       propertyPath: m_Text
-      value: Us?
+      value: $$$
+      objectReference: {fileID: 0}
+    - target: {fileID: 8318275852138782393, guid: ecf8b8b5c4d9d694eac388ca5f41cd16,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecf8b8b5c4d9d694eac388ca5f41cd16, type: 3}
