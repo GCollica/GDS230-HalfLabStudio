@@ -406,7 +406,7 @@ MonoBehaviour:
   healthBar: {fileID: 109669075940932621}
   spriteRenderer: {fileID: 5477876673659567539}
   getHit: 0
-  speed: 0.9
+  speed: 0.8
   spawner: {fileID: 0}
   turret: {fileID: 0}
   turret2: {fileID: 0}
