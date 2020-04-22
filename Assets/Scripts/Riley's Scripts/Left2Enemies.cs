@@ -105,6 +105,12 @@ public class Left2Enemies : MonoBehaviour
         if (spawner.waveIndex == 7) { health += 3.5f; }
         if (spawner.waveIndex == 8) { health += 4f; }
         if (spawner.waveIndex == 9) { health += 4.5f; }
+        if (spawner.waveIndex == 10) { health += 5.5f; }
+        if (spawner.waveIndex == 11) { health += 6.5f; }
+        if (spawner.waveIndex == 12) { health += 7.5f; }
+        if (spawner.waveIndex == 13) { health += 8.5f; }
+        if (spawner.waveIndex == 14) { health += 9.5f; }
+        if (spawner.waveIndex == 15) { health += 10.5f; }
     }
 
 

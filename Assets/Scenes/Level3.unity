@@ -1656,11 +1656,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1064610123, guid: da248099c0047c346bfca4804dda6086, type: 3}
       propertyPath: waves.Array.data[13].rate
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1064610123, guid: da248099c0047c346bfca4804dda6086, type: 3}
       propertyPath: waves.Array.data[14].rate
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1064610123, guid: da248099c0047c346bfca4804dda6086, type: 3}
       propertyPath: waves.Array.data[1].count
@@ -4040,6 +4040,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 943663345881468286, guid: a3146d0c07d8dde4ea77177579a0dd2c,
+        type: 3}
+      propertyPath: m_Text
+      value: "11,500\u202C\n"
       objectReference: {fileID: 0}
     - target: {fileID: 78136734163548179, guid: a3146d0c07d8dde4ea77177579a0dd2c,
         type: 3}

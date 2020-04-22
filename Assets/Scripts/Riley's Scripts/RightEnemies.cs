@@ -127,6 +127,8 @@ public class RightEnemies : MonoBehaviour
           if (spawner.waveIndex == 11) { health += 20f; slides.maxValue = 67.5f; }
           if (spawner.waveIndex == 12) { health += 30f; slides.maxValue = 77.5f; }
           if (spawner.waveIndex == 13) { health += 40f; slides.maxValue = 87.5f; }
+          if (spawner.waveIndex == 14) { health += 50f; slides.maxValue = 97.5f; }
+          if (spawner.waveIndex == 15) { health += 60f; slides.maxValue = 107.5f; }
     }
 
     void GetNextWaypoint()
