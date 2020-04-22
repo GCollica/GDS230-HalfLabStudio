@@ -8,7 +8,8 @@ public class Turret2 : MonoBehaviour
     //all the upgrade windows and the spawnpoint turret
     public GameObject[] upgradeWindows;
     public Text[] upgradeText;
-    
+    public SpriteRenderer[] thisSprite;
+
     public GameObject enemy;
 
     public float damage = 0.1f;
@@ -41,7 +42,12 @@ public class Turret2 : MonoBehaviour
     {
         gC = FindObjectOfType<GameController>();
         rangeSprite.gameObject.transform.parent = null;
-
+        if (gC.checkForEnemyScript.sceneInt == 5)
+        {
+            thisSprite[0].sortingOrder = -2;
+            thisSprite[1].sortingOrder = -2;
+            thisSprite[2].sortingOrder = -2;
+        }
     }
 
     private void Update()

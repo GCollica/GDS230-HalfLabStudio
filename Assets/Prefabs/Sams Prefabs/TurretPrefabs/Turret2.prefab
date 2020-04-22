@@ -497,6 +497,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  thisSprite:
+  - {fileID: 1622014087725804953}
+  - {fileID: 779568353976133353}
+  - {fileID: 3891487158909833294}
   enemy: {fileID: 0}
   damage: 5
   damageUpgradedTimes: 0

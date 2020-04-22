@@ -9,7 +9,7 @@ public class ProjectileT2 : MonoBehaviour
     public float deathCountDown = 0.1f;
 
     void Start()
-    {
+    {  
         rb.AddRelativeForce(Vector2.right * thrust, ForceMode2D.Impulse);
     }
     private void Update()
