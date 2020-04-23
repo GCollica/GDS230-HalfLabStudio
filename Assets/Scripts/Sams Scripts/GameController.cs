@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Advertisements;
+using UnityEditor;
 
 public class GameController : MonoBehaviour
 {
@@ -51,6 +52,8 @@ public class GameController : MonoBehaviour
 
     public bool updateHealthAudio = true;
 
+    public GameObject[] speedTimeButtons;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -63,6 +66,7 @@ public class GameController : MonoBehaviour
     {
         LoseState();
 
+        
         
         researchText.text = researchPoints.ToString();
 
@@ -100,6 +104,37 @@ public class GameController : MonoBehaviour
             }
         }
 
+    }
+
+    public void SpeedUpGame1()
+    {
+        if (Time.timeScale == 1)
+        {
+            Time.timeScale = 2;
+            speedTimeButtons[1].SetActive(true);
+            speedTimeButtons[0].SetActive(false);
+
+        }
+    }
+    public void SpeedUpGame2()
+    {
+        if (Time.timeScale == 2)
+        {
+            Time.timeScale = 3;
+            speedTimeButtons[2].SetActive(true);
+            speedTimeButtons[1].SetActive(false);
+
+        }
+    }
+    public void SpeedUpGame3()
+    {
+        if (Time.timeScale == 3)
+        {
+            Time.timeScale = 1;
+            speedTimeButtons[0].SetActive(true);
+            speedTimeButtons[2].SetActive(false);
+
+        }
     }
 
     void LoseState() 

@@ -48,10 +48,12 @@ public class CheckForEnemy : MonoBehaviour
 
     public void NextWave() 
     {
-        skipCountDown.SetActive(false);
-        spawner.gameStartTimer = 0;
-        gC.researchPoints += 50;
-        
+        if (gC.canMove)
+        {
+            skipCountDown.SetActive(false);
+            spawner.gameStartTimer = 0;
+            gC.researchPoints += 50;
+        }
     }
 
 
