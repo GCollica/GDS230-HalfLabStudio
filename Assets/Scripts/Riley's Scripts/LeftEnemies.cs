@@ -9,7 +9,7 @@ public class LeftEnemies : MonoBehaviour
     public bool showHealth;
     public Slider slides;
     public GameObject healthBar;
-
+    public AudioSource source;
     public SpriteRenderer spriteRenderer;
     public bool getHit;
     private float colourCountdown = 0.1f;
