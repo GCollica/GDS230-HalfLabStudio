@@ -9,7 +9,7 @@ public class LeftEnemies : MonoBehaviour
     public bool showHealth;
     public Slider slides;
     public GameObject healthBar;
-    public AudioSource source;
+    public GameObject source;
     public SpriteRenderer spriteRenderer;
     public bool getHit;
     private float colourCountdown = 0.1f;
@@ -33,6 +33,7 @@ public class LeftEnemies : MonoBehaviour
 
     void Start()
     {
+        source.transform.parent = null;
         target = LeftWaypoints.leftWaypoints[0];
         gC = GameObject.Find("GameController").GetComponent<GameController>();
         spawner = gC.spawner;
@@ -53,6 +54,7 @@ public class LeftEnemies : MonoBehaviour
         if (health <= 0f) 
         {
             gC.researchPoints += 25;
+            source.SetActive(true);
             Destroy(gameObject);
             AdvancedWaveSpawner.EnemiesAlive--;
         }

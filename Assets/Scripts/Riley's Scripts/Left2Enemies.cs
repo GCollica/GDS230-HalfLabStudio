@@ -19,7 +19,7 @@ public class Left2Enemies : MonoBehaviour
     private Transform target;
     private int leftWaypointIndex = 0;
 
-
+    public GameObject source;
 
     public Turret turret;
     public Turret2 turret2;
@@ -33,6 +33,7 @@ public class Left2Enemies : MonoBehaviour
 
     void Start()
     {
+        source.transform.parent = null;
         target = LeftWaypoints.leftWaypoints[0];
         gC = GameObject.Find("GameController").GetComponent<GameController>();
         spawner = gC.spawner;
@@ -53,6 +54,7 @@ public class Left2Enemies : MonoBehaviour
         if (health <= 0f)
         {
             gC.researchPoints += 25;
+            source.SetActive(true);
             Destroy(gameObject);
             AdvancedWaveSpawner.EnemiesAlive--;
         }
