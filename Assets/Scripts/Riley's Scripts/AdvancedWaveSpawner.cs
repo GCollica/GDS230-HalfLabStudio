@@ -77,9 +77,9 @@ public class AdvancedWaveSpawner : MonoBehaviour
             if (checkForEnemyClass.sceneInt == 1 || checkForEnemyClass.sceneInt == 4) 
             {
                 if (wave.enemyPrefabs[0]) { SpawnEnemy(wave.enemyPrefabs[0], spawnPoint[ChooseSpawnPoint()]); }
-                if (wave.enemyPrefabs[1]) { SpawnEnemy(wave.enemyPrefabs[1], spawnPoint[ChooseSpawnPoint()]); }
-                if (wave.enemyPrefabs[2]) { SpawnEnemy(wave.enemyPrefabs[2], spawnPoint[ChooseSpawnPoint()]); }
-                if (wave.enemyPrefabs[3]) { SpawnEnemy(wave.enemyPrefabs[3], spawnPoint[ChooseSpawnPoint()]); }
+                if (wave.enemyPrefabs[0] && wave.enemyPrefabs[1]) { SpawnEnemy(wave.enemyPrefabs[ChooseEnemy(2)], spawnPoint[ChooseSpawnPoint()]); }
+                if (wave.enemyPrefabs[0] && wave.enemyPrefabs[1] && wave.enemyPrefabs[2]) { SpawnEnemy(wave.enemyPrefabs[ChooseEnemy(3)], spawnPoint[ChooseSpawnPoint()]); }
+                if (wave.enemyPrefabs[0] && wave.enemyPrefabs[1] && wave.enemyPrefabs[2] && wave.enemyPrefabs[3]) { SpawnEnemy(wave.enemyPrefabs[ChooseEnemy(4)], spawnPoint[ChooseSpawnPoint()]); }
             }
             if (checkForEnemyClass.sceneInt == 5)
             {
@@ -123,5 +123,11 @@ public class AdvancedWaveSpawner : MonoBehaviour
     {
         int chosenPoint = (Random.Range(1, 4) - 1);
         return chosenPoint;
+    }
+
+    private int ChooseEnemy(int amountOfEnemies)
+    {
+        int chosenEnemy = (Mathf.RoundToInt(Random.Range(0, amountOfEnemies)) - 1);
+        return chosenEnemy;
     }
 }
