@@ -148,6 +148,7 @@ public class LeftEnemies : MonoBehaviour
 
         if (collision.tag == "EnemyExit")
         {
+            gC.updateHealthAudio = true;
             gC.health -= 1;
             Destroy(gameObject);
             AdvancedWaveSpawner.EnemiesAlive--;

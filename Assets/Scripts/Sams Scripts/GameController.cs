@@ -8,6 +8,8 @@ using UnityEngine.Advertisements;
 public class GameController : MonoBehaviour
 {
     public int health = 10;
+    public AudioSource source;
+    public AudioClip[] clips;
     public SpriteRenderer healthSprite;
     public Animator healthAnim;
     public Color32 green;
@@ -47,7 +49,7 @@ public class GameController : MonoBehaviour
 
     public GameObject bannerAdPlaceholder;
 
-
+    public bool updateHealthAudio = true;
 
     // Start is called before the first frame update
     void Start()
@@ -66,16 +68,36 @@ public class GameController : MonoBehaviour
 
         if (health == Mathf.Clamp(health, 7, 10))
         {
+            if (updateHealthAudio == true)
+            {
+                source.clip = clips[0];
+                source.Play();
+                updateHealthAudio = false;
+            }
             healthSprite.color = green;
         }
         if (health == Mathf.Clamp(health, 4, 6))
         {
+            if (updateHealthAudio == true)
+            {
+                source.clip = clips[1];
+                source.Play();
+                updateHealthAudio = false;
+            }
             healthSprite.color = orange;
         }
         if (health == Mathf.Clamp(health, -1, 3))
         {
-            healthSprite.color = red;
-            
+            healthSprite.color = red;   
+        }
+        if (health == 0) 
+        {
+            if (updateHealthAudio == true)
+            {
+                source.clip = clips[2];
+                source.Play();
+                updateHealthAudio = false;
+            }
         }
 
     }
@@ -101,6 +123,10 @@ public class GameController : MonoBehaviour
         {
             var options = new ShowOptions { resultCallback = AdIsOver };
             Advertisement.Show("rewardedVideo", options);
+        }
+        if (!Advertisement.IsReady("rewardedVideo")) 
+        {
+            AdWatched();
         }
     }
 
@@ -143,7 +169,7 @@ public class GameController : MonoBehaviour
 
     public void AdWatched()
     {
-       
+        updateHealthAudio = true;
         healthAnim.SetBool("Lose", false);
         health += 5;
         canMove = true;
