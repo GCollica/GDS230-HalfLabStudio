@@ -72,7 +72,7 @@ public class AdvancedWaveSpawner : MonoBehaviour
         Waves wave = waves[waveIndex];
         waveIndex++;
 
-        for (int i = 0; i < wave.count;)
+        for (int i = 0; i <= wave.count;)
         {
             if (checkForEnemyClass.sceneInt == 1 || checkForEnemyClass.sceneInt == 4) 
             {
@@ -109,17 +109,33 @@ public class AdvancedWaveSpawner : MonoBehaviour
                 {
                     SpawnEnemy(wave.leftEnemyPrefabs[ChooseEnemy1(2)], spawnPoint[ChooseSpawnPoint1()]);
                     i++;
+                }            
+                if (wave.leftEnemyPrefabs[0] != null && wave.leftEnemyPrefabs[1] != null && wave.rightEnemyPrefabs[0] != null && wave.rightEnemyPrefabs[1] == null)
+                {
+                    SpawnEnemy(wave.leftEnemyPrefabs[ChooseEnemy1(2)], spawnPoint[ChooseSpawnPoint1()]);
+                    SpawnEnemy(wave.rightEnemyPrefabs[ChooseEnemy2(1)], spawnPoint[ChooseSpawnPoint2()]);
+                    i += 2;
                 }
                 if (wave.leftEnemyPrefabs[0] != null && wave.leftEnemyPrefabs[1] == null && wave.rightEnemyPrefabs[0] != null && wave.rightEnemyPrefabs[1] == null)
                 {
                     SpawnEnemy(wave.leftEnemyPrefabs[ChooseEnemy1(1)], spawnPoint[ChooseSpawnPoint1()]);
                     SpawnEnemy(wave.rightEnemyPrefabs[ChooseEnemy2(1)], spawnPoint[ChooseSpawnPoint2()]);
                     i += 2;
-                }               
-                if (wave.leftEnemyPrefabs[0] != null && wave.leftEnemyPrefabs[1] != null && wave.rightEnemyPrefabs[0] != null && wave.rightEnemyPrefabs[1] == null)
+                }
+                if (wave.leftEnemyPrefabs[0] == null && wave.leftEnemyPrefabs[1] == null && wave.rightEnemyPrefabs[0] != null && wave.rightEnemyPrefabs[1] == null)
                 {
-                    SpawnEnemy(wave.leftEnemyPrefabs[ChooseEnemy1(2)], spawnPoint[ChooseSpawnPoint1()]);
                     SpawnEnemy(wave.rightEnemyPrefabs[ChooseEnemy2(1)], spawnPoint[ChooseSpawnPoint2()]);
+                    i ++;
+                }
+                if (wave.leftEnemyPrefabs[0] == null && wave.leftEnemyPrefabs[1] == null && wave.rightEnemyPrefabs[0] != null && wave.rightEnemyPrefabs[1] != null)
+                {
+                    SpawnEnemy(wave.rightEnemyPrefabs[ChooseEnemy2(2)], spawnPoint[ChooseSpawnPoint2()]);
+                    i++;
+                }
+                if (wave.leftEnemyPrefabs[0] != null && wave.leftEnemyPrefabs[1] == null && wave.rightEnemyPrefabs[0] != null && wave.rightEnemyPrefabs[1] != null)
+                {
+                    SpawnEnemy(wave.leftEnemyPrefabs[ChooseEnemy1(1)], spawnPoint[ChooseSpawnPoint1()]);
+                    SpawnEnemy(wave.rightEnemyPrefabs[ChooseEnemy2(2)], spawnPoint[ChooseSpawnPoint2()]);
                     i += 2;
                 }
                 if (wave.leftEnemyPrefabs[0] != null && wave.leftEnemyPrefabs[1] != null && wave.rightEnemyPrefabs[0] != null && wave.rightEnemyPrefabs[1] != null)
