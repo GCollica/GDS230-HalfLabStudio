@@ -76,10 +76,10 @@ public class AdvancedWaveSpawner : MonoBehaviour
         {
             if (checkForEnemyClass.sceneInt == 1 || checkForEnemyClass.sceneInt == 4) 
             {
-                if (wave.enemyPrefabs[0]) { SpawnEnemy(wave.enemyPrefabs[0]); }
-                if (wave.enemyPrefabs[1]) { SpawnEnemy(wave.enemyPrefabs[1]); }
-                if (wave.enemyPrefabs[2]) { SpawnEnemy(wave.enemyPrefabs[2]); }
-                if (wave.enemyPrefabs[3]) { SpawnEnemy(wave.enemyPrefabs[3]); }
+                if (wave.enemyPrefabs[0]) { SpawnEnemy(wave.enemyPrefabs[0], spawnPoint[ChooseSpawnPoint()]); }
+                if (wave.enemyPrefabs[1]) { SpawnEnemy(wave.enemyPrefabs[1], spawnPoint[ChooseSpawnPoint()]); }
+                if (wave.enemyPrefabs[2]) { SpawnEnemy(wave.enemyPrefabs[2], spawnPoint[ChooseSpawnPoint()]); }
+                if (wave.enemyPrefabs[3]) { SpawnEnemy(wave.enemyPrefabs[3], spawnPoint[ChooseSpawnPoint()]); }
             }
             if (checkForEnemyClass.sceneInt == 5)
             {
@@ -91,7 +91,7 @@ public class AdvancedWaveSpawner : MonoBehaviour
 
 
 
-            yield return new WaitForSeconds(1f / wave.rate);
+            yield return new WaitForSeconds(wave.rate);
         }
 
         if (waveIndex >= waves.Length)
@@ -100,11 +100,11 @@ public class AdvancedWaveSpawner : MonoBehaviour
         }
     }
 
-    void SpawnEnemy(GameObject enemy)
+    void SpawnEnemy(GameObject enemy, Transform spawnPoint)
     {
         if (gC.canMove == true)
         {
-            Instantiate(enemy, spawnPoint[0].position, spawnPoint[0].rotation);
+            Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
             EnemiesAlive++;
         }
     }
@@ -117,5 +117,11 @@ public class AdvancedWaveSpawner : MonoBehaviour
             Instantiate(enemy, spawnPoint[1].position, spawnPoint[1].rotation);
             EnemiesAlive += 2;
         }
+    }
+
+    private int ChooseSpawnPoint()
+    {
+        int chosenPoint = (Random.Range(1, 4) - 1);
+        return chosenPoint;
     }
 }

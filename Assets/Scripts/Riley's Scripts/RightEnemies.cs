@@ -5,8 +5,8 @@ using UnityEngine.UI;
 public class RightEnemies : MonoBehaviour
 {
     //this float/bool is used to controll the offset of the right enemies so they dont sit ontop of the left enemies
-    float moveCountDown = 1;
-    bool startMoving;
+    //float moveCountDown = 1;
+    //bool startMoving;
 
     public float health = 47f;
     public bool showHealth;
@@ -48,16 +48,16 @@ public class RightEnemies : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (gC.canMove == true && startMoving == true)
+        if (gC.canMove == true)
         {
             Vector2 dir = target.position - transform.position;
             transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
         }
 
-        StartMoving();
+        //StartMoving();
     }
 
-    void StartMoving() 
+    /*void StartMoving() 
     {
         if (startMoving == false) 
         {
@@ -69,7 +69,7 @@ public class RightEnemies : MonoBehaviour
             gameObject.layer = 0;
             startMoving = true;
         }
-    }
+    }*/
 
     void Update()
     {
