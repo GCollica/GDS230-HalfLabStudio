@@ -1746,6 +1746,11 @@ PrefabInstance:
       propertyPath: bannerAdPlaceholder
       value: 
       objectReference: {fileID: 1205773705}
+    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
+        type: 3}
+      propertyPath: checkForEnemyScript
+      value: 
+      objectReference: {fileID: 388378803}
     - target: {fileID: 1064610123, guid: da248099c0047c346bfca4804dda6086, type: 3}
       propertyPath: waves.Array.size
       value: 15

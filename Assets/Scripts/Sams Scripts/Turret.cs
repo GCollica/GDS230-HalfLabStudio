@@ -122,9 +122,11 @@ public class Turret : MonoBehaviour
     {
         if (fireTimer <= 0f)
         {
-
-            anim.SetInteger("AnimState", 1);
-            source.Play();
+            if(enemy != null)
+            {
+                anim.SetInteger("AnimState", 1);
+                source.Play();
+            }
             fireTimer = 2f;
         }
     }

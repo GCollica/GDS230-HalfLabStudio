@@ -55,9 +55,13 @@ public class Turret3 : MonoBehaviour
             //Instantiate(projectilePrefab, firePoint.transform.position, firePoint.transform.rotation);
 
             //Reworked how firing works, this now just starts the animation, the animation has events which do the rest - Gian
-            towerAnimator.SetInteger("AnimState", 1);
-            print("Set int");
-            source.Play();
+            
+            if(enemy != null)
+            {
+                towerAnimator.SetInteger("AnimState", 1);
+                source.Play();
+            }
+
             fireTimer = 7.5f;
         }
     }

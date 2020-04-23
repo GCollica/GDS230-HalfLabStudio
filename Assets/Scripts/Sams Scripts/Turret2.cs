@@ -137,8 +137,11 @@ public class Turret2 : MonoBehaviour
             Instantiate(projectile, firepoints[4].transform.position, firepoints[4].transform.rotation);
             Instantiate(projectile, firepoints[4].transform.position, firepoints[4].transform.rotation);*/
 
-            anim.SetInteger("AnimState", 1);
-            source.Play();
+            if(enemy != null)
+            {
+                anim.SetInteger("AnimState", 1);
+                source.Play();
+            }
             fireTimer = 3f;
         }
 
