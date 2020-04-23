@@ -31,12 +31,12 @@ public class RightEnemies : MonoBehaviour
 
     public DamageNumbersSpawner damageNumbersSpawnerScript;
 
-    
+    public GameObject source;
 
 
     void Start()
     {
-
+        source.transform.parent = null;
         target = RightWaypoints.rightWaypoints[0];
         gC = GameObject.Find("GameController").GetComponent<GameController>();
         spawner = gC.spawner;
@@ -82,8 +82,9 @@ public class RightEnemies : MonoBehaviour
        if (health <= 0)
         {
             gC.researchPoints += 25;
-            Destroy(gameObject);
+            source.SetActive(true);
             AdvancedWaveSpawner.EnemiesAlive--;
+            Destroy(gameObject);
         }
 
         UpdateHealth();

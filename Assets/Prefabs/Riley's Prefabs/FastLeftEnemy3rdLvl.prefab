@@ -195,7 +195,6 @@ GameObject:
   - component: {fileID: 7095584537015850624}
   - component: {fileID: 1995543499182899204}
   - component: {fileID: 3675018542167903325}
-  - component: {fileID: 5189872951901605857}
   m_Layer: 0
   m_Name: FastLeftEnemy3rdLvl
   m_TagString: Enemy
@@ -216,6 +215,7 @@ Transform:
   m_Children:
   - {fileID: 445953174739885725}
   - {fileID: 1012179191746022098}
+  - {fileID: 3032836619365084946}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -288,6 +288,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 7095584537015850626}
   getHit: 0
   speed: 1.2
+  source: {fileID: 8232015899779420881}
   turret: {fileID: 0}
   turret2: {fileID: 0}
   gC: {fileID: 0}
@@ -349,14 +350,46 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!82 &5189872951901605857
+--- !u!1 &8232015899779420881
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3032836619365084946}
+  - component: {fileID: 3628668841400499541}
+  - component: {fileID: 8059314236836931727}
+  m_Layer: 0
+  m_Name: enemyDeathSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &3032836619365084946
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8232015899779420881}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.941085, y: -7.349018, z: 61.5042}
+  m_LocalScale: {x: 1.2382828, y: 1.2382828, z: 1.2382828}
+  m_Children: []
+  m_Father: {fileID: 7095584537015850625}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &3628668841400499541
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7095584537015850627}
-  m_Enabled: 0
+  m_GameObject: {fileID: 8232015899779420881}
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -1278940944615987243, guid: 45af55cd0cfb67648896f5f0c4e113cd,
     type: 2}
@@ -364,7 +397,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -446,6 +479,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8059314236836931727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8232015899779420881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92198760edaee8d44ac78d5b3c962c64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8710428500773045744
 GameObject:
   m_ObjectHideFlags: 0
