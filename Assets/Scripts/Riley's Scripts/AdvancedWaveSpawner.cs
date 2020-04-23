@@ -76,11 +76,24 @@ public class AdvancedWaveSpawner : MonoBehaviour
         {
             if (checkForEnemyClass.sceneInt == 1 || checkForEnemyClass.sceneInt == 4) 
             {
-                if (wave.enemyPrefabs[0]) { SpawnEnemy(wave.enemyPrefabs[0], spawnPoint[ChooseSpawnPoint()]); }
-                if (wave.enemyPrefabs[0] && wave.enemyPrefabs[1]) { SpawnEnemy(wave.enemyPrefabs[ChooseEnemy(2)], spawnPoint[ChooseSpawnPoint()]); }
-                if (wave.enemyPrefabs[0] && wave.enemyPrefabs[1] && wave.enemyPrefabs[2]) { SpawnEnemy(wave.enemyPrefabs[ChooseEnemy(3)], spawnPoint[ChooseSpawnPoint()]); }
-                if (wave.enemyPrefabs[0] && wave.enemyPrefabs[1] && wave.enemyPrefabs[2] && wave.enemyPrefabs[3]) { SpawnEnemy(wave.enemyPrefabs[ChooseEnemy(4)], spawnPoint[ChooseSpawnPoint()]); }
+                if (wave.enemyPrefabs[0] != null && wave.enemyPrefabs[1] == null && wave.enemyPrefabs[2] == null && wave.enemyPrefabs[3] == null) 
+                { 
+                    SpawnEnemy(wave.enemyPrefabs[0], spawnPoint[ChooseSpawnPoint()]); 
+                }
+                if (wave.enemyPrefabs[0] != null && wave.enemyPrefabs[1] != null && wave.enemyPrefabs[2] == null && wave.enemyPrefabs[3] == null) 
+                { 
+                    SpawnEnemy(wave.enemyPrefabs[ChooseEnemy(2)], spawnPoint[ChooseSpawnPoint()]); 
+                }
+                if (wave.enemyPrefabs[0] != null && wave.enemyPrefabs[1] != null && wave.enemyPrefabs[2] != null && wave.enemyPrefabs[3] == null) 
+                { 
+                    SpawnEnemy(wave.enemyPrefabs[ChooseEnemy(3)], spawnPoint[ChooseSpawnPoint()]);
+                }
+                if (wave.enemyPrefabs[0] != null && wave.enemyPrefabs[1] != null && wave.enemyPrefabs[2] != null && wave.enemyPrefabs[3] != null) 
+                { 
+                    SpawnEnemy(wave.enemyPrefabs[ChooseEnemy(4)], spawnPoint[ChooseSpawnPoint()]);
+                }
             }
+
             if (checkForEnemyClass.sceneInt == 5)
             {
                 if (wave.enemyPrefabs[0]) { SpawnMultipleEnemy(wave.enemyPrefabs[0]); }
@@ -88,8 +101,6 @@ public class AdvancedWaveSpawner : MonoBehaviour
                 if (wave.enemyPrefabs[2]) { SpawnMultipleEnemy(wave.enemyPrefabs[2]); }
                 if (wave.enemyPrefabs[3]) { SpawnMultipleEnemy(wave.enemyPrefabs[3]); }
             }
-
-
 
             yield return new WaitForSeconds(wave.rate);
         }
@@ -127,7 +138,7 @@ public class AdvancedWaveSpawner : MonoBehaviour
 
     private int ChooseEnemy(int amountOfEnemies)
     {
-        int chosenEnemy = (Mathf.RoundToInt(Random.Range(0, amountOfEnemies)) - 1);
+        int chosenEnemy = (Mathf.RoundToInt(Random.Range(1, amountOfEnemies)) - 1);
         return chosenEnemy;
     }
 }
