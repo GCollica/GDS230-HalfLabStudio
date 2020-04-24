@@ -72,7 +72,7 @@ public class AdvancedWaveSpawner : MonoBehaviour
         Waves wave = waves[waveIndex];
         waveIndex++;
 
-        for (int i = 0; i <= wave.count;)
+        for (int i = 0; i < wave.count;)
         {
             if (checkForEnemyClass.sceneInt == 1 || checkForEnemyClass.sceneInt == 4) 
             {
@@ -151,7 +151,7 @@ public class AdvancedWaveSpawner : MonoBehaviour
 
         if (waveIndex >= waves.Length)
         {
-            this.enabled = false;
+            //this.enabled = false;
         }
     }
 

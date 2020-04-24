@@ -26,8 +26,7 @@ public class CheckForEnemy : MonoBehaviour
     private void Update()
     {
         
-
-        if (AdvancedWaveSpawner.EnemiesAlive <= 0 && gC.health >= 0 && spawner.waveIndex == 15)
+        if (AdvancedWaveSpawner.EnemiesAlive <= 0 && gC.health >= 0 && spawner.waveIndex == spawner.waves.Length)
         {
             gC.Win();
             skipCountDown.SetActive(false);
