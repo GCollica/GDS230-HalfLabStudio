@@ -68,7 +68,7 @@ public class Turret3 : MonoBehaviour
 
     public void SpawnProjectile()
     {
-        Instantiate(projectilePrefab, firePoint.transform.position, firePoint.transform.rotation, this.gameObject.transform);
+        Instantiate(projectilePrefab, firePoint.transform.position, firePoint.transform.rotation);
     }
 
 
