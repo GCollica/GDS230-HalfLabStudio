@@ -180,21 +180,26 @@ public class RightEnemies : MonoBehaviour
     {
         if (collision.gameObject.name == "T1Projectile(Clone)")
         {
-            health -= turret.damage;
+            health -= collision.gameObject.GetComponent<ProjectileT1>().damage;
             showHealth = true;
             getHit = true;
-            damageNumbersSpawnerScript.SpawnDamageNumber(Mathf.RoundToInt(turret.damage));
+            damageNumbersSpawnerScript.SpawnDamageNumber(Mathf.RoundToInt(collision.gameObject.GetComponent<ProjectileT1>().damage));
+
             Destroy(collision.gameObject);
+
+
         }
 
         if (collision.gameObject.name == "T2Projectile(Clone)")
         {
-            health -= turret2.damage;
+            health -= collision.gameObject.GetComponent<ProjectileT2>().damage;
             showHealth = true;
             getHit = true;
-            damageNumbersSpawnerScript.SpawnDamageNumber(Mathf.RoundToInt(turret2.damage));
+            damageNumbersSpawnerScript.SpawnDamageNumber(Mathf.RoundToInt(collision.gameObject.GetComponent<ProjectileT2>().damage));
+
             Destroy(collision.gameObject);
         }
+
         if (collision.gameObject.name == "T3Projectile(Clone)")
         {
             speed = 0.25f;

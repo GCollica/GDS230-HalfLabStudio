@@ -198,7 +198,7 @@ public class Turret2 : MonoBehaviour
 
     public void SpawnProjectile(int spawnPoint)
     {
-        Instantiate(projectile, firepoints[spawnPoint].transform.position, firepoints[spawnPoint].transform.rotation);
+        Instantiate(projectile, firepoints[spawnPoint].transform.position, firepoints[spawnPoint].transform.rotation, this.gameObject.transform);
     }
 
 }

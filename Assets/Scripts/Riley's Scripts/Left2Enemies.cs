@@ -39,7 +39,7 @@ public class Left2Enemies : MonoBehaviour
         spawner = gC.spawner;
         gameObject.transform.SetParent(GameObject.Find("EnemyParent").transform);
         healthBar.SetActive(false);
-        IncreaseHealthPerWave();
+        //IncreaseHealthPerWave();
     }
 
 
@@ -96,7 +96,7 @@ public class Left2Enemies : MonoBehaviour
 
     }
 
-    void IncreaseHealthPerWave()
+    /*void IncreaseHealthPerWave()
     {
         if (spawner.waveIndex == 1) { health += 0.5f; }
         if (spawner.waveIndex == 2) { health += 1f; }
@@ -113,7 +113,7 @@ public class Left2Enemies : MonoBehaviour
         if (spawner.waveIndex == 13) { health += 8.5f; }
         if (spawner.waveIndex == 14) { health += 9.5f; }
         if (spawner.waveIndex == 15) { health += 10.5f; }
-    }
+    }*/
 
 
     void GetNextWaypoint()
@@ -168,10 +168,10 @@ public class Left2Enemies : MonoBehaviour
     {
         if (collision.gameObject.name == "T1Projectile(Clone)")
         {
-            health -= turret.damage;
+            health -= collision.gameObject.GetComponent<ProjectileT1>().damage;
             showHealth = true;
             getHit = true;
-            damageNumbersSpawnerScript.SpawnDamageNumber(Mathf.RoundToInt(turret.damage));
+            damageNumbersSpawnerScript.SpawnDamageNumber(Mathf.RoundToInt(collision.gameObject.GetComponent<ProjectileT1>().damage));
 
             Destroy(collision.gameObject);
 
@@ -180,17 +180,17 @@ public class Left2Enemies : MonoBehaviour
 
         if (collision.gameObject.name == "T2Projectile(Clone)")
         {
-            health -= turret2.damage;
+            health -= collision.gameObject.GetComponent<ProjectileT2>().damage;
             showHealth = true;
             getHit = true;
-            damageNumbersSpawnerScript.SpawnDamageNumber(Mathf.RoundToInt(turret2.damage));
+            damageNumbersSpawnerScript.SpawnDamageNumber(Mathf.RoundToInt(collision.gameObject.GetComponent<ProjectileT2>().damage));
 
             Destroy(collision.gameObject);
         }
 
         if (collision.gameObject.name == "T3Projectile(Clone)")
         {
-            speed = 0.5f;
+            speed = 0.25f;
         }
     }
 

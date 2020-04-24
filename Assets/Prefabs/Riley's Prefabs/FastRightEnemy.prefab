@@ -438,7 +438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a745af62eb75b0649bbfee2ed048a4bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 15
+  health: 25
   showHealth: 0
   slides: {fileID: 8337128674847054260}
   healthBar: {fileID: 109669075940932621}

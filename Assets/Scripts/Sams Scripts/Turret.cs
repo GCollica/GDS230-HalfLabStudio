@@ -133,7 +133,7 @@ public class Turret : MonoBehaviour
 
     public void SpawnProjectile()
     {
-        Instantiate(projectile, firePoint.transform.position, transform.rotation);
+        Instantiate(projectile, firePoint.transform.position, transform.rotation, this.gameObject.transform);
     }
     
     public void CloseUpgradeWindow() 
