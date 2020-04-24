@@ -153,35 +153,35 @@ public class GameController : MonoBehaviour
         }
     }
 
-    public void StartAds() 
-    {
-        if (Advertisement.IsReady("rewardedVideo")) 
-        {
-            var options = new ShowOptions { resultCallback = AdIsOver };
-            Advertisement.Show("rewardedVideo", options);
-        }
-        if (!Advertisement.IsReady("rewardedVideo")) 
-        {
-            AdWatched();
-        }
-    }
+    //public void StartAds() 
+    //{
+    //    if (Advertisement.IsReady("rewardedVideo")) 
+    //    {
+    //        var options = new ShowOptions { resultCallback = AdIsOver };
+    //        Advertisement.Show("rewardedVideo", options);
+    //    }
+    //    if (!Advertisement.IsReady("rewardedVideo")) 
+    //    {
+    //        AdWatched();
+    //    }
+    //}
 
-    private void AdIsOver(ShowResult result) 
-    {
-        switch (result) 
-        {
-            case ShowResult.Finished:
-                Debug.Log("The Ad is over!");
-                AdWatched();
-                break;
-            case ShowResult.Skipped:
-                Debug.Log("The Ad is Skipped!");
-                break;
-            case ShowResult.Failed:
-                Debug.Log("The Ad was not shown!");
-                break;
-        }
-    }
+    //private void AdIsOver(ShowResult result) 
+    //{
+    //    switch (result) 
+    //    {
+    //        case ShowResult.Finished:
+    //            Debug.Log("The Ad is over!");
+    //            AdWatched();
+    //            break;
+    //        case ShowResult.Skipped:
+    //            Debug.Log("The Ad is Skipped!");
+    //            break;
+    //        case ShowResult.Failed:
+    //            Debug.Log("The Ad was not shown!");
+    //            break;
+    //    }
+    //}
 
     public void PauseGame() 
     {
