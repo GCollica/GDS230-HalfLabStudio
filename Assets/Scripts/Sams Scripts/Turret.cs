@@ -127,7 +127,7 @@ public class Turret : MonoBehaviour
                 anim.SetInteger("AnimState", 1);
                 source.Play();
             }
-            fireTimer = 2f;
+            fireTimer = 1.5f;
         }
     }
 

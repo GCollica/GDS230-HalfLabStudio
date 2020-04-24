@@ -176,37 +176,37 @@ public class AdvancedWaveSpawner : MonoBehaviour
 
     private int ChooseSpawnPoint()
     {
-        int chosenPoint = (Random.Range(1, 4) - 1);
+        int chosenPoint = (Random.Range(1, 5) - 1);
         return chosenPoint;
     }
 
     private int ChooseEnemy(int amountOfEnemies)
     {
-        int chosenEnemy = (Mathf.RoundToInt(Random.Range(1, amountOfEnemies)) - 1);
+        int chosenEnemy = (Mathf.RoundToInt(Random.Range(1, (amountOfEnemies +1))) - 1);
         return chosenEnemy;
     }
 
     private int ChooseSpawnPoint1()
     {
-        int chosenPoint1 = (Random.Range(1, 4) - 1);
+        int chosenPoint1 = (Random.Range(1, 5) - 1);
         return chosenPoint1;
     }
 
     private int ChooseSpawnPoint2()
     {
-        int chosenPoint2 = (Random.Range(5, 8) - 1);
+        int chosenPoint2 = (Random.Range(5, 9) - 1);
         return chosenPoint2;
     }
 
     private int ChooseEnemy1(int amountOfEnemies)
     {
-        int chosenEnemy = (Mathf.RoundToInt(Random.Range(1, amountOfEnemies)) - 1);
+        int chosenEnemy = (Mathf.RoundToInt(Random.Range(1, (amountOfEnemies +1))) - 1);
         return chosenEnemy;
     }
 
     private int ChooseEnemy2(int amountOfEnemies)
     {
-        int chosenEnemy = (Mathf.RoundToInt(Random.Range(1, amountOfEnemies)) - 1);
+        int chosenEnemy = (Mathf.RoundToInt(Random.Range(1, (amountOfEnemies +1))) - 1);
         return chosenEnemy;
     }
 }

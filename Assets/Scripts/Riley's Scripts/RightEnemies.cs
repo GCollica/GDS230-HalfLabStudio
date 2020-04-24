@@ -81,7 +81,7 @@ public class RightEnemies : MonoBehaviour
 
        if (health <= 0)
         {
-            gC.researchPoints += 25;
+            gC.researchPoints += 50;
             source.SetActive(true);
             AdvancedWaveSpawner.EnemiesAlive--;
             Destroy(gameObject);

@@ -58,7 +58,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         mouse = new Vector3(transform.position.x, transform.position.y, 10);
-        researchPoints = 325;
+        researchPoints = 375;
         health = 10;
         Time.timeScale = 1;
     }
