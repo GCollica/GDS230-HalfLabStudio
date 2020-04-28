@@ -33,6 +33,7 @@ public class AdvancedWaveSpawner : MonoBehaviour
     private void Start()
     {
         ResetEnemiesAlive();
+        
     }
 
     public void ResetEnemiesAlive() 
@@ -44,7 +45,7 @@ public class AdvancedWaveSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        checkForEnemyCount = EnemiesAlive;
+        
         if (EnemiesAlive > 0)
         {
             return;
@@ -79,21 +80,25 @@ public class AdvancedWaveSpawner : MonoBehaviour
                 if (wave.enemyPrefabs[0] != null && wave.enemyPrefabs[1] == null && wave.enemyPrefabs[2] == null && wave.enemyPrefabs[3] == null) 
                 { 
                     SpawnEnemy(wave.enemyPrefabs[ChooseEnemy(1)], spawnPoint[ChooseSpawnPoint()]);
+                    EnemiesAlive++;
                     i++;
                 }
                 if (wave.enemyPrefabs[0] != null && wave.enemyPrefabs[1] != null && wave.enemyPrefabs[2] == null && wave.enemyPrefabs[3] == null) 
                 { 
                     SpawnEnemy(wave.enemyPrefabs[ChooseEnemy(2)], spawnPoint[ChooseSpawnPoint()]);
+                    EnemiesAlive++;
                     i++;
                 }
                 if (wave.enemyPrefabs[0] != null && wave.enemyPrefabs[1] != null && wave.enemyPrefabs[2] != null && wave.enemyPrefabs[3] == null) 
                 { 
                     SpawnEnemy(wave.enemyPrefabs[ChooseEnemy(3)], spawnPoint[ChooseSpawnPoint()]);
+                    EnemiesAlive++;
                     i++;
                 }
                 if (wave.enemyPrefabs[0] != null && wave.enemyPrefabs[1] != null && wave.enemyPrefabs[2] != null && wave.enemyPrefabs[3] != null) 
                 { 
                     SpawnEnemy(wave.enemyPrefabs[ChooseEnemy(4)], spawnPoint[ChooseSpawnPoint()]);
+                    EnemiesAlive++;
                     i++;
                 }
             }
@@ -103,45 +108,53 @@ public class AdvancedWaveSpawner : MonoBehaviour
                 if (wave.leftEnemyPrefabs[0] != null && wave.leftEnemyPrefabs[1] == null && wave.rightEnemyPrefabs[0] == null && wave.rightEnemyPrefabs[1] == null)
                 {
                     SpawnEnemy(wave.leftEnemyPrefabs[ChooseEnemy1(1)], spawnPoint[ChooseSpawnPoint1()]);
+                    EnemiesAlive++;
                     i++;
                 }
                 if (wave.leftEnemyPrefabs[0] != null && wave.leftEnemyPrefabs[1] != null && wave.rightEnemyPrefabs[0] == null && wave.rightEnemyPrefabs[1] == null)
                 {
                     SpawnEnemy(wave.leftEnemyPrefabs[ChooseEnemy1(2)], spawnPoint[ChooseSpawnPoint1()]);
+                    EnemiesAlive++;
                     i++;
                 }            
                 if (wave.leftEnemyPrefabs[0] != null && wave.leftEnemyPrefabs[1] != null && wave.rightEnemyPrefabs[0] != null && wave.rightEnemyPrefabs[1] == null)
                 {
                     SpawnEnemy(wave.leftEnemyPrefabs[ChooseEnemy1(2)], spawnPoint[ChooseSpawnPoint1()]);
                     SpawnEnemy(wave.rightEnemyPrefabs[ChooseEnemy2(1)], spawnPoint[ChooseSpawnPoint2()]);
+                    EnemiesAlive += 2;
                     i += 2;
                 }
                 if (wave.leftEnemyPrefabs[0] != null && wave.leftEnemyPrefabs[1] == null && wave.rightEnemyPrefabs[0] != null && wave.rightEnemyPrefabs[1] == null)
                 {
                     SpawnEnemy(wave.leftEnemyPrefabs[ChooseEnemy1(1)], spawnPoint[ChooseSpawnPoint1()]);
                     SpawnEnemy(wave.rightEnemyPrefabs[ChooseEnemy2(1)], spawnPoint[ChooseSpawnPoint2()]);
+                    EnemiesAlive += 2;
                     i += 2;
                 }
                 if (wave.leftEnemyPrefabs[0] == null && wave.leftEnemyPrefabs[1] == null && wave.rightEnemyPrefabs[0] != null && wave.rightEnemyPrefabs[1] == null)
                 {
                     SpawnEnemy(wave.rightEnemyPrefabs[ChooseEnemy2(1)], spawnPoint[ChooseSpawnPoint2()]);
+                    EnemiesAlive++;
                     i ++;
                 }
                 if (wave.leftEnemyPrefabs[0] == null && wave.leftEnemyPrefabs[1] == null && wave.rightEnemyPrefabs[0] != null && wave.rightEnemyPrefabs[1] != null)
                 {
                     SpawnEnemy(wave.rightEnemyPrefabs[ChooseEnemy2(2)], spawnPoint[ChooseSpawnPoint2()]);
+                    EnemiesAlive++;
                     i++;
                 }
                 if (wave.leftEnemyPrefabs[0] != null && wave.leftEnemyPrefabs[1] == null && wave.rightEnemyPrefabs[0] != null && wave.rightEnemyPrefabs[1] != null)
                 {
                     SpawnEnemy(wave.leftEnemyPrefabs[ChooseEnemy1(1)], spawnPoint[ChooseSpawnPoint1()]);
                     SpawnEnemy(wave.rightEnemyPrefabs[ChooseEnemy2(2)], spawnPoint[ChooseSpawnPoint2()]);
+                    EnemiesAlive += 2;
                     i += 2;
                 }
                 if (wave.leftEnemyPrefabs[0] != null && wave.leftEnemyPrefabs[1] != null && wave.rightEnemyPrefabs[0] != null && wave.rightEnemyPrefabs[1] != null)
                 {
                     SpawnEnemy(wave.leftEnemyPrefabs[ChooseEnemy1(2)], spawnPoint[ChooseSpawnPoint1()]);
                     SpawnEnemy(wave.rightEnemyPrefabs[ChooseEnemy2(2)], spawnPoint[ChooseSpawnPoint2()]);
+                    EnemiesAlive += 2;
                     i += 2;
                 }
             }
@@ -160,7 +173,7 @@ public class AdvancedWaveSpawner : MonoBehaviour
         if (gC.canMove == true)
         {
             Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
-            EnemiesAlive++;
+            
         }
     }
 

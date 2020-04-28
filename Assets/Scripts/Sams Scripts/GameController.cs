@@ -66,7 +66,7 @@ public class GameController : MonoBehaviour
     private void Update()
     {
         LoseState();
-
+        
         
         
         researchText.text = researchPoints.ToString();
@@ -232,6 +232,7 @@ public class GameController : MonoBehaviour
         bS.gameObject.SetActive(false);
         spawner.enabled = false;
         EndingHealthIncrease();
+        
     }
 
     void EndingHealthIncrease()

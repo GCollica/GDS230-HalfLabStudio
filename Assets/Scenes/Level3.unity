@@ -1559,116 +1559,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameController
       objectReference: {fileID: 0}
-    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
-        type: 3}
-      propertyPath: clips.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
-        type: 3}
-      propertyPath: speedTimeButtons.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
-        type: 3}
-      propertyPath: healthSprite
-      value: 
-      objectReference: {fileID: 2009963029}
-    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
-        type: 3}
-      propertyPath: healthAnim
-      value: 
-      objectReference: {fileID: 2009963028}
-    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
-        type: 3}
-      propertyPath: watchAd
-      value: 
-      objectReference: {fileID: 1579698369}
-    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
-        type: 3}
-      propertyPath: gameOver
-      value: 
-      objectReference: {fileID: 1579698368}
-    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
-        type: 3}
-      propertyPath: researchText
-      value: 
-      objectReference: {fileID: 1579698370}
-    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
-        type: 3}
-      propertyPath: enemyParent
-      value: 
-      objectReference: {fileID: 1579698375}
-    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
-        type: 3}
-      propertyPath: WinButtons
-      value: 
-      objectReference: {fileID: 1579698372}
-    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
-        type: 3}
-      propertyPath: pause
-      value: 
-      objectReference: {fileID: 1579698373}
-    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
-        type: 3}
-      propertyPath: loseObjects
-      value: 
-      objectReference: {fileID: 1579698371}
-    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
-        type: 3}
-      propertyPath: bS
-      value: 
-      objectReference: {fileID: 1579698374}
-    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
-        type: 3}
-      propertyPath: checkForEnemyScript
-      value: 
-      objectReference: {fileID: 1585439916}
-    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
-        type: 3}
-      propertyPath: bannerAdPlaceholder
-      value: 
-      objectReference: {fileID: 101110986}
-    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
-        type: 3}
-      propertyPath: source
-      value: 
-      objectReference: {fileID: 542545978}
-    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
-        type: 3}
-      propertyPath: clips.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: 8b1b6387894508346b22a5b1f3c04928, type: 3}
-    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
-        type: 3}
-      propertyPath: clips.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: 62b615303a17ce84bb8b23c140eb0ea2, type: 3}
-    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
-        type: 3}
-      propertyPath: clips.Array.data[2]
-      value: 
-      objectReference: {fileID: 8300000, guid: e6125a3c6f2243446aff992e9d0e15ca, type: 3}
-    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
-        type: 3}
-      propertyPath: updateHealthAudio
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
-        type: 3}
-      propertyPath: speedTimeButtons.Array.data[0]
-      value: 
-      objectReference: {fileID: 1700052458}
-    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
-        type: 3}
-      propertyPath: speedTimeButtons.Array.data[1]
-      value: 
-      objectReference: {fileID: 1171222353}
-    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
-        type: 3}
-      propertyPath: speedTimeButtons.Array.data[2]
-      value: 
-      objectReference: {fileID: 718959384}
     - target: {fileID: 4633545004592377896, guid: da248099c0047c346bfca4804dda6086,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2092,63 +1982,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1064610123, guid: da248099c0047c346bfca4804dda6086, type: 3}
       propertyPath: waves.Array.data[0].rate
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1064610123, guid: da248099c0047c346bfca4804dda6086, type: 3}
       propertyPath: waves.Array.data[1].rate
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1064610123, guid: da248099c0047c346bfca4804dda6086, type: 3}
       propertyPath: waves.Array.data[2].rate
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1064610123, guid: da248099c0047c346bfca4804dda6086, type: 3}
       propertyPath: waves.Array.data[3].rate
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1064610123, guid: da248099c0047c346bfca4804dda6086, type: 3}
       propertyPath: waves.Array.data[4].rate
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1064610123, guid: da248099c0047c346bfca4804dda6086, type: 3}
       propertyPath: waves.Array.data[5].rate
-      value: 3.5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1064610123, guid: da248099c0047c346bfca4804dda6086, type: 3}
       propertyPath: waves.Array.data[6].rate
-      value: 3.5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1064610123, guid: da248099c0047c346bfca4804dda6086, type: 3}
       propertyPath: waves.Array.data[7].rate
-      value: 3.5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1064610123, guid: da248099c0047c346bfca4804dda6086, type: 3}
       propertyPath: waves.Array.data[8].rate
-      value: 3.5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1064610123, guid: da248099c0047c346bfca4804dda6086, type: 3}
       propertyPath: waves.Array.data[9].rate
-      value: 3.5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1064610123, guid: da248099c0047c346bfca4804dda6086, type: 3}
       propertyPath: waves.Array.data[10].rate
-      value: 4
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1064610123, guid: da248099c0047c346bfca4804dda6086, type: 3}
       propertyPath: waves.Array.data[11].rate
-      value: 4
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1064610123, guid: da248099c0047c346bfca4804dda6086, type: 3}
       propertyPath: waves.Array.data[12].rate
-      value: 4
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1064610123, guid: da248099c0047c346bfca4804dda6086, type: 3}
       propertyPath: waves.Array.data[13].rate
-      value: 4
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1064610123, guid: da248099c0047c346bfca4804dda6086, type: 3}
       propertyPath: waves.Array.data[14].rate
-      value: 5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1064610123, guid: da248099c0047c346bfca4804dda6086, type: 3}
       propertyPath: waves.Array.data[1].count
@@ -2616,6 +2506,116 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5477876673659567537, guid: 3864c72eec216aa4e8aad51b60e761b9,
         type: 3}
+    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
+        type: 3}
+      propertyPath: clips.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
+        type: 3}
+      propertyPath: speedTimeButtons.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
+        type: 3}
+      propertyPath: healthSprite
+      value: 
+      objectReference: {fileID: 2009963029}
+    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
+        type: 3}
+      propertyPath: healthAnim
+      value: 
+      objectReference: {fileID: 2009963028}
+    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
+        type: 3}
+      propertyPath: watchAd
+      value: 
+      objectReference: {fileID: 1579698369}
+    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
+        type: 3}
+      propertyPath: gameOver
+      value: 
+      objectReference: {fileID: 1579698368}
+    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
+        type: 3}
+      propertyPath: researchText
+      value: 
+      objectReference: {fileID: 1579698370}
+    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
+        type: 3}
+      propertyPath: enemyParent
+      value: 
+      objectReference: {fileID: 1579698375}
+    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
+        type: 3}
+      propertyPath: WinButtons
+      value: 
+      objectReference: {fileID: 1579698372}
+    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
+        type: 3}
+      propertyPath: pause
+      value: 
+      objectReference: {fileID: 1579698373}
+    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
+        type: 3}
+      propertyPath: loseObjects
+      value: 
+      objectReference: {fileID: 1579698371}
+    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
+        type: 3}
+      propertyPath: bS
+      value: 
+      objectReference: {fileID: 1579698374}
+    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
+        type: 3}
+      propertyPath: checkForEnemyScript
+      value: 
+      objectReference: {fileID: 1585439916}
+    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
+        type: 3}
+      propertyPath: bannerAdPlaceholder
+      value: 
+      objectReference: {fileID: 101110986}
+    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
+        type: 3}
+      propertyPath: source
+      value: 
+      objectReference: {fileID: 542545978}
+    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
+        type: 3}
+      propertyPath: clips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8b1b6387894508346b22a5b1f3c04928, type: 3}
+    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
+        type: 3}
+      propertyPath: clips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 62b615303a17ce84bb8b23c140eb0ea2, type: 3}
+    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
+        type: 3}
+      propertyPath: clips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: e6125a3c6f2243446aff992e9d0e15ca, type: 3}
+    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
+        type: 3}
+      propertyPath: updateHealthAudio
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
+        type: 3}
+      propertyPath: speedTimeButtons.Array.data[0]
+      value: 
+      objectReference: {fileID: 1700052458}
+    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
+        type: 3}
+      propertyPath: speedTimeButtons.Array.data[1]
+      value: 
+      objectReference: {fileID: 1171222353}
+    - target: {fileID: 4633545004592377902, guid: da248099c0047c346bfca4804dda6086,
+        type: 3}
+      propertyPath: speedTimeButtons.Array.data[2]
+      value: 
+      objectReference: {fileID: 718959384}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da248099c0047c346bfca4804dda6086, type: 3}
 --- !u!1 &542545977 stripped
@@ -5551,7 +5551,7 @@ PrefabInstance:
     - target: {fileID: 8259566053862752624, guid: a3146d0c07d8dde4ea77177579a0dd2c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -950.22
+      value: -950.28
       objectReference: {fileID: 0}
     - target: {fileID: 8259566053862752624, guid: a3146d0c07d8dde4ea77177579a0dd2c,
         type: 3}
@@ -5566,17 +5566,17 @@ PrefabInstance:
     - target: {fileID: 8259566053862752624, guid: a3146d0c07d8dde4ea77177579a0dd2c,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.014891459
+      value: 0.015933862
       objectReference: {fileID: 0}
     - target: {fileID: 8259566053862752624, guid: a3146d0c07d8dde4ea77177579a0dd2c,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.0109123355
+      value: 0.0116762
       objectReference: {fileID: 0}
     - target: {fileID: 8259566053862752624, guid: a3146d0c07d8dde4ea77177579a0dd2c,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.014891459
+      value: 0.015933862
       objectReference: {fileID: 0}
     - target: {fileID: 8259566053862752624, guid: a3146d0c07d8dde4ea77177579a0dd2c,
         type: 3}
@@ -5587,6 +5587,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3347709003114730548, guid: a3146d0c07d8dde4ea77177579a0dd2c,
+        type: 3}
+      propertyPath: m_Text
+      value: Turret 3 - 225 Research Points
       objectReference: {fileID: 0}
     - target: {fileID: 78136734163548179, guid: a3146d0c07d8dde4ea77177579a0dd2c,
         type: 3}
@@ -5917,11 +5922,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: Resume Game
-      objectReference: {fileID: 0}
-    - target: {fileID: 3347709003114730548, guid: a3146d0c07d8dde4ea77177579a0dd2c,
-        type: 3}
-      propertyPath: m_Text
-      value: Turret 3 - 225 Research Points
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3146d0c07d8dde4ea77177579a0dd2c, type: 3}
