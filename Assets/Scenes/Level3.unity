@@ -2068,7 +2068,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1064610123, guid: da248099c0047c346bfca4804dda6086, type: 3}
       propertyPath: waveIndex
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1064610123, guid: da248099c0047c346bfca4804dda6086, type: 3}
       propertyPath: waves.Array.data[4].enemyPrefabs.Array.data[2]
@@ -3192,7 +3192,7 @@ PrefabInstance:
     - target: {fileID: 4599518853233964667, guid: 71e959cd85624b14f85a7be29caa6ea3,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -948.03
+      value: -948.42957
       objectReference: {fileID: 0}
     - target: {fileID: 4599518853233964667, guid: 71e959cd85624b14f85a7be29caa6ea3,
         type: 3}
@@ -6534,7 +6534,7 @@ PrefabInstance:
     - target: {fileID: 8577927612227360040, guid: bb2ae94c973c9c14bb91c01c28da7d96,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -948.03
+      value: -948.42957
       objectReference: {fileID: 0}
     - target: {fileID: 8577927612227360040, guid: bb2ae94c973c9c14bb91c01c28da7d96,
         type: 3}
