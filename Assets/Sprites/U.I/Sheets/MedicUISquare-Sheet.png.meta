@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8a57847a3d2372d40b141bef6214c35c
+guid: 201d71fd2d3b9e441b6a06e607764675
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -166,7 +166,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 256
-        width: 128
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -175,7 +175,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4bc5d609462a38438f41257f1936820
+      spriteID: 017ad1cda9f5df14192322d12835d9e0
       internalID: -5920954583608633795
       vertices: []
       indices: 
@@ -185,9 +185,9 @@ TextureImporter:
       name: MedicUI-Sheet_1
       rect:
         serializedVersion: 2
-        x: 128
+        x: 64
         y: 256
-        width: 128
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -196,7 +196,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb7ffd8debd399040b1655f289ee63d4
+      spriteID: 392f008bce0018243a48a88395eb6b22
       internalID: 1536832468253067158
       vertices: []
       indices: 
@@ -206,9 +206,9 @@ TextureImporter:
       name: MedicUI-Sheet_2
       rect:
         serializedVersion: 2
-        x: 256
+        x: 128
         y: 256
-        width: 128
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -217,7 +217,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db7d0b7a22a5af64a83c000193aa42e7
+      spriteID: 640f639d82766894dad2ec6971ada121
       internalID: -915796685538238219
       vertices: []
       indices: 
@@ -227,9 +227,9 @@ TextureImporter:
       name: MedicUI-Sheet_3
       rect:
         serializedVersion: 2
-        x: 384
+        x: 192
         y: 256
-        width: 128
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -238,7 +238,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e906bee4de2b6e0419f7e01fe1de0bfc
+      spriteID: b73810c1695169f4b84e404f1c7cf01a
       internalID: 2689847903568505715
       vertices: []
       indices: 
@@ -248,9 +248,9 @@ TextureImporter:
       name: MedicUI-Sheet_4
       rect:
         serializedVersion: 2
-        x: 512
+        x: 256
         y: 256
-        width: 128
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -259,7 +259,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ed0aab93003d06419e5470f2f0d99c4
+      spriteID: 10f2b8baa1af02945be07fd5f7ed171f
       internalID: -2950500219027132938
       vertices: []
       indices: 
@@ -271,7 +271,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 192
-        width: 128
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -280,7 +280,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14f5d2ecd1a32ad43807dc7485026b48
+      spriteID: 692f5d94edb74a04cb9a92fab54ee5e2
       internalID: -2051787780986199836
       vertices: []
       indices: 
@@ -290,9 +290,9 @@ TextureImporter:
       name: MedicUI-Sheet_6
       rect:
         serializedVersion: 2
-        x: 128
+        x: 64
         y: 192
-        width: 128
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -301,7 +301,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae7d8e4df265a7a47b37406727c21977
+      spriteID: ea43ecdef2e10ff4a90b834d3162b2f5
       internalID: 4429556014364949233
       vertices: []
       indices: 
@@ -311,9 +311,9 @@ TextureImporter:
       name: MedicUI-Sheet_7
       rect:
         serializedVersion: 2
-        x: 256
+        x: 128
         y: 192
-        width: 128
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -322,7 +322,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8a2f154d84dbe94da423dfb348da1a1
+      spriteID: d10e728f811fdfa4fa67e78cecf5975d
       internalID: -7077138767625728532
       vertices: []
       indices: 
@@ -332,9 +332,9 @@ TextureImporter:
       name: MedicUI-Sheet_8
       rect:
         serializedVersion: 2
-        x: 384
+        x: 192
         y: 192
-        width: 128
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -343,7 +343,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e737e5edc5616d49822ffbb9d811b67
+      spriteID: 55569766410a22643a01da6fc72980ec
       internalID: -6317242163164492524
       vertices: []
       indices: 
@@ -353,9 +353,9 @@ TextureImporter:
       name: MedicUI-Sheet_9
       rect:
         serializedVersion: 2
-        x: 512
+        x: 256
         y: 192
-        width: 128
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -364,7 +364,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3389e2b30e03a64448c4458d364faea1
+      spriteID: 16395607d0d0b8249b2eba93897bc30c
       internalID: 2235763731568917261
       vertices: []
       indices: 
@@ -376,7 +376,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 128
-        width: 128
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -385,7 +385,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 230e642d4d1f77145b5246f677e1d34b
+      spriteID: b0a5b841ed9046e4986fa3c2540b83f0
       internalID: 2162246424798819661
       vertices: []
       indices: 
@@ -395,9 +395,9 @@ TextureImporter:
       name: MedicUI-Sheet_11
       rect:
         serializedVersion: 2
-        x: 128
+        x: 64
         y: 128
-        width: 128
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -406,7 +406,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac431cdc430de604f8fb95135252867a
+      spriteID: a3baeff3fe3faa44cb6f2cbeeab9e18f
       internalID: -2736078367539525170
       vertices: []
       indices: 
@@ -416,9 +416,9 @@ TextureImporter:
       name: MedicUI-Sheet_12
       rect:
         serializedVersion: 2
-        x: 256
+        x: 128
         y: 128
-        width: 128
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -427,7 +427,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 697023d7600403f4883a308faf99efe5
+      spriteID: 8dbd545d5c52fd4478cd6104345e4e32
       internalID: 847921658404634082
       vertices: []
       indices: 
@@ -437,9 +437,9 @@ TextureImporter:
       name: MedicUI-Sheet_13
       rect:
         serializedVersion: 2
-        x: 384
+        x: 192
         y: 128
-        width: 128
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -448,7 +448,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96ac1c04a1ef4454981cbd5ca638cf1f
+      spriteID: 6f4b2ddbc0abb864cae462bc316b94ae
       internalID: 4272950640621031876
       vertices: []
       indices: 
@@ -458,9 +458,9 @@ TextureImporter:
       name: MedicUI-Sheet_14
       rect:
         serializedVersion: 2
-        x: 512
+        x: 256
         y: 128
-        width: 128
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -469,7 +469,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ad5bc90c4c47294da18e91a7583fc07
+      spriteID: a5384f91a9e543f458deca0733f09960
       internalID: -2669753975027651827
       vertices: []
       indices: 
@@ -481,7 +481,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 64
-        width: 128
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -490,7 +490,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13746380cc054bd4cb91238affe49529
+      spriteID: 2a2a519fe51099745bb6b9e02e9afa15
       internalID: 4779061297512446897
       vertices: []
       indices: 
@@ -500,9 +500,9 @@ TextureImporter:
       name: MedicUI-Sheet_16
       rect:
         serializedVersion: 2
-        x: 128
+        x: 64
         y: 64
-        width: 128
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -511,7 +511,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 479cabaa09539d94e8a1fc6a6e28a473
+      spriteID: a8188e53a3f7b444b84dc78ae361b392
       internalID: -511401251570304930
       vertices: []
       indices: 
@@ -521,9 +521,9 @@ TextureImporter:
       name: MedicUI-Sheet_17
       rect:
         serializedVersion: 2
-        x: 256
+        x: 128
         y: 64
-        width: 128
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -532,7 +532,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a66a2b63dfbda4d49b8ae860bf76e858
+      spriteID: 82dfb8fa3e0bb364e8fa178cfe600c8c
       internalID: 3333155688137193459
       vertices: []
       indices: 
@@ -542,9 +542,9 @@ TextureImporter:
       name: MedicUI-Sheet_18
       rect:
         serializedVersion: 2
-        x: 384
+        x: 192
         y: 64
-        width: 128
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -553,7 +553,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a36dfe38101e5464bb95a1f4ee0d301c
+      spriteID: d5845930060c9824c9457bd9d6695cc6
       internalID: -5605394681755990777
       vertices: []
       indices: 
@@ -563,9 +563,9 @@ TextureImporter:
       name: MedicUI-Sheet_19
       rect:
         serializedVersion: 2
-        x: 512
+        x: 256
         y: 64
-        width: 128
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -574,7 +574,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71c71adaa27001f4f886e6c2ac0403e0
+      spriteID: bf27c5a0423f20f4e9a13760c5df1d96
       internalID: -6320494206393624878
       vertices: []
       indices: 
@@ -586,7 +586,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -595,7 +595,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73210e1683e3e9e4bbb31ab17103f52a
+      spriteID: 0d6b27b661ec3d54eabf30845ce09227
       internalID: -7219827116427771427
       vertices: []
       indices: 

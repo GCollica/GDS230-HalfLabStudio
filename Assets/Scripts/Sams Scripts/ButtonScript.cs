@@ -53,11 +53,11 @@ public class ButtonScript : MonoBehaviour
             }
             else 
             {
-                upgradesText[0].text = "Upgrade Tower - " + turretScript.damageIncreaseCost + " Research Points";
+                upgradesText[0].text = "Upgrade Tower: - " + turretScript.damageIncreaseCost + " Research Points";
             }
 
             //     upgradesText[1].text = "Upgrade Range  - " + turretScript.rangeIncreaseCost + " Research Points";
-            upgradesText[2].text = "Destroy Tower   + " + turretScript.sellTurret + " Research Points";
+            upgradesText[2].text = "Destroy Tower: + " + turretScript.sellTurret + " Research Points";
         }
 
         if (turret2Script)
@@ -68,11 +68,11 @@ public class ButtonScript : MonoBehaviour
             }
             else 
             {
-                upgradesText[3].text = "Upgrade Tower - " + turret2Script.upgradeDamage + " Research Points";
+                upgradesText[3].text = "Upgrade Tower: - " + turret2Script.upgradeDamage + " Research Points";
             }
           
       //      upgradesText[4].text = "Upgrade Range - " + turret2Script.upgradeRange + " Research Points";
-            upgradesText[5].text = "Destroy Tower + " + turret2Script.sellTurret + " Research Points";
+            upgradesText[5].text = "Destroy Tower: + " + turret2Script.sellTurret + " Research Points";
         }
 
   
@@ -368,7 +368,7 @@ public class ButtonScript : MonoBehaviour
 
     public void DestroyTurret3()
     {
-        gC.researchPoints += 250;
+        gC.researchPoints += 100;
         CloseUpgradeWindow();
         upgradingTurretsBool = false;
         buyingTurretScript.turretSpawned = false;

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 
@@ -64,7 +65,11 @@ public class AdvancedWaveSpawner : MonoBehaviour
         gameStartTimer = Mathf.Clamp(gameStartTimer, 0f, Mathf.Infinity);
 
         waveCountdownText.text = "Next Wave In: " + gameStartTimer.ToString("F0");
-        waveUpdate.text = "Wave Count: " + waveIndex.ToString();
+        if(SceneManager.GetActiveScene().name == "Level1")
+        {
+            waveUpdate.text = "Wave Count: " + waveIndex.ToString() + " / 10";
+        }
+        
         //enemiesAliveText.text = "Enemies: " + EnemiesAlive.ToString();
     }
 
