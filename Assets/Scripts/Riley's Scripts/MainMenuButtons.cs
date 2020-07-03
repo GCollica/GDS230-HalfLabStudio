@@ -42,16 +42,16 @@ public class MainMenuButtons : MonoBehaviour
 
     public void LoadLvl1()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Level1");
     }
     public void LoadLvl2()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene("Level2");
     }
 
     public void LoadLvl3() 
     {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene("Level3");
     }
 
     public void OpenOptions()

@@ -69,7 +69,15 @@ public class AdvancedWaveSpawner : MonoBehaviour
         {
             waveUpdate.text = "Wave Count: " + waveIndex.ToString() + " / 10";
         }
-        
+        if (SceneManager.GetActiveScene().name == "Level2")
+        {
+            waveUpdate.text = "Wave Count: " + waveIndex.ToString() + " / 10";
+        }
+        if (SceneManager.GetActiveScene().name == "Level3")
+        {
+            waveUpdate.text = "Wave Count: " + waveIndex.ToString() + " / 10";
+        }
+
         //enemiesAliveText.text = "Enemies: " + EnemiesAlive.ToString();
     }
 
@@ -80,7 +88,7 @@ public class AdvancedWaveSpawner : MonoBehaviour
 
         for (int i = 0; i < wave.count;)
         {
-            if (checkForEnemyClass.sceneInt == 1 || checkForEnemyClass.sceneInt == 4) 
+            if (checkForEnemyClass.sceneInt == 1 || checkForEnemyClass.sceneInt == 2) 
             {
                 if (wave.enemyPrefabs[0] != null && wave.enemyPrefabs[1] == null && wave.enemyPrefabs[2] == null && wave.enemyPrefabs[3] == null) 
                 { 
@@ -108,7 +116,7 @@ public class AdvancedWaveSpawner : MonoBehaviour
                 }
             }
 
-            if (checkForEnemyClass.sceneInt == 5)
+            if (checkForEnemyClass.sceneInt == 3)
             {
                 if (wave.leftEnemyPrefabs[0] != null && wave.leftEnemyPrefabs[1] == null && wave.rightEnemyPrefabs[0] == null && wave.rightEnemyPrefabs[1] == null)
                 {
