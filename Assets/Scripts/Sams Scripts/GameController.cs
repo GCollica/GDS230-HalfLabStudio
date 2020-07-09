@@ -33,6 +33,7 @@ public class GameController : MonoBehaviour
 
     public GameObject WinButtons;
     public GameObject pause;
+    public GameObject tutorialScreen;
     
     //canMove sets the speed for the enemies to 0, and pauses their spawning in the AdvancedWaveSpawner
     //pausing is done this way so the buttons can still operate in runtime
@@ -251,6 +252,29 @@ public class GameController : MonoBehaviour
             if (health == 10) { researchPoints += 5000; }
             endingAddMoney = false;
         }
+    }
+
+    public void OpenTutorial()
+    {
+        if (tutorialScreen.gameObject.activeInHierarchy != true)
+        {
+            if(pause.gameObject.activeInHierarchy == true)
+            {
+                pause.SetActive(false);
+            }
+
+            tutorialScreen.SetActive(true);
+        }
+    }
+
+    public void CloseTutorial()
+    {
+        if(tutorialScreen.gameObject.activeInHierarchy == true)
+        {
+            tutorialScreen.SetActive(false);
+        }
+
+        pause.SetActive(true);
     }
 
    
