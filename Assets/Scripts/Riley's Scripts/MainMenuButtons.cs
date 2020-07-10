@@ -67,23 +67,23 @@ public class MainMenuButtons : MonoBehaviour
 
     public void HideTitleButtons()
     {
-        if(mainMenuButtons[0].activeInHierarchy == true && mainMenuButtons[1].activeInHierarchy == true && mainMenuButtons[5].activeInHierarchy == true && bannerAds.activeInHierarchy == true)
+        if(mainMenuButtons[0].activeInHierarchy == true && mainMenuButtons[1].activeInHierarchy == true && mainMenuButtons[5].activeInHierarchy == true) //&& bannerAds.activeInHierarchy == true)
         {
             mainMenuButtons[0].SetActive(false);
             mainMenuButtons[1].SetActive(false);
             mainMenuButtons[5].SetActive(false);
-            bannerAds.SetActive(false);
+            //bannerAds.SetActive(false);
         }
     }
 
     public void ShowTitleButtons()
     {
-        if (mainMenuButtons[0].activeInHierarchy == false && mainMenuButtons[1].activeInHierarchy == false && mainMenuButtons[5].activeInHierarchy == false && bannerAds.activeInHierarchy == false)
+        if (mainMenuButtons[0].activeInHierarchy == false && mainMenuButtons[1].activeInHierarchy == false && mainMenuButtons[5].activeInHierarchy == false) // && bannerAds.activeInHierarchy == false)
         {
             mainMenuButtons[0].SetActive(true);
             mainMenuButtons[1].SetActive(true);
             mainMenuButtons[5].SetActive(true);
-            bannerAds.SetActive(true);
+            //bannerAds.SetActive(true);
         }       
     }
 
