@@ -9,6 +9,7 @@ public class MainMenuButtons : MonoBehaviour
     public Sprite titleBGSprite;
     public Sprite blankBGSprite;
     public GameObject backgroundGameObject;
+    public GameObject tutorialOverlay;
     
     public void MenuScene()
     {
@@ -57,6 +58,22 @@ public class MainMenuButtons : MonoBehaviour
     public void OpenOptions()
     {
         SceneManager.LoadScene(2);
+    }
+
+    public void OpenTutorial()
+    {
+        if(tutorialOverlay.activeInHierarchy == false)
+        {
+            tutorialOverlay.SetActive(true);
+        }
+    }
+
+    public void CloseTutorial()
+    {
+        if(tutorialOverlay.activeInHierarchy == true)
+        {
+            tutorialOverlay.SetActive(false);
+        }
     }
 
     public void StartAnimation(int targetScreen)
